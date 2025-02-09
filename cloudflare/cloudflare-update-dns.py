@@ -17,6 +17,21 @@ def log(message, level='info'):
 
 # get cloudlflare records list
 def get_cloudflare_records(zone_id, record_name, api_key, email):
+    """
+    Retrieves the Cloudflare DNS record ID for a given zone and record name.
+
+    Args:
+        zone_id (str): The ID of the Cloudflare zone.
+        record_name (str): The name of the DNS record to retrieve.
+        api_key (str): The Cloudflare API key.
+        email (str): The email associated with the Cloudflare account.
+
+    Returns:
+        str: The ID of the requested DNS record.
+
+    Raises:
+        ConnectionError: If there is an error fetching the Cloudflare records or if the record is not found.
+    """
     res = None
     try:
         res = requests.get(
@@ -45,6 +60,20 @@ def get_cloudflare_records(zone_id, record_name, api_key, email):
 
 # update cloudflare record
 def update_cloudflare_record(record_name, record_id, zone_id, current_ip, api_key, email):
+    """
+    Updates a Cloudflare DNS record with the current IP address.
+
+    Args:
+        record_name (str): The name of the DNS record to update.
+        record_id (str): The ID of the DNS record to update.
+        zone_id (str): The ID of the Cloudflare zone.
+        current_ip (str): The current public IP address.
+        api_key (str): The Cloudflare API key.
+        email (str): The email associated with the Cloudflare account.
+
+    Raises:
+        ConnectionError: If there is an error updating the Cloudflare record.
+    """
 
     url = f'{CLOUDFLARE_API_URL}/zones/{zone_id}/dns_records/{record_id}'
     headers = {
@@ -80,6 +109,15 @@ def update_cloudflare_record(record_name, record_id, zone_id, current_ip, api_ke
 
 # get public ip
 def get_public_ip():
+    """
+    Retrieves the current public IP address.
+
+    Returns:
+        str: The current public IP address.
+
+    Raises:
+        ConnectionError: If there is an error fetching the public IP address.
+    """
     try:
         res = requests.get('https://api.ipify.org?format=json', timeout=5)
         res.raise_for_status()
@@ -91,6 +129,20 @@ def get_public_ip():
 
 # main function
 def main():
+    """
+    Main function to update Cloudflare DNS record with the current public IP address.
+
+    This function performs the following steps:
+    1. Loads environment variables from a .env file.
+    2. Retrieves the required environment variables: ZONE_ID, RECORD_NAME, API_KEY, EMAIL.
+    3. Checks if all required environment variables are present.
+    4. Gets the Cloudflare record ID for the specified zone and record name.
+    5. Retrieves the current public IP address.
+    6. Updates the Cloudflare DNS record with the current public IP address.
+
+    Raises:
+        EnvironmentError: If any of the required environment variables are missing.
+    """
     # get env vars from .env file
     load_dotenv()
     zone_id = os.getenv('ZONE_ID')
