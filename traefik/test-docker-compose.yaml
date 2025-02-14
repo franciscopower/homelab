@@ -1,0 +1,13 @@
+services:
+
+  nginxtest:
+    image: "nginx"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.nginxtest.rule=Host(`test.npowers.net`)"
+    networks:
+      - proxy
+
+networks:
+  proxy:
+    external: true

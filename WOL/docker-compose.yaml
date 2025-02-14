@@ -6,3 +6,8 @@ services:
     restart: unless-stopped
     volumes:
       - ~/docker/UpSnap/data:/app/pb_data
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.upsnap.rule=Host(`wol.npowers.net`)"
+      - "traefik.http.services.upsnap.loadbalancer.server.port=8090"
+
