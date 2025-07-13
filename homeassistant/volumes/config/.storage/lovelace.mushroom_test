@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.mushroom_test",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Home",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.living_room_press",
+                  "icon": "mdi:led-strip-variant",
+                  "fill_container": false,
+                  "use_light_color": true,
+                  "show_brightness_control": true,
+                  "show_color_temp_control": false,
+                  "show_color_control": true,
+                  "collapsible_controls": false,
+                  "hold_action": {
+                    "action": "toggle"
+                  },
+                  "tap_action": {
+                    "action": "more-info"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-media-player-card",
+                  "entity": "media_player.tv_qe50q68bauxxc",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 1
+                  },
+                  "fill_container": false,
+                  "volume_controls": [
+                    "volume_set"
+                  ],
+                  "media_controls": [
+                    "on_off"
+                  ],
+                  "show_volume_level": true,
+                  "use_media_info": true,
+                  "collapsible_controls": false,
+                  "hold_action": {
+                    "action": "more-info"
+                  }
+                }
+              ]
+            }
+          ],
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "person.francisco_power",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "weather.forecast_home",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sun.sun",
+              "show_entity_picture": true
+            }
+          ],
+          "header": {
+            "card": {
+              "type": "markdown",
+              "content": "# Welcome home, {{ user }}",
+              "text_only": true
+            }
+          }
+        }
+      ]
+    }
+  }
+}

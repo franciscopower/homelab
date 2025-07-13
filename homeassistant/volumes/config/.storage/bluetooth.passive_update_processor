@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "bluetooth.passive_update_processor",
+  "data": {
+    "01K000MKJ5R41820E31KPS2DC7": {
+      "binary_sensor": {
+        "devices": {
+          "": {
+            "name": "Temperature/Humidity Sensor 7407",
+            "manufacturer": "Xiaomi",
+            "model": "LYWSD03MMC"
+          }
+        },
+        "entity_descriptions": {},
+        "entity_names": {},
+        "entity_data": {}
+      },
+      "sensor": {
+        "devices": {
+          "": {
+            "name": "Temperature/Humidity Sensor 7407",
+            "manufacturer": "Xiaomi",
+            "model": "LYWSD03MMC"
+          }
+        },
+        "entity_descriptions": {
+          "signal_strength___": {
+            "key": "signal_strength_dBm",
+            "device_class": "signal_strength",
+            "entity_category": "diagnostic",
+            "entity_registry_enabled_default": false,
+            "native_unit_of_measurement": "dBm",
+            "state_class": "measurement"
+          }
+        },
+        "entity_names": {},
+        "entity_data": {
+          "signal_strength___": -68
+        }
+      }
+    }
+  }
+}

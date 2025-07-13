@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "id": "francisco_power",
+        "name": "Francisco Power",
+        "user_id": "13475ff9b07c447c980258c9d4b5af72",
+        "device_trackers": [
+          "device_tracker.wvnq93vm7r"
+        ],
+        "picture": "/api/image/serve/c2a651ecb094f38f4e68a1e806f579b1/512x512"
+      }
+    ]
+  }
+}

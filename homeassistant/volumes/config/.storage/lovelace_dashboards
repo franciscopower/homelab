@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_dashboards",
+  "data": {
+    "items": [
+      {
+        "id": "map",
+        "icon": "mdi:map",
+        "title": "Map",
+        "url_path": "map",
+        "require_admin": false,
+        "mode": "storage",
+        "show_in_sidebar": true
+      },
+      {
+        "id": "mushroom_test",
+        "show_in_sidebar": true,
+        "icon": "mdi:mushroom",
+        "title": "Mushroom Test",
+        "require_admin": false,
+        "mode": "storage",
+        "url_path": "mushroom-test"
+      },
+      {
+        "id": "dashboard_admin",
+        "show_in_sidebar": true,
+        "icon": "mdi:tools",
+        "title": "Admin",
+        "require_admin": true,
+        "mode": "storage",
+        "url_path": "dashboard-admin"
+      }
+    ]
+  }
+}
