@@ -14,22 +14,13 @@
         "show_in_sidebar": true
       },
       {
-        "id": "mushroom_test",
+        "id": "my_home",
         "show_in_sidebar": true,
-        "icon": "mdi:mushroom",
-        "title": "Mushroom Test",
+        "icon": "mdi:home",
+        "title": "My Home",
         "require_admin": false,
         "mode": "storage",
-        "url_path": "mushroom-test"
-      },
-      {
-        "id": "dashboard_admin",
-        "show_in_sidebar": true,
-        "icon": "mdi:tools",
-        "title": "Admin",
-        "require_admin": true,
-        "mode": "storage",
-        "url_path": "dashboard-admin"
+        "url_path": "my-home"
       }
     ]
   }

@@ -1,32 +1,28 @@
 {
   "version": 1,
   "minor_version": 1,
-  "key": "frontend.user_data_13475ff9b07c447c980258c9d4b5af72",
+  "key": "frontend.user_data_ef6b57fd674242e5bd2c71cc89896ebe",
   "data": {
     "language": {
-      "language": "en-GB",
+      "language": "es",
       "number_format": "language",
       "time_format": "language",
       "date_format": "language",
       "time_zone": "local",
       "first_weekday": "language"
     },
-    "core": {
-      "showAdvanced": true
-    },
     "sidebar": {
       "panelOrder": [
-        "my-home",
-        "todo",
+        "mushroom-test",
         "map",
-        "hacs",
-        "logbook",
-        "history",
-        "developer-tools"
+        "todo"
       ],
       "hiddenPanels": [
+        "lovelace",
+        "history",
         "media-browser",
-        "energy"
+        "energy",
+        "logbook"
       ]
     }
   }

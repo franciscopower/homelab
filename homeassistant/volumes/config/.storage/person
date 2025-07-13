@@ -12,6 +12,15 @@
           "device_tracker.wvnq93vm7r"
         ],
         "picture": "/api/image/serve/c2a651ecb094f38f4e68a1e806f579b1/512x512"
+      },
+      {
+        "id": "angelica",
+        "name": "Angélica",
+        "device_trackers": [
+          "device_tracker.cph2465"
+        ],
+        "user_id": "ef6b57fd674242e5bd2c71cc89896ebe",
+        "picture": "/api/image/serve/ad069fc142f4dbeaad4e7aba02df05bd/512x512"
       }
     ]
   }
