@@ -1,0 +1,705 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.my_home",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Home",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:flash",
+                  "heading": "Essentials",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.google_travel_time",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Travel time to work",
+                  "icon": "mdi:map-marker-distance"
+                },
+                {
+                  "type": "tile",
+                  "entity": "vacuum.xiaomi_d106gl_b255_robot_cleaner",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "visibility": [
+                    {
+                      "condition": "or",
+                      "conditions": [
+                        {
+                          "condition": "state",
+                          "entity": "vacuum.xiaomi_d106gl_b255_robot_cleaner",
+                          "state": "returning"
+                        },
+                        {
+                          "condition": "state",
+                          "entity": "vacuum.xiaomi_d106gl_b255_robot_cleaner",
+                          "state": "cleaning"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:entity-progress-card",
+                  "unit": "%",
+                  "decimal": 0,
+                  "name": "Program Progress",
+                  "bar_size": "medium",
+                  "color": "accent",
+                  "entity": "sensor.403100542121000104_bsh_common_option_programprogress",
+                  "max_value": 100,
+                  "min_value": 0,
+                  "icon": "mdi:dishwasher",
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  },
+                  "visibility": [
+                    {
+                      "condition": "numeric_state",
+                      "entity": "sensor.403100542121000104_bsh_common_option_programprogress",
+                      "above": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.bedroom_light",
+                  "fill_container": false,
+                  "icon": "mdi:ceiling-light",
+                  "show_brightness_control": true,
+                  "show_color_temp_control": true,
+                  "show_color_control": false,
+                  "use_light_color": true,
+                  "collapsible_controls": false
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.ellies_light",
+                  "icon": "mdi:ceiling-light",
+                  "use_light_color": true,
+                  "show_brightness_control": true,
+                  "show_color_temp_control": true,
+                  "collapsible_controls": false
+                }
+              ],
+              "visibility": [
+                {
+                  "condition": "state",
+                  "entity": "sun.sun",
+                  "state": "below_horizon"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "custom:entity-progress-card",
+                  "entity": "sensor.p1s_01p00a460501268_print_progress",
+                  "max_value": 100,
+                  "min_value": 0,
+                  "icon": "mdi:printer-3d",
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.p1s_01p00a460501268_end_time",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  },
+                  "icon": "mdi:clock"
+                },
+                {
+                  "show_state": false,
+                  "show_name": false,
+                  "camera_view": "auto",
+                  "fit_mode": "cover",
+                  "type": "picture-entity",
+                  "entity": "camera.p1s_01p00a460501268_camera",
+                  "image": "https://demo.home-assistant.io/stub_config/bedroom.png",
+                  "camera_image": "camera.p1s_01p00a460501268_camera"
+                }
+              ],
+              "visibility": [
+                {
+                  "condition": "state",
+                  "entity": "sensor.p1s_01p00a460501268_current_stage",
+                  "state_not": "offline"
+                },
+                {
+                  "condition": "state",
+                  "entity": "sensor.p1s_01p00a460501268_current_stage",
+                  "state_not": "idle"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Jump to…",
+                  "heading_style": "title",
+                  "icon": "mdi:arrow-decision"
+                },
+                {
+                  "alert_classes": [
+                    "motion",
+                    "moisture"
+                  ],
+                  "sensor_classes": [
+                    "temperature",
+                    "humidity"
+                  ],
+                  "features_position": "bottom",
+                  "display_type": "picture",
+                  "type": "area",
+                  "area": "bedroom",
+                  "color": "",
+                  "navigation_path": "/my-home/master-bedroom"
+                },
+                {
+                  "alert_classes": [
+                    "motion",
+                    "moisture"
+                  ],
+                  "sensor_classes": [
+                    "temperature",
+                    "humidity"
+                  ],
+                  "features_position": "bottom",
+                  "display_type": "picture",
+                  "type": "area",
+                  "area": "living_room",
+                  "color": "",
+                  "navigation_path": "/my-home/living-room"
+                },
+                {
+                  "alert_classes": [
+                    "motion",
+                    "moisture"
+                  ],
+                  "sensor_classes": [
+                    "temperature",
+                    "humidity"
+                  ],
+                  "features_position": "bottom",
+                  "display_type": "picture",
+                  "type": "area",
+                  "area": "kitchen",
+                  "color": "",
+                  "navigation_path": "/my-home/kitchen"
+                },
+                {
+                  "alert_classes": [
+                    "motion",
+                    "moisture"
+                  ],
+                  "sensor_classes": [
+                    "temperature",
+                    "humidity"
+                  ],
+                  "features_position": "bottom",
+                  "display_type": "picture",
+                  "type": "area",
+                  "area": "ellie_s_room",
+                  "color": "",
+                  "navigation_path": "/my-home/ellie-room"
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "Common areas",
+                  "icon": "mdi:texture-box"
+                },
+                {
+                  "type": "custom:mushroom-vacuum-card",
+                  "entity": "vacuum.xiaomi_d106gl_b255_robot_cleaner",
+                  "icon_animation": true,
+                  "commands": [
+                    "on_off",
+                    "start_pause",
+                    "stop",
+                    "locate",
+                    "clean_spot",
+                    "return_home"
+                  ],
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 2
+                  },
+                  "name": "Little Sucker"
+                }
+              ]
+            }
+          ],
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "person.francisco_power",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "person.angelica",
+              "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "weather.forecast_home",
+              "show_entity_picture": true,
+              "state_content": [
+                "temperature",
+                "state"
+              ]
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "conversation.google_ai_conversation_2",
+              "name": "AI",
+              "icon": "mdi:creation"
+            }
+          ],
+          "header": {
+            "card": {
+              "type": "markdown",
+              "content": "# Welcome home, {{ user }}",
+              "text_only": true
+            }
+          },
+          "type": "sections",
+          "icon": "mdi:home",
+          "cards": [],
+          "max_columns": 2
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Living room ",
+          "path": "living-room",
+          "icon": "mdi:sofa",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "icon": "mdi:lightbulb",
+                  "heading_style": "title",
+                  "heading": "Lights "
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.living_room_press",
+                  "icon": "mdi:wardrobe",
+                  "use_light_color": true,
+                  "show_brightness_control": true,
+                  "show_color_control": true
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "3D Printer",
+                  "icon": "mdi:printer-3d"
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.p1s_01p00a460501268_end_time",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  },
+                  "icon": "mdi:clock",
+                  "visibility": [
+                    {
+                      "condition": "state",
+                      "entity": "sensor.p1s_01p00a460501268_print_progress",
+                      "state_not": "unavailable"
+                    },
+                    {
+                      "condition": "state",
+                      "entity": "sensor.p1s_01p00a460501268_print_progress",
+                      "state_not": "unknown"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:entity-progress-card",
+                  "entity": "sensor.p1s_01p00a460501268_print_progress",
+                  "max_value": 100,
+                  "min_value": 0,
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  },
+                  "visibility": [
+                    {
+                      "condition": "state",
+                      "entity": "sensor.p1s_01p00a460501268_print_status",
+                      "state_not": "idle"
+                    },
+                    {
+                      "condition": "state",
+                      "entity": "sensor.p1s_01p00a460501268_print_status",
+                      "state_not": "offline"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:ha-bambulab-ams-card",
+                  "entity": "",
+                  "header": "",
+                  "subtitle": "",
+                  "style": "graphic",
+                  "ams": "705ce4578344f050bb21c0695f42c283",
+                  "show_info_bar": true,
+                  "custom_humidity": "sensor.p1s_01p00a460501268_ams_1_humidity",
+                  "custom_temperature": "sensor.p1s_01p00a460501268_ams_1_temperature",
+                  "show_type": true
+                },
+                {
+                  "type": "custom:ha-bambulab-print_status-card",
+                  "printer": "1d97c8896f7946d1160adc9afa471828",
+                  "custom_power": "switch.3d_printer_outlet",
+                  "style": "graphic",
+                  "custom_light": "light.p1s_01p00a460501268_chamber_light",
+                  "custom_camera": "camera.p1s_01p00a460501268_camera"
+                },
+                {
+                  "show_state": false,
+                  "show_name": false,
+                  "camera_view": "auto",
+                  "fit_mode": "cover",
+                  "type": "picture-entity",
+                  "entity": "camera.p1s_01p00a460501268_camera",
+                  "image": "https://demo.home-assistant.io/stub_config/bedroom.png",
+                  "camera_image": "camera.p1s_01p00a460501268_camera",
+                  "visibility": [
+                    {
+                      "condition": "state",
+                      "entity": "sensor.p1s_01p00a460501268_current_stage",
+                      "state_not": "idle"
+                    },
+                    {
+                      "condition": "state",
+                      "entity": "sensor.p1s_01p00a460501268_current_stage",
+                      "state_not": "offline"
+                    }
+                  ]
+                }
+              ],
+              "visibility": [
+                {
+                  "condition": "user",
+                  "users": [
+                    "13475ff9b07c447c980258c9d4b5af72"
+                  ]
+                }
+              ]
+            }
+          ],
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "## Work, rest and anything in between"
+            }
+          },
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.3d_printer_humidity_sensor_temperature"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.3d_printer_humidity_sensor_humidity"
+            }
+          ]
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Kitchen ",
+          "path": "kitchen",
+          "icon": "mdi:countertop",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "Dish washer ",
+                  "icon": "mdi:dishwasher"
+                },
+                {
+                  "type": "custom:mushroom-chips-card",
+                  "chips": [
+                    {
+                      "type": "entity",
+                      "entity": "binary_sensor.403100542121000104_bsh_common_setting_childlock",
+                      "icon": "mdi:lock",
+                      "use_entity_picture": false
+                    },
+                    {
+                      "type": "entity",
+                      "entity": "binary_sensor.403100542121000104_bsh_common_status_doorstate"
+                    },
+                    {
+                      "type": "entity",
+                      "entity": "sensor.403100542121000104_bsh_common_option_remainingprogramtime",
+                      "icon": "mdi:timer"
+                    },
+                    {
+                      "type": "entity",
+                      "entity": "sensor.403100542121000104_selected_program"
+                    }
+                  ],
+                  "alignment": "center"
+                },
+                {
+                  "type": "custom:entity-progress-card",
+                  "unit": "%",
+                  "decimal": 0,
+                  "name": "Program Progress",
+                  "bar_size": "medium",
+                  "color": "accent",
+                  "entity": "sensor.403100542121000104_bsh_common_option_programprogress",
+                  "max_value": 100,
+                  "min_value": 0,
+                  "icon": "mdi:dishwasher",
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  }
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.403100542121000104_bsh_common_setting_powerstate",
+                  "icon": "mdi:power",
+                  "name": "Power",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.403100542121000104_bsh_common_setting_childlock",
+                  "icon": "mdi:lock",
+                  "name": "Childproof Lock",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-select-card",
+                  "entity": "select.403100542121000104_programs",
+                  "name": "Program",
+                  "secondary_info": "none"
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_variospeedplus",
+                  "name": "SpeedPerfect +",
+                  "icon": "mdi:speedometer",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_hygieneplus",
+                  "icon": "mdi:air-filter",
+                  "name": "Hygene +",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_halfload",
+                  "icon": "mdi:fraction-one-half",
+                  "name": "Half Load",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_ecodry",
+                  "icon": "mdi:leaf",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "name": "Eco Dry"
+                },
+                {
+                  "show_name": false,
+                  "show_icon": true,
+                  "type": "button",
+                  "entity": "button.403100542121000104_start_pause",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 1
+                  },
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "show_name": false,
+                  "show_icon": true,
+                  "type": "button",
+                  "entity": "button.403100542121000104_stop",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 1
+                  },
+                  "hold_action": {
+                    "action": "toggle"
+                  }
+                }
+              ],
+              "column_span": 1
+            }
+          ],
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "## 🥗 How can I help you cook?"
+            }
+          },
+          "badges": []
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Master Bedroom",
+          "path": "master-bedroom",
+          "icon": "mdi:bed-king",
+          "subview": false,
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "Lights",
+                  "icon": "mdi:lightbulb"
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.bedroom_light",
+                  "icon": "mdi:ceiling-light",
+                  "use_light_color": true,
+                  "show_brightness_control": true,
+                  "show_color_temp_control": true,
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 2
+                  }
+                }
+              ]
+            }
+          ],
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "## ✨ Where the magic happens"
+            }
+          }
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Ellie’s room",
+          "path": "ellie-room",
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "Lights",
+                  "icon": "mdi:lightbulb"
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.ellies_light",
+                  "icon": "mdi:ceiling-light",
+                  "use_light_color": true,
+                  "show_color_temp_control": true,
+                  "show_brightness_control": true
+                }
+              ]
+            }
+          ],
+          "icon": "mdi:baby-carriage",
+          "cards": [],
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "## 🐣 Ellie's Mansion"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

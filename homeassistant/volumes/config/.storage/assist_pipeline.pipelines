@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "minor_version": 2,
+  "key": "assist_pipeline.pipelines",
+  "data": {
+    "items": [
+      {
+        "conversation_engine": "conversation.home_assistant",
+        "conversation_language": "en",
+        "id": "01k0008m8atbtm1fxryn2wwyxz",
+        "language": "en",
+        "name": "Home Assistant",
+        "stt_engine": null,
+        "stt_language": null,
+        "tts_engine": null,
+        "tts_language": null,
+        "tts_voice": null,
+        "wake_word_entity": null,
+        "wake_word_id": null,
+        "prefer_local_intents": false
+      },
+      {
+        "conversation_engine": "conversation.google_ai_conversation",
+        "conversation_language": "*",
+        "id": "01k0emskddm7901zt6gvebh6xn",
+        "language": "en",
+        "name": "Gemini Assistant",
+        "stt_engine": null,
+        "stt_language": null,
+        "tts_engine": "tts.google_ai_tts",
+        "tts_language": "en-US",
+        "tts_voice": "zephyr",
+        "wake_word_entity": null,
+        "wake_word_id": null,
+        "prefer_local_intents": true
+      }
+    ],
+    "preferred_item": "01k0emskddm7901zt6gvebh6xn"
+  }
+}

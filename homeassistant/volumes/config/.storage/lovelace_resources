@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace_resources",
+  "data": {
+    "items": [
+      {
+        "id": "b0e5d34fbb3e43e2a4c4949ccfb7e715",
+        "url": "/hacsfiles/lovelace-mushroom/mushroom.js?hacstag=444350375440",
+        "type": "module"
+      },
+      {
+        "id": "ad43b1cea680497ba741766053761ca8",
+        "url": "/bambu_lab/ha-bambulab-cards.js?v=0.5.11",
+        "type": "module"
+      },
+      {
+        "id": "7b4757e000e04b76826b2e278d259559",
+        "url": "/hacsfiles/lovelace-entity-progress-card/entity-progress-card.js?hacstag=9088685221412",
+        "type": "module"
+      },
+      {
+        "id": "93bbc4903b844489919851c5631081a7",
+        "url": "/hacsfiles/universal-remote-card/universal-remote-card.min.js?hacstag=654393646464",
+        "type": "module"
+      }
+    ]
+  }
+}
