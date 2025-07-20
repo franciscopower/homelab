@@ -10,6 +10,9 @@ custom_components/
 backups/
 *.db*
 
+##### Adguard volumes
+adguard/volumes/
+
 ##### Python defaults (for general apps and plugins)
 
 # Byte-compiled / optimized / DLL files
