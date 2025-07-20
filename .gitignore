@@ -1,7 +1,7 @@
 secret*
 .env
 
-##### Home assistant specific folders
+##### Home assistant specific directories
 *.log*
 auth*
 core.*
@@ -12,6 +12,10 @@ backups/
 
 ##### Adguard volumes
 adguard/volumes/
+
+##### Nginx proxy specific directories
+*.sqlite
+keys.json
 
 ##### Python defaults (for general apps and plugins)
 
