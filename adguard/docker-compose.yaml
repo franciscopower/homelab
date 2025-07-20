@@ -10,4 +10,11 @@ services:
       - 53:53/tcp
       - 53:53/udp
       - 3000:3000/tcp
+    networks:
+        - proxy
+
+networks:
+  proxy:
+    name: nginx-proxy_proxy
+    external: true
 
