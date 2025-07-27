@@ -6,7 +6,7 @@
     "items": [
       {
         "id": "b0e5d34fbb3e43e2a4c4949ccfb7e715",
-        "url": "/hacsfiles/lovelace-mushroom/mushroom.js?hacstag=444350375440",
+        "url": "/hacsfiles/lovelace-mushroom/mushroom.js?hacstag=444350375450",
         "type": "module"
       },
       {
@@ -21,7 +21,7 @@
       },
       {
         "id": "93bbc4903b844489919851c5631081a7",
-        "url": "/hacsfiles/universal-remote-card/universal-remote-card.min.js?hacstag=654393646464",
+        "url": "/hacsfiles/universal-remote-card/universal-remote-card.min.js?hacstag=654393646465",
         "type": "module"
       }
     ]

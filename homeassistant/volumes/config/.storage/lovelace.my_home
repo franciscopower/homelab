@@ -19,14 +19,6 @@
                 },
                 {
                   "type": "tile",
-                  "entity": "sensor.google_travel_time",
-                  "features_position": "bottom",
-                  "vertical": false,
-                  "name": "Travel time to work",
-                  "icon": "mdi:map-marker-distance"
-                },
-                {
-                  "type": "tile",
                   "entity": "vacuum.xiaomi_d106gl_b255_robot_cleaner",
                   "features_position": "bottom",
                   "vertical": false,
@@ -49,27 +41,12 @@
                   ]
                 },
                 {
-                  "type": "custom:entity-progress-card",
-                  "unit": "%",
-                  "decimal": 0,
-                  "name": "Program Progress",
-                  "bar_size": "medium",
-                  "color": "accent",
-                  "entity": "sensor.403100542121000104_bsh_common_option_programprogress",
-                  "max_value": 100,
-                  "min_value": 0,
+                  "type": "tile",
+                  "entity": "sensor.403100542121000104_bsh_common_option_remainingprogramtime",
+                  "features_position": "bottom",
+                  "vertical": false,
                   "icon": "mdi:dishwasher",
-                  "grid_options": {
-                    "columns": 12,
-                    "rows": 1
-                  },
-                  "visibility": [
-                    {
-                      "condition": "numeric_state",
-                      "entity": "sensor.403100542121000104_bsh_common_option_programprogress",
-                      "above": 0
-                    }
-                  ]
+                  "name": "Remaining Time"
                 }
               ]
             },
@@ -278,18 +255,6 @@
             },
             {
               "type": "entity",
-              "show_name": false,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "weather.forecast_home",
-              "show_entity_picture": true,
-              "state_content": [
-                "temperature",
-                "state"
-              ]
-            },
-            {
-              "type": "entity",
               "show_name": true,
               "show_state": false,
               "show_icon": true,
@@ -358,13 +323,13 @@
                   "visibility": [
                     {
                       "condition": "state",
-                      "entity": "sensor.p1s_01p00a460501268_print_progress",
-                      "state_not": "unavailable"
+                      "entity": "sensor.p1s_01p00a460501268_current_stage",
+                      "state_not": "offline"
                     },
                     {
                       "condition": "state",
-                      "entity": "sensor.p1s_01p00a460501268_print_progress",
-                      "state_not": "unknown"
+                      "entity": "sensor.p1s_01p00a460501268_current_stage",
+                      "state_not": "idle"
                     }
                   ]
                 },
@@ -380,12 +345,12 @@
                   "visibility": [
                     {
                       "condition": "state",
-                      "entity": "sensor.p1s_01p00a460501268_print_status",
+                      "entity": "sensor.p1s_01p00a460501268_current_stage",
                       "state_not": "idle"
                     },
                     {
                       "condition": "state",
-                      "entity": "sensor.p1s_01p00a460501268_print_status",
+                      "entity": "sensor.p1s_01p00a460501268_current_stage",
                       "state_not": "offline"
                     }
                   ]
@@ -405,7 +370,6 @@
                 {
                   "type": "custom:ha-bambulab-print_status-card",
                   "printer": "1d97c8896f7946d1160adc9afa471828",
-                  "custom_power": "switch.3d_printer_outlet",
                   "style": "graphic",
                   "custom_light": "light.p1s_01p00a460501268_chamber_light",
                   "custom_camera": "camera.p1s_01p00a460501268_camera"
@@ -479,8 +443,8 @@
               "cards": [
                 {
                   "type": "heading",
+                  "heading": "Dishwasher",
                   "heading_style": "title",
-                  "heading": "Dish washer ",
                   "icon": "mdi:dishwasher"
                 },
                 {
@@ -488,101 +452,68 @@
                   "chips": [
                     {
                       "type": "entity",
-                      "entity": "binary_sensor.403100542121000104_bsh_common_setting_childlock",
-                      "icon": "mdi:lock",
-                      "use_entity_picture": false
+                      "entity": "switch.403100542121000104_bsh_common_setting_powerstate",
+                      "icon": "mdi:power"
                     },
                     {
                       "type": "entity",
                       "entity": "binary_sensor.403100542121000104_bsh_common_status_doorstate"
-                    },
-                    {
-                      "type": "entity",
-                      "entity": "sensor.403100542121000104_bsh_common_option_remainingprogramtime",
-                      "icon": "mdi:timer"
-                    },
-                    {
-                      "type": "entity",
-                      "entity": "sensor.403100542121000104_selected_program"
                     }
                   ],
                   "alignment": "center"
                 },
                 {
-                  "type": "custom:entity-progress-card",
-                  "unit": "%",
-                  "decimal": 0,
-                  "name": "Program Progress",
-                  "bar_size": "medium",
-                  "color": "accent",
-                  "entity": "sensor.403100542121000104_bsh_common_option_programprogress",
-                  "max_value": 100,
-                  "min_value": 0,
-                  "icon": "mdi:dishwasher",
-                  "grid_options": {
-                    "columns": 12,
-                    "rows": 1
-                  }
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "switch.403100542121000104_bsh_common_setting_powerstate",
-                  "icon": "mdi:power",
-                  "name": "Power",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
+                  "type": "custom:mushroom-select-card",
+                  "entity": "select.403100542121000104_programs",
+                  "name": "Select Program"
                 },
                 {
                   "type": "custom:mushroom-entity-card",
                   "entity": "switch.403100542121000104_bsh_common_setting_childlock",
                   "icon": "mdi:lock",
-                  "name": "Childproof Lock",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "custom:mushroom-select-card",
-                  "entity": "select.403100542121000104_programs",
-                  "name": "Program",
-                  "secondary_info": "none"
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_variospeedplus",
-                  "name": "SpeedPerfect +",
-                  "icon": "mdi:speedometer",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_hygieneplus",
-                  "icon": "mdi:air-filter",
-                  "name": "Hygene +",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_halfload",
-                  "icon": "mdi:fraction-one-half",
-                  "name": "Half Load",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_ecodry",
-                  "icon": "mdi:leaf",
                   "tap_action": {
                     "action": "toggle"
                   },
-                  "name": "Eco Dry"
+                  "name": "Childproof Lock"
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_hygieneplus",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "icon_tap_action": {
+                    "action": "more-info"
+                  },
+                  "icon": "mdi:air-filter",
+                  "name": "Hygene +"
+                },
+                {
+                  "type": "tile",
+                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_halfload",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Half Load",
+                  "icon": "mdi:fraction-one-half",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "binary_sensor.403100542121000104_dishcare_dishwasher_option_variospeedplus",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Speed Perfect +",
+                  "icon": "mdi:speedometer",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "icon_tap_action": {
+                    "action": "more-info"
+                  }
                 },
                 {
                   "show_name": false,
@@ -598,6 +529,11 @@
                   }
                 },
                 {
+                  "type": "custom:mushroom-select-card",
+                  "entity": "select.403100542121000104_bsh_common_option_startinrelative",
+                  "name": "Start Time"
+                },
+                {
                   "show_name": false,
                   "show_icon": true,
                   "type": "button",
@@ -606,12 +542,14 @@
                     "columns": 6,
                     "rows": 1
                   },
+                  "tap_action": {
+                    "action": "more-info"
+                  },
                   "hold_action": {
                     "action": "toggle"
                   }
                 }
-              ],
-              "column_span": 1
+              ]
             }
           ],
           "header": {

@@ -3,6 +3,56 @@
   "minor_version": 2,
   "key": "repairs.issue_registry",
   "data": {
-    "issues": []
+    "issues": [
+      {
+        "created": "2025-06-27T00:06:33.830819+00:00",
+        "dismissed_version": "2025.7.1",
+        "domain": "bambu_lab",
+        "is_persistent": false,
+        "issue_id": "authentication_failed_01P00A460501268_1750982793"
+      },
+      {
+        "created": "2025-06-27T04:54:59.808363+00:00",
+        "dismissed_version": "2025.7.1",
+        "domain": "bambu_lab",
+        "is_persistent": false,
+        "issue_id": "authentication_failed_01P00A460501268_1751000099"
+      },
+      {
+        "created": "2025-06-27T08:38:11.904525+00:00",
+        "dismissed_version": "2025.7.1",
+        "domain": "bambu_lab",
+        "is_persistent": false,
+        "issue_id": "authentication_failed_01P00A460501268_1751013491"
+      },
+      {
+        "created": "2025-07-27T16:48:16.270326+00:00",
+        "dismissed_version": "2025.7.1",
+        "domain": "bambu_lab",
+        "is_persistent": false,
+        "issue_id": "authentication_failed_01P00A460501268_1753634896"
+      },
+      {
+        "created": "2025-07-27T17:01:27.559310+00:00",
+        "dismissed_version": "2025.7.1",
+        "domain": "bambu_lab",
+        "is_persistent": false,
+        "issue_id": "authentication_failed_01P00A460501268_1753635687"
+      },
+      {
+        "created": "2025-07-27T18:06:23.625764+00:00",
+        "dismissed_version": "2025.7.1",
+        "domain": "bambu_lab",
+        "is_persistent": false,
+        "issue_id": "authentication_failed_01P00A460501268_1753639583"
+      },
+      {
+        "created": "2025-07-27T18:09:38.197051+00:00",
+        "dismissed_version": null,
+        "domain": "bambu_lab",
+        "is_persistent": false,
+        "issue_id": "authentication_failed_01P00A460501268_1753639778"
+      }
+    ]
   }
 }
