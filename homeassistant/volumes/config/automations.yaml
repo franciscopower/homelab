@@ -1,1 +1,81 @@
-[]
+- id: '1753398280332'
+  alias: 'Leaving home '
+  description: ''
+  triggers:
+  - trigger: zone
+    entity_id: person.angelica
+    zone: zone.home
+    event: leave
+  conditions:
+  - condition: zone
+    entity_id: person.francisco_power
+    zone: zone.home
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id:
+      - 99101c0bcd66d8e4d3532b7c03afbc44
+      - 9ac24b0298e6df6ceda384d3384f4590
+      - d146f6075d24738d742ae8ec63d3ed4d
+      - 36ba8d8d619f76af150f27bb1f18c4f7
+  mode: single
+- id: '1753399106551'
+  alias: 'Lights out at night '
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - sensor.wvnq93vm7r_battery_state
+    attribute: Charging
+    from: Not Charging
+    to: Charging
+  conditions:
+  - condition: zone
+    entity_id: person.francisco_power
+    zone: zone.home
+  - condition: time
+    after: '23:00:00'
+    before: 02:00:00
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id:
+      - d146f6075d24738d742ae8ec63d3ed4d
+      - 36ba8d8d619f76af150f27bb1f18c4f7
+  - action: light.turn_on
+    metadata: {}
+    data:
+      brightness_pct: 10
+      color_temp_kelvin: 2000
+    target:
+      device_id: 99101c0bcd66d8e4d3532b7c03afbc44
+  mode: single
+- id: '1753700249742'
+  alias: Leaving Work
+  description: ''
+  triggers:
+  - device_id: d63398366a8d1b9dd522022508ea86c0
+    domain: device_tracker
+    entity_id: 0699e303e55ba01731f28833c2e614ac
+    type: leaves
+    trigger: device
+    zone: zone.frankie_s_work
+  conditions:
+  - condition: time
+    after: '16:00:00'
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  actions:
+  - device_id: a01d0ee4428dd29d1eaf512d4e7fe2c3
+    domain: mobile_app
+    type: notify
+    message: Frankie's leaving work!
+  mode: single

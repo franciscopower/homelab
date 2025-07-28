@@ -1,0 +1,40 @@
+- id: '1753722910654'
+  name: New scene
+  entities:
+    light.bedroom_light:
+      min_color_temp_kelvin: 2500
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 400
+      effect_list:
+      - 'Off'
+      - Party
+      - Relax
+      supported_color_modes:
+      - color_temp
+      - hs
+      effect: 'off'
+      color_mode: color_temp
+      brightness: 115
+      color_temp_kelvin: 2500
+      color_temp: 400
+      hs_color:
+      - 28.874
+      - 72.522
+      rgb_color:
+      - 255
+      - 159
+      - 70
+      xy_color:
+      - 0.546
+      - 0.389
+      friendly_name: 'Bedroom Light '
+      supported_features: 36
+      state: 'on'
+    switch.bedside_table:
+      device_class: switch
+      icon: mdi:lamp
+      friendly_name: Bedside table light
+      state: 'on'
+  icon: mdi:lightbulb-night
+  metadata: {}

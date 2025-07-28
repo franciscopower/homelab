@@ -21,6 +21,15 @@
         "require_admin": false,
         "mode": "storage",
         "url_path": "my-home"
+      },
+      {
+        "id": "dashboard_tests",
+        "show_in_sidebar": true,
+        "icon": "mdi:test-tube",
+        "title": "Tests",
+        "require_admin": true,
+        "mode": "storage",
+        "url_path": "dashboard-tests"
       }
     ]
   }

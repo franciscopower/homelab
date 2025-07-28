@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.dashboard_tests",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Tests",
+          "type": "sections",
+          "max_columns": 4,
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "New section"
+                },
+                {
+                  "type": "custom:big-slider-card",
+                  "entity": "light.living_room_press"
+                }
+              ]
+            }
+          ],
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "# Dashboard tests"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

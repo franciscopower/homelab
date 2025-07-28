@@ -5,12 +5,6 @@
   "data": {
     "backups": [
       {
-        "backup_id": "438c7172",
-        "failed_addons": [],
-        "failed_agent_ids": [],
-        "failed_folders": []
-      },
-      {
         "backup_id": "59f36187",
         "failed_addons": [],
         "failed_agent_ids": [],
@@ -18,6 +12,12 @@
       },
       {
         "backup_id": "fc542c59",
+        "failed_addons": [],
+        "failed_agent_ids": [],
+        "failed_folders": []
+      },
+      {
+        "backup_id": "a62a5422",
         "failed_addons": [],
         "failed_agent_ids": [],
         "failed_folders": []
@@ -37,8 +37,8 @@
         "name": null,
         "password": "215K-OOSA-QA2N-2QE9-JCRY-05WD-EHHD"
       },
-      "last_attempted_automatic_backup": "2025-07-25T05:20:11.001784+01:00",
-      "last_completed_automatic_backup": "2025-07-25T05:20:30.523280+01:00",
+      "last_attempted_automatic_backup": "2025-07-28T05:08:53.000697+01:00",
+      "last_completed_automatic_backup": "2025-07-28T05:09:23.089813+01:00",
       "retention": {
         "copies": 3,
         "days": null

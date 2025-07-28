@@ -41,12 +41,26 @@
                   ]
                 },
                 {
-                  "type": "tile",
-                  "entity": "sensor.403100542121000104_bsh_common_option_remainingprogramtime",
-                  "features_position": "bottom",
-                  "vertical": false,
+                  "type": "custom:entity-progress-card",
+                  "entity": "sensor.403100542121000104_bsh_common_option_programprogress",
+                  "name": "Program progress ",
                   "icon": "mdi:dishwasher",
-                  "name": "Remaining Time"
+                  "visibility": [
+                    {
+                      "condition": "state",
+                      "entity": "sensor.403100542121000104_bsh_common_option_programprogress",
+                      "state_not": "unavailable"
+                    },
+                    {
+                      "condition": "state",
+                      "entity": "sensor.403100542121000104_bsh_common_option_programprogress",
+                      "state_not": "unknown"
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  }
                 }
               ]
             },
@@ -463,6 +477,28 @@
                   "alignment": "center"
                 },
                 {
+                  "type": "custom:entity-progress-card",
+                  "entity": "sensor.403100542121000104_bsh_common_option_programprogress",
+                  "name": "Program progress ",
+                  "icon": "mdi:dishwasher",
+                  "visibility": [
+                    {
+                      "condition": "state",
+                      "entity": "sensor.403100542121000104_bsh_common_option_programprogress",
+                      "state_not": "unavailable"
+                    },
+                    {
+                      "condition": "state",
+                      "entity": "sensor.403100542121000104_bsh_common_option_programprogress",
+                      "state_not": "unknown"
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  }
+                },
+                {
                   "type": "custom:mushroom-select-card",
                   "entity": "select.403100542121000104_programs",
                   "name": "Select Program"
@@ -475,6 +511,15 @@
                     "action": "toggle"
                   },
                   "name": "Childproof Lock"
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_ecodry",
+                  "name": "Eco Dry",
+                  "icon": "mdi:leaf",
+                  "tap_action": {
+                    "action": "toggle"
+                  }
                 },
                 {
                   "type": "tile",
@@ -559,7 +604,22 @@
               "content": "## 🥗 How can I help you cook?"
             }
           },
-          "badges": []
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "light.kitchen_cabinet",
+              "tap_action": {
+                "action": "toggle"
+              },
+              "hold_action": {
+                "action": "more-info"
+              },
+              "icon": "mdi:led-strip-variant"
+            }
+          ]
         },
         {
           "type": "sections",
@@ -579,16 +639,20 @@
                   "icon": "mdi:lightbulb"
                 },
                 {
-                  "type": "custom:mushroom-light-card",
+                  "type": "custom:big-slider-card",
                   "entity": "light.bedroom_light",
-                  "icon": "mdi:ceiling-light",
-                  "use_light_color": true,
-                  "show_brightness_control": true,
-                  "show_color_temp_control": true,
                   "grid_options": {
-                    "columns": 12,
-                    "rows": 2
+                    "columns": 6,
+                    "rows": 1
                   }
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.bedside_table",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "icon_color": "orange"
                 }
               ]
             }
@@ -622,7 +686,11 @@
                   "icon": "mdi:ceiling-light",
                   "use_light_color": true,
                   "show_color_temp_control": true,
-                  "show_brightness_control": true
+                  "show_brightness_control": true,
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 2
+                  }
                 }
               ]
             }

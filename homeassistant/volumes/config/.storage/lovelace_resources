@@ -23,6 +23,16 @@
         "id": "93bbc4903b844489919851c5631081a7",
         "url": "/hacsfiles/universal-remote-card/universal-remote-card.min.js?hacstag=654393646465",
         "type": "module"
+      },
+      {
+        "id": "324c32cd0038430ea395649d133c1469",
+        "url": "/hacsfiles/room-card-minimalist/room-card-minimalist.js?hacstag=1020949375102",
+        "type": "module"
+      },
+      {
+        "id": "bbffe03e1ecd4f8c97ada1bc8ad14a12",
+        "url": "/hacsfiles/lovelace-big-slider-card/big-slider-card.js?hacstag=332589148115",
+        "type": "module"
       }
     ]
   }
