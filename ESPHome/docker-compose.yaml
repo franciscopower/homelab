@@ -1,0 +1,20 @@
+services:
+  esphome:
+    image: ghcr.io/imagegenius/esphome:latest
+    container_name: esphome
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Lisbon
+      - ESPHOME_DASHBOARD_USE_PING=true
+    volumes:
+      - ./volumes/config:/config
+    restart: unless-stopped
+    networks:
+        - proxy
+
+networks:
+  proxy:
+    name: nginx-proxy_proxy
+    external: true
+
