@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.esp_home",
+  "data": {
+    "config": {
+      "strategy": {
+        "type": "iframe",
+        "url": "http://esphome.lan"
+      }
+    }
+  }
+}

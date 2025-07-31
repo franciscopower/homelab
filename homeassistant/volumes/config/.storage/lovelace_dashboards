@@ -30,6 +30,24 @@
         "require_admin": true,
         "mode": "storage",
         "url_path": "dashboard-tests"
+      },
+      {
+        "id": "esp_home",
+        "show_in_sidebar": true,
+        "icon": "mdi:chip",
+        "title": "ESP Home",
+        "require_admin": true,
+        "mode": "storage",
+        "url_path": "esp-home"
+      },
+      {
+        "id": "battery_status",
+        "show_in_sidebar": true,
+        "icon": "mdi:battery-charging",
+        "title": "Battery Status",
+        "require_admin": true,
+        "mode": "storage",
+        "url_path": "battery-status"
       }
     ]
   }

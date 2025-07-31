@@ -68,24 +68,29 @@
               "type": "grid",
               "cards": [
                 {
-                  "type": "custom:mushroom-light-card",
+                  "type": "custom:big-slider-card",
                   "entity": "light.bedroom_light",
-                  "fill_container": false,
-                  "icon": "mdi:ceiling-light",
-                  "show_brightness_control": true,
-                  "show_color_temp_control": true,
-                  "show_color_control": false,
-                  "use_light_color": true,
-                  "collapsible_controls": false
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 1
+                  }
                 },
                 {
-                  "type": "custom:mushroom-light-card",
+                  "type": "custom:big-slider-card",
                   "entity": "light.ellies_light",
-                  "icon": "mdi:ceiling-light",
-                  "use_light_color": true,
-                  "show_brightness_control": true,
-                  "show_color_temp_control": true,
-                  "collapsible_controls": false
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 1
+                  }
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.bedside_table",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "icon_color": "orange",
+                  "name": "Bedside Table "
                 }
               ],
               "visibility": [
@@ -287,7 +292,7 @@
           "type": "sections",
           "icon": "mdi:home",
           "cards": [],
-          "max_columns": 2
+          "max_columns": 3
         },
         {
           "type": "sections",
@@ -312,6 +317,26 @@
                   "use_light_color": true,
                   "show_brightness_control": true,
                   "show_color_control": true
+                },
+                {
+                  "type": "heading",
+                  "heading": "Climate",
+                  "heading_style": "title",
+                  "icon": "mdi:air-filter"
+                },
+                {
+                  "graph": "line",
+                  "type": "sensor",
+                  "entity": "sensor.3d_printer_humidity_sensor_temperature",
+                  "detail": 1,
+                  "name": "Temperature "
+                },
+                {
+                  "graph": "line",
+                  "type": "sensor",
+                  "entity": "sensor.3d_printer_humidity_sensor_humidity",
+                  "detail": 1,
+                  "name": "Humidity "
                 }
               ]
             },
@@ -444,6 +469,50 @@
               "entity": "sensor.3d_printer_humidity_sensor_humidity"
             }
           ]
+        },
+        {
+          "type": "sections",
+          "max_columns": 4,
+          "title": "Master Bedroom",
+          "path": "master-bedroom",
+          "icon": "mdi:bed-king",
+          "subview": false,
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "Lights",
+                  "icon": "mdi:lightbulb"
+                },
+                {
+                  "type": "custom:big-slider-card",
+                  "entity": "light.bedroom_light",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 1
+                  }
+                },
+                {
+                  "type": "custom:mushroom-entity-card",
+                  "entity": "switch.bedside_table",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "icon_color": "orange"
+                }
+              ]
+            }
+          ],
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "## ✨ Where the magic happens"
+            }
+          }
         },
         {
           "type": "sections",
@@ -608,6 +677,14 @@
             {
               "type": "entity",
               "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.unk_manufacturer_unk_model",
+              "icon": "mdi:motion-sensor"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
               "show_state": true,
               "show_icon": true,
               "entity": "light.kitchen_cabinet",
@@ -620,50 +697,6 @@
               "icon": "mdi:led-strip-variant"
             }
           ]
-        },
-        {
-          "type": "sections",
-          "max_columns": 4,
-          "title": "Master Bedroom",
-          "path": "master-bedroom",
-          "icon": "mdi:bed-king",
-          "subview": false,
-          "sections": [
-            {
-              "type": "grid",
-              "cards": [
-                {
-                  "type": "heading",
-                  "heading_style": "title",
-                  "heading": "Lights",
-                  "icon": "mdi:lightbulb"
-                },
-                {
-                  "type": "custom:big-slider-card",
-                  "entity": "light.bedroom_light",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": 1
-                  }
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "switch.bedside_table",
-                  "tap_action": {
-                    "action": "toggle"
-                  },
-                  "icon_color": "orange"
-                }
-              ]
-            }
-          ],
-          "header": {
-            "card": {
-              "type": "markdown",
-              "text_only": true,
-              "content": "## ✨ Where the magic happens"
-            }
-          }
         },
         {
           "type": "sections",

@@ -6,12 +6,12 @@
     "items": [
       {
         "id": "frankie_s_work",
-        "latitude": 40.670043769320536,
-        "longitude": -8.610041141510012,
+        "latitude": 40.670914482104166,
+        "longitude": -8.6103093624115,
         "name": "Frankie's Work",
         "icon": "mdi:briefcase",
         "passive": false,
-        "radius": 420.0
+        "radius": 295.60468610420963
       }
     ]
   }

@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.battery_status",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Home",
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "# Battery status\nMonitor all devices' batteries"
+            }
+          },
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "Living room",
+                  "icon": "mdi:sofa"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    "sensor.xiaomi_d106gl_b255_battery_level",
+                    "sensor.3d_printer_humidity_sensor_battery"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Master Bedroom",
+                  "heading_style": "title",
+                  "icon": "mdi:bed-king"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    "sensor.tz3000_mrpevh8p_ts0041_battery"
+                  ]
+                },
+                {
+                  "type": "heading",
+                  "icon": "mdi:baby-carriage",
+                  "heading": "Ellie's Room",
+                  "heading_style": "title"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    "sensor.tz3000_mrpevh8p_ts0041_battery_2"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading": "Kitchen",
+                  "heading_style": "title",
+                  "icon": "mdi:countertop"
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    "sensor.unk_manufacturer_unk_model_battery"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

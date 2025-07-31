@@ -49,6 +49,11 @@
             "key": "battery_%",
             "device_class": "battery",
             "entity_category": "diagnostic",
+            "entity_registry_enabled_default": null,
+            "entity_registry_visible_default": null,
+            "force_update": null,
+            "has_entity_name": null,
+            "name": null,
             "native_unit_of_measurement": "%",
             "state_class": "measurement"
           },
@@ -56,15 +61,20 @@
             "key": "voltage_V",
             "device_class": "voltage",
             "entity_category": "diagnostic",
+            "entity_registry_enabled_default": null,
+            "entity_registry_visible_default": null,
+            "force_update": null,
+            "has_entity_name": null,
+            "name": null,
             "native_unit_of_measurement": "V",
             "state_class": "measurement"
           }
         },
         "entity_names": {},
         "entity_data": {
-          "signal_strength___": -69,
-          "temperature___": 26.9,
-          "humidity___": 59,
+          "signal_strength___": -63,
+          "temperature___": 28.6,
+          "humidity___": 51,
           "battery___": 100,
           "voltage___": 3.1
         }

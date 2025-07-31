@@ -12,16 +12,7 @@
           "sections": [
             {
               "type": "grid",
-              "cards": [
-                {
-                  "type": "heading",
-                  "heading": "New section"
-                },
-                {
-                  "type": "custom:big-slider-card",
-                  "entity": "light.living_room_press"
-                }
-              ]
+              "cards": []
             }
           ],
           "header": {

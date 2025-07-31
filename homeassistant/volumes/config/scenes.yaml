@@ -1,5 +1,5 @@
 - id: '1753722910654'
-  name: New scene
+  name: Bedroom bed time
   entities:
     light.bedroom_light:
       min_color_temp_kelvin: 2500
