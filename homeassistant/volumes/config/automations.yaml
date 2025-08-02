@@ -130,12 +130,18 @@
   alias: Kitchen Lights On
   description: ''
   triggers:
-  - type: turned_on
+  - type: occupied
     device_id: 530032e09dab84b6ec0ee6b2a6567a2d
-    entity_id: f5823b59c994363d1cb4df1e660dee2e
+    entity_id: 29a7eefe3dc25e6e50797c5c9fbcdf72
     domain: binary_sensor
     trigger: device
-  conditions: []
+  conditions:
+  - type: is_illuminance
+    condition: device
+    device_id: 530032e09dab84b6ec0ee6b2a6567a2d
+    entity_id: a49bb559f93d3d54e41050e685693bd2
+    domain: sensor
+    below: 2800
   actions:
   - action: light.turn_on
     metadata: {}
@@ -148,15 +154,15 @@
   alias: Kitchen Lights off
   description: ''
   triggers:
-  - trigger: state
-    entity_id:
-    - binary_sensor.unk_manufacturer_unk_model
-    from: 'on'
-    to: 'off'
+  - type: not_occupied
+    device_id: 530032e09dab84b6ec0ee6b2a6567a2d
+    entity_id: 29a7eefe3dc25e6e50797c5c9fbcdf72
+    domain: binary_sensor
+    trigger: device
     for:
       hours: 0
-      minutes: 1
-      seconds: 0
+      minutes: 0
+      seconds: 30
   conditions: []
   actions:
   - action: light.turn_off
@@ -197,4 +203,59 @@
     device_id: 8cc3f355ed7e71b1039c01b8091ecbb3
     entity_id: 0c4fe33636478cc1962a0741f4bf4f36
     domain: switch
+  mode: single
+- id: '1754068982797'
+  alias: Ellie's Room Lights
+  description: ''
+  triggers:
+  - device_id: f77630cb24ee7913a410d278c2ca0700
+    domain: zha
+    type: remote_button_short_press
+    subtype: button_1
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.toggle
+    metadata: {}
+    data: {}
+    target:
+      area_id: ellie_s_room
+  mode: single
+- id: '1754149511411'
+  alias: 'Ellie’s room lights '
+  description: ''
+  triggers:
+  - type: occupied
+    device_id: 6c2e8bafd11f93eaaa92607d68833677
+    entity_id: b09c923070623faacab4d9404b5447cd
+    domain: binary_sensor
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      area_id: ellie_s_room
+  mode: single
+- id: '1754150318889'
+  alias: Ellie's room off
+  description: ''
+  triggers:
+  - type: not_occupied
+    device_id: 6c2e8bafd11f93eaaa92607d68833677
+    entity_id: b09c923070623faacab4d9404b5447cd
+    domain: binary_sensor
+    trigger: device
+    for:
+      hours: 0
+      minutes: 1
+      seconds: 0
+  conditions: []
+  actions:
+  - action: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      area_id: ellie_s_room
   mode: single

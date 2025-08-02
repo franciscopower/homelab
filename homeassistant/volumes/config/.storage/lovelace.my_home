@@ -329,14 +329,17 @@
                   "type": "sensor",
                   "entity": "sensor.3d_printer_humidity_sensor_temperature",
                   "detail": 1,
-                  "name": "Temperature "
+                  "name": "Temperature ",
+                  "hours_to_show": 24,
+                  "limits": {}
                 },
                 {
                   "graph": "line",
                   "type": "sensor",
                   "entity": "sensor.3d_printer_humidity_sensor_humidity",
                   "detail": 1,
-                  "name": "Humidity "
+                  "name": "Humidity ",
+                  "hours_to_show": 24
                 }
               ]
             },
@@ -679,7 +682,7 @@
               "show_name": false,
               "show_state": false,
               "show_icon": true,
-              "entity": "binary_sensor.unk_manufacturer_unk_model",
+              "entity": "binary_sensor.kitchen_motion_sensor_occupancy",
               "icon": "mdi:motion-sensor"
             },
             {

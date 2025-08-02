@@ -2,5 +2,2828 @@
   "version": 1,
   "minor_version": 1,
   "key": "trace.saved_traces",
-  "data": {}
+  "data": {
+    "automation.1753890727945": [
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "401e2c668e09a79720f66810a49a79dc",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T14:46:19.062768+00:00",
+            "finish": "2025-08-01T14:46:19.416775+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890727945",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-08-01T14:46:19.062828+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.kitchen_lights_on",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753890727945",
+                      "last_triggered": "2025-08-01T14:17:29.388533+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Kitchen Lights On"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.467886+00:00",
+                    "last_reported": "2025-08-01T14:17:29.489018+00:00",
+                    "last_updated": "2025-08-01T14:17:29.489018+00:00",
+                    "context": {
+                      "id": "01K1JZXEHCW0EJPN27392K2RXJ",
+                      "parent_id": "01K1JZXEHAMRMP001QVA4241KT",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "device",
+                    "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                    "from_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "off",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:17:44.429151+00:00",
+                      "last_reported": "2025-08-01T14:17:44.429151+00:00",
+                      "last_updated": "2025-08-01T14:17:44.429151+00:00",
+                      "context": {
+                        "id": "01K1JZXX7DZ5CF4AX49GN1175C",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "on",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:46:19.061585+00:00",
+                      "last_reported": "2025-08-01T14:46:19.061585+00:00",
+                      "last_updated": "2025-08-01T14:46:19.061585+00:00",
+                      "context": {
+                        "id": "01K1K1J7NN7DK2KYWGRHPYJ7ZC",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of binary_sensor.unk_manufacturer_unk_model"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-08-01T14:46:19.063006+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01K1K1J7NPD8SGKM1GNMNRGX19",
+                    "parent_id": "01K1K1J7NN7DK2KYWGRHPYJ7ZC",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_on",
+                    "service_data": {
+                      "brightness_pct": 100,
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    },
+                    "target": {
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753890727945",
+            "alias": "Kitchen Lights On",
+            "description": "",
+            "triggers": [
+              {
+                "type": "turned_on",
+                "device_id": "530032e09dab84b6ec0ee6b2a6567a2d",
+                "entity_id": "f5823b59c994363d1cb4df1e660dee2e",
+                "domain": "binary_sensor",
+                "trigger": "device"
+              }
+            ],
+            "conditions": [],
+            "actions": [
+              {
+                "action": "light.turn_on",
+                "metadata": {},
+                "data": {
+                  "brightness_pct": 100
+                },
+                "target": {
+                  "area_id": "kitchen"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1K1J7NPD8SGKM1GNMNRGX19",
+            "parent_id": "01K1K1J7NN7DK2KYWGRHPYJ7ZC",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "401e2c668e09a79720f66810a49a79dc",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T14:46:19.062768+00:00",
+            "finish": "2025-08-01T14:46:19.416775+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890727945",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "a0ce3072e2e302bfe930e7c6ff98d6ec",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T14:46:31.405022+00:00",
+            "finish": "2025-08-01T14:46:31.524030+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890727945",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-08-01T14:46:31.405171+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.kitchen_lights_on",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753890727945",
+                      "last_triggered": "2025-08-01T14:46:19.062902+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Kitchen Lights On"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.467886+00:00",
+                    "last_reported": "2025-08-01T14:46:19.416175+00:00",
+                    "last_updated": "2025-08-01T14:46:19.416175+00:00",
+                    "context": {
+                      "id": "01K1K1J7NPD8SGKM1GNMNRGX19",
+                      "parent_id": "01K1K1J7NN7DK2KYWGRHPYJ7ZC",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "device",
+                    "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                    "from_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "off",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:46:29.102358+00:00",
+                      "last_reported": "2025-08-01T14:46:29.102358+00:00",
+                      "last_updated": "2025-08-01T14:46:29.102358+00:00",
+                      "context": {
+                        "id": "01K1K1JHFEN8J664DTAH3H3M9Y",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "on",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:46:31.402963+00:00",
+                      "last_reported": "2025-08-01T14:46:31.402963+00:00",
+                      "last_updated": "2025-08-01T14:46:31.402963+00:00",
+                      "context": {
+                        "id": "01K1K1JKQATHPH7NRCBJME7Z2B",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of binary_sensor.unk_manufacturer_unk_model"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-08-01T14:46:31.405457+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01K1K1JKQC7HHGS70S1AKZ1C9J",
+                    "parent_id": "01K1K1JKQATHPH7NRCBJME7Z2B",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_on",
+                    "service_data": {
+                      "brightness_pct": 100,
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    },
+                    "target": {
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753890727945",
+            "alias": "Kitchen Lights On",
+            "description": "",
+            "triggers": [
+              {
+                "type": "turned_on",
+                "device_id": "530032e09dab84b6ec0ee6b2a6567a2d",
+                "entity_id": "f5823b59c994363d1cb4df1e660dee2e",
+                "domain": "binary_sensor",
+                "trigger": "device"
+              }
+            ],
+            "conditions": [],
+            "actions": [
+              {
+                "action": "light.turn_on",
+                "metadata": {},
+                "data": {
+                  "brightness_pct": 100
+                },
+                "target": {
+                  "area_id": "kitchen"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1K1JKQC7HHGS70S1AKZ1C9J",
+            "parent_id": "01K1K1JKQATHPH7NRCBJME7Z2B",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "a0ce3072e2e302bfe930e7c6ff98d6ec",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T14:46:31.405022+00:00",
+            "finish": "2025-08-01T14:46:31.524030+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890727945",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "9de8b37b550bebaa2b96413a3cc04937",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T14:47:27.135682+00:00",
+            "finish": "2025-08-01T14:47:27.249362+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890727945",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-08-01T14:47:27.135843+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.kitchen_lights_on",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753890727945",
+                      "last_triggered": "2025-08-01T14:46:31.405290+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Kitchen Lights On"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.467886+00:00",
+                    "last_reported": "2025-08-01T14:46:31.523907+00:00",
+                    "last_updated": "2025-08-01T14:46:31.523907+00:00",
+                    "context": {
+                      "id": "01K1K1JKQC7HHGS70S1AKZ1C9J",
+                      "parent_id": "01K1K1JKQATHPH7NRCBJME7Z2B",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "device",
+                    "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                    "from_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "off",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:46:44.628152+00:00",
+                      "last_reported": "2025-08-01T14:46:44.628152+00:00",
+                      "last_updated": "2025-08-01T14:46:44.628152+00:00",
+                      "context": {
+                        "id": "01K1K1K0MM1N9CEEM8XJYZJPJK",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "on",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:47:27.133475+00:00",
+                      "last_reported": "2025-08-01T14:47:27.133475+00:00",
+                      "last_updated": "2025-08-01T14:47:27.133475+00:00",
+                      "context": {
+                        "id": "01K1K1MA4XQVMEA3RHYWMBB0J2",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of binary_sensor.unk_manufacturer_unk_model"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-08-01T14:47:27.136254+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01K1K1MA4ZZRNF144M3JNQAFY1",
+                    "parent_id": "01K1K1MA4XQVMEA3RHYWMBB0J2",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_on",
+                    "service_data": {
+                      "brightness_pct": 100,
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    },
+                    "target": {
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753890727945",
+            "alias": "Kitchen Lights On",
+            "description": "",
+            "triggers": [
+              {
+                "type": "turned_on",
+                "device_id": "530032e09dab84b6ec0ee6b2a6567a2d",
+                "entity_id": "f5823b59c994363d1cb4df1e660dee2e",
+                "domain": "binary_sensor",
+                "trigger": "device"
+              }
+            ],
+            "conditions": [],
+            "actions": [
+              {
+                "action": "light.turn_on",
+                "metadata": {},
+                "data": {
+                  "brightness_pct": 100
+                },
+                "target": {
+                  "area_id": "kitchen"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1K1MA4ZZRNF144M3JNQAFY1",
+            "parent_id": "01K1K1MA4XQVMEA3RHYWMBB0J2",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "9de8b37b550bebaa2b96413a3cc04937",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T14:47:27.135682+00:00",
+            "finish": "2025-08-01T14:47:27.249362+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890727945",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "1e3425c9ea811268e85b435f55da7fce",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T14:49:11.652756+00:00",
+            "finish": "2025-08-01T14:49:11.746467+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890727945",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-08-01T14:49:11.652907+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.kitchen_lights_on",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753890727945",
+                      "last_triggered": "2025-08-01T14:47:27.135987+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Kitchen Lights On"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.467886+00:00",
+                    "last_reported": "2025-08-01T14:47:27.249245+00:00",
+                    "last_updated": "2025-08-01T14:47:27.249245+00:00",
+                    "context": {
+                      "id": "01K1K1MA4ZZRNF144M3JNQAFY1",
+                      "parent_id": "01K1K1MA4XQVMEA3RHYWMBB0J2",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "device",
+                    "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                    "from_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "off",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:47:47.189265+00:00",
+                      "last_reported": "2025-08-01T14:47:47.189265+00:00",
+                      "last_updated": "2025-08-01T14:47:47.189265+00:00",
+                      "context": {
+                        "id": "01K1K1MXQNJ7Q15EM2YKTCNMNT",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "on",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:49:11.649721+00:00",
+                      "last_reported": "2025-08-01T14:49:11.649721+00:00",
+                      "last_updated": "2025-08-01T14:49:11.649721+00:00",
+                      "context": {
+                        "id": "01K1K1QG71129F6DFJDEW3B9C1",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of binary_sensor.unk_manufacturer_unk_model"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-08-01T14:49:11.653328+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01K1K1QG743HHX4Q2TEX0VB92A",
+                    "parent_id": "01K1K1QG71129F6DFJDEW3B9C1",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_on",
+                    "service_data": {
+                      "brightness_pct": 100,
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    },
+                    "target": {
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753890727945",
+            "alias": "Kitchen Lights On",
+            "description": "",
+            "triggers": [
+              {
+                "type": "turned_on",
+                "device_id": "530032e09dab84b6ec0ee6b2a6567a2d",
+                "entity_id": "f5823b59c994363d1cb4df1e660dee2e",
+                "domain": "binary_sensor",
+                "trigger": "device"
+              }
+            ],
+            "conditions": [],
+            "actions": [
+              {
+                "action": "light.turn_on",
+                "metadata": {},
+                "data": {
+                  "brightness_pct": 100
+                },
+                "target": {
+                  "area_id": "kitchen"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1K1QG743HHX4Q2TEX0VB92A",
+            "parent_id": "01K1K1QG71129F6DFJDEW3B9C1",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "1e3425c9ea811268e85b435f55da7fce",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T14:49:11.652756+00:00",
+            "finish": "2025-08-01T14:49:11.746467+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890727945",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "a181d0b522f5faa0cbd32263bf755df1",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T15:00:41.329526+00:00",
+            "finish": "2025-08-01T15:00:41.638974+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890727945",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-08-01T15:00:41.329600+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.kitchen_lights_on",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753890727945",
+                      "last_triggered": "2025-08-01T14:49:11.653130+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Kitchen Lights On"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.467886+00:00",
+                    "last_reported": "2025-08-01T14:49:11.746212+00:00",
+                    "last_updated": "2025-08-01T14:49:11.746212+00:00",
+                    "context": {
+                      "id": "01K1K1QG743HHX4Q2TEX0VB92A",
+                      "parent_id": "01K1K1QG71129F6DFJDEW3B9C1",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "device",
+                    "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                    "from_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "off",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:49:36.514756+00:00",
+                      "last_reported": "2025-08-01T14:49:36.514756+00:00",
+                      "last_updated": "2025-08-01T14:49:36.514756+00:00",
+                      "context": {
+                        "id": "01K1K1R8G24BN4MQKB66ZDE71T",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "on",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T15:00:41.328342+00:00",
+                      "last_reported": "2025-08-01T15:00:41.328342+00:00",
+                      "last_updated": "2025-08-01T15:00:41.328342+00:00",
+                      "context": {
+                        "id": "01K1K2CHQGHHQX5P4V2K2B18KC",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of binary_sensor.unk_manufacturer_unk_model"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-08-01T15:00:41.329811+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01K1K2CHQH92GEJ5J2ATP6DAPV",
+                    "parent_id": "01K1K2CHQGHHQX5P4V2K2B18KC",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_on",
+                    "service_data": {
+                      "brightness_pct": 100,
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    },
+                    "target": {
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753890727945",
+            "alias": "Kitchen Lights On",
+            "description": "",
+            "triggers": [
+              {
+                "type": "turned_on",
+                "device_id": "530032e09dab84b6ec0ee6b2a6567a2d",
+                "entity_id": "f5823b59c994363d1cb4df1e660dee2e",
+                "domain": "binary_sensor",
+                "trigger": "device"
+              }
+            ],
+            "conditions": [],
+            "actions": [
+              {
+                "action": "light.turn_on",
+                "metadata": {},
+                "data": {
+                  "brightness_pct": 100
+                },
+                "target": {
+                  "area_id": "kitchen"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1K2CHQH92GEJ5J2ATP6DAPV",
+            "parent_id": "01K1K2CHQGHHQX5P4V2K2B18KC",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "a181d0b522f5faa0cbd32263bf755df1",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T15:00:41.329526+00:00",
+            "finish": "2025-08-01T15:00:41.638974+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890727945",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model"
+        }
+      }
+    ],
+    "automation.1753890797701": [
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "c93e78d66e829295161e49441f463433",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T13:39:38.913350+00:00",
+            "finish": "2025-08-01T13:39:39.012387+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890797701",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-08-01T13:39:38.913416+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.kitchen_lights_off",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753890797701",
+                      "last_triggered": "2025-08-01T13:34:50.263773+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Kitchen Lights off"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.468040+00:00",
+                    "last_reported": "2025-08-01T13:34:50.580448+00:00",
+                    "last_updated": "2025-08-01T13:34:50.580448+00:00",
+                    "context": {
+                      "id": "01K1JXFBCQYMCQCH3CESYWJDVY",
+                      "parent_id": "01K1JXDGSN3KT6PSW8PBA5W5F8",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                    "from_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "on",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T13:38:23.861015+00:00",
+                      "last_reported": "2025-08-01T13:38:23.861015+00:00",
+                      "last_updated": "2025-08-01T13:38:23.861015+00:00",
+                      "context": {
+                        "id": "01K1JXNVZN3FH2JGRMMV2B9A3M",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "off",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T13:38:38.911128+00:00",
+                      "last_reported": "2025-08-01T13:38:38.911128+00:00",
+                      "last_updated": "2025-08-01T13:38:38.911128+00:00",
+                      "context": {
+                        "id": "01K1JXPANZ6STQJZGDFRYDB5CA",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": {
+                      "__type": "<class 'datetime.timedelta'>",
+                      "total_seconds": 60.0
+                    },
+                    "attribute": null,
+                    "description": "state of binary_sensor.unk_manufacturer_unk_model"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-08-01T13:39:38.913729+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01K1JXR591NN77N7503WC4J4ZA",
+                    "parent_id": "01K1JXPANZ6STQJZGDFRYDB5CA",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_off",
+                    "service_data": {},
+                    "target": {
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753890797701",
+            "alias": "Kitchen Lights off",
+            "description": "",
+            "triggers": [
+              {
+                "trigger": "state",
+                "entity_id": [
+                  "binary_sensor.unk_manufacturer_unk_model"
+                ],
+                "from": "on",
+                "to": "off",
+                "for": {
+                  "hours": 0,
+                  "minutes": 1,
+                  "seconds": 0
+                }
+              }
+            ],
+            "conditions": [],
+            "actions": [
+              {
+                "action": "light.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "area_id": "kitchen"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1JXR591NN77N7503WC4J4ZA",
+            "parent_id": "01K1JXPANZ6STQJZGDFRYDB5CA",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "c93e78d66e829295161e49441f463433",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T13:39:38.913350+00:00",
+            "finish": "2025-08-01T13:39:39.012387+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890797701",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "3656a9a53cbea990e37184f5daf207b4",
+          "state": "stopped",
+          "script_execution": "error",
+          "timestamp": {
+            "start": "2025-08-01T14:18:44.433206+00:00",
+            "finish": "2025-08-01T14:18:44.509109+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890797701",
+          "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-08-01T14:18:44.433287+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.kitchen_lights_off",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753890797701",
+                      "last_triggered": "2025-08-01T13:39:38.913550+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Kitchen Lights off"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.468040+00:00",
+                    "last_reported": "2025-08-01T13:39:39.011861+00:00",
+                    "last_updated": "2025-08-01T13:39:39.011861+00:00",
+                    "context": {
+                      "id": "01K1JXR591NN77N7503WC4J4ZA",
+                      "parent_id": "01K1JXPANZ6STQJZGDFRYDB5CA",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                    "from_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "on",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:17:29.386549+00:00",
+                      "last_reported": "2025-08-01T14:17:29.386549+00:00",
+                      "last_updated": "2025-08-01T14:17:29.386549+00:00",
+                      "context": {
+                        "id": "01K1JZXEHAMRMP001QVA4241KT",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "off",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:17:44.429151+00:00",
+                      "last_reported": "2025-08-01T14:17:44.429151+00:00",
+                      "last_updated": "2025-08-01T14:17:44.429151+00:00",
+                      "context": {
+                        "id": "01K1JZXX7DZ5CF4AX49GN1175C",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": {
+                      "__type": "<class 'datetime.timedelta'>",
+                      "total_seconds": 60.0
+                    },
+                    "attribute": null,
+                    "description": "state of binary_sensor.unk_manufacturer_unk_model"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-08-01T14:18:44.433609+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01K1JZZQTH7P232C18KVBGQNAK",
+                    "parent_id": "01K1JZXX7DZ5CF4AX49GN1175C",
+                    "user_id": null
+                  }
+                },
+                "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_off",
+                    "service_data": {},
+                    "target": {
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753890797701",
+            "alias": "Kitchen Lights off",
+            "description": "",
+            "triggers": [
+              {
+                "trigger": "state",
+                "entity_id": [
+                  "binary_sensor.unk_manufacturer_unk_model"
+                ],
+                "from": "on",
+                "to": "off",
+                "for": {
+                  "hours": 0,
+                  "minutes": 1,
+                  "seconds": 0
+                }
+              }
+            ],
+            "conditions": [],
+            "actions": [
+              {
+                "action": "light.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "area_id": "kitchen"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1JZZQTH7P232C18KVBGQNAK",
+            "parent_id": "01K1JZXX7DZ5CF4AX49GN1175C",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "3656a9a53cbea990e37184f5daf207b4",
+          "state": "stopped",
+          "script_execution": "error",
+          "timestamp": {
+            "start": "2025-08-01T14:18:44.433206+00:00",
+            "finish": "2025-08-01T14:18:44.509109+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890797701",
+          "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "9fd0d2781b8a963dd240b0d1c448c309",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T14:48:47.192806+00:00",
+            "finish": "2025-08-01T14:48:47.498534+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890797701",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-08-01T14:48:47.192883+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.kitchen_lights_off",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753890797701",
+                      "last_triggered": "2025-08-01T14:18:44.433398+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Kitchen Lights off"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.468040+00:00",
+                    "last_reported": "2025-08-01T14:18:44.499240+00:00",
+                    "last_updated": "2025-08-01T14:18:44.499240+00:00",
+                    "context": {
+                      "id": "01K1JZZQTH7P232C18KVBGQNAK",
+                      "parent_id": "01K1JZXX7DZ5CF4AX49GN1175C",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                    "from_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "on",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:47:27.133475+00:00",
+                      "last_reported": "2025-08-01T14:47:27.133475+00:00",
+                      "last_updated": "2025-08-01T14:47:27.133475+00:00",
+                      "context": {
+                        "id": "01K1K1MA4XQVMEA3RHYWMBB0J2",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "off",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:47:47.189265+00:00",
+                      "last_reported": "2025-08-01T14:47:47.189265+00:00",
+                      "last_updated": "2025-08-01T14:47:47.189265+00:00",
+                      "context": {
+                        "id": "01K1K1MXQNJ7Q15EM2YKTCNMNT",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": {
+                      "__type": "<class 'datetime.timedelta'>",
+                      "total_seconds": 60.0
+                    },
+                    "attribute": null,
+                    "description": "state of binary_sensor.unk_manufacturer_unk_model"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-08-01T14:48:47.193374+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01K1K1PRARFXTA8SY4DF6289PH",
+                    "parent_id": "01K1K1MXQNJ7Q15EM2YKTCNMNT",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_off",
+                    "service_data": {},
+                    "target": {
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753890797701",
+            "alias": "Kitchen Lights off",
+            "description": "",
+            "triggers": [
+              {
+                "trigger": "state",
+                "entity_id": [
+                  "binary_sensor.unk_manufacturer_unk_model"
+                ],
+                "from": "on",
+                "to": "off",
+                "for": {
+                  "hours": 0,
+                  "minutes": 1,
+                  "seconds": 0
+                }
+              }
+            ],
+            "conditions": [],
+            "actions": [
+              {
+                "action": "light.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "area_id": "kitchen"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1K1PRARFXTA8SY4DF6289PH",
+            "parent_id": "01K1K1MXQNJ7Q15EM2YKTCNMNT",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "9fd0d2781b8a963dd240b0d1c448c309",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T14:48:47.192806+00:00",
+            "finish": "2025-08-01T14:48:47.498534+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890797701",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "5e611f1448091150b12f3682407f0afe",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T14:50:36.516889+00:00",
+            "finish": "2025-08-01T14:50:36.805693+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890797701",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-08-01T14:50:36.517103+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.kitchen_lights_off",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753890797701",
+                      "last_triggered": "2025-08-01T14:48:47.192992+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Kitchen Lights off"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.468040+00:00",
+                    "last_reported": "2025-08-01T14:48:47.498389+00:00",
+                    "last_updated": "2025-08-01T14:48:47.498389+00:00",
+                    "context": {
+                      "id": "01K1K1PRARFXTA8SY4DF6289PH",
+                      "parent_id": "01K1K1MXQNJ7Q15EM2YKTCNMNT",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                    "from_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "on",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:49:11.649721+00:00",
+                      "last_reported": "2025-08-01T14:49:11.649721+00:00",
+                      "last_updated": "2025-08-01T14:49:11.649721+00:00",
+                      "context": {
+                        "id": "01K1K1QG71129F6DFJDEW3B9C1",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "off",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T14:49:36.514756+00:00",
+                      "last_reported": "2025-08-01T14:49:36.514756+00:00",
+                      "last_updated": "2025-08-01T14:49:36.514756+00:00",
+                      "context": {
+                        "id": "01K1K1R8G24BN4MQKB66ZDE71T",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": {
+                      "__type": "<class 'datetime.timedelta'>",
+                      "total_seconds": 60.0
+                    },
+                    "attribute": null,
+                    "description": "state of binary_sensor.unk_manufacturer_unk_model"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-08-01T14:50:36.517371+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01K1K1T334JHBQCXE32ZSX8H89",
+                    "parent_id": "01K1K1R8G24BN4MQKB66ZDE71T",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_off",
+                    "service_data": {},
+                    "target": {
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753890797701",
+            "alias": "Kitchen Lights off",
+            "description": "",
+            "triggers": [
+              {
+                "trigger": "state",
+                "entity_id": [
+                  "binary_sensor.unk_manufacturer_unk_model"
+                ],
+                "from": "on",
+                "to": "off",
+                "for": {
+                  "hours": 0,
+                  "minutes": 1,
+                  "seconds": 0
+                }
+              }
+            ],
+            "conditions": [],
+            "actions": [
+              {
+                "action": "light.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "area_id": "kitchen"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1K1T334JHBQCXE32ZSX8H89",
+            "parent_id": "01K1K1R8G24BN4MQKB66ZDE71T",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "5e611f1448091150b12f3682407f0afe",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T14:50:36.516889+00:00",
+            "finish": "2025-08-01T14:50:36.805693+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890797701",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "a15e69cce437c094b14d01044469557c",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T15:01:56.380208+00:00",
+            "finish": "2025-08-01T15:01:56.464175+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890797701",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-08-01T15:01:56.380277+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.kitchen_lights_off",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753890797701",
+                      "last_triggered": "2025-08-01T14:50:36.517215+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Kitchen Lights off"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.468040+00:00",
+                    "last_reported": "2025-08-01T14:50:36.805263+00:00",
+                    "last_updated": "2025-08-01T14:50:36.805263+00:00",
+                    "context": {
+                      "id": "01K1K1T334JHBQCXE32ZSX8H89",
+                      "parent_id": "01K1K1R8G24BN4MQKB66ZDE71T",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                    "from_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "on",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T15:00:41.328342+00:00",
+                      "last_reported": "2025-08-01T15:00:41.328342+00:00",
+                      "last_updated": "2025-08-01T15:00:41.328342+00:00",
+                      "context": {
+                        "id": "01K1K2CHQGHHQX5P4V2K2B18KC",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "binary_sensor.unk_manufacturer_unk_model",
+                      "state": "off",
+                      "attributes": {
+                        "device_class": "motion",
+                        "friendly_name": "Kitchen Motion Sensor"
+                      },
+                      "last_changed": "2025-08-01T15:00:56.378278+00:00",
+                      "last_reported": "2025-08-01T15:00:56.378278+00:00",
+                      "last_updated": "2025-08-01T15:00:56.378278+00:00",
+                      "context": {
+                        "id": "01K1K2D0DT752Y8TG0MTADSCA6",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": {
+                      "__type": "<class 'datetime.timedelta'>",
+                      "total_seconds": 60.0
+                    },
+                    "attribute": null,
+                    "description": "state of binary_sensor.unk_manufacturer_unk_model"
+                  }
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-08-01T15:01:56.380486+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01K1K2EV0WCATCV675ZWY2XX0J",
+                    "parent_id": "01K1K2D0DT752Y8TG0MTADSCA6",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_off",
+                    "service_data": {},
+                    "target": {
+                      "area_id": [
+                        "kitchen"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753890797701",
+            "alias": "Kitchen Lights off",
+            "description": "",
+            "triggers": [
+              {
+                "trigger": "state",
+                "entity_id": [
+                  "binary_sensor.unk_manufacturer_unk_model"
+                ],
+                "from": "on",
+                "to": "off",
+                "for": {
+                  "hours": 0,
+                  "minutes": 1,
+                  "seconds": 0
+                }
+              }
+            ],
+            "conditions": [],
+            "actions": [
+              {
+                "action": "light.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "area_id": "kitchen"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1K2EV0WCATCV675ZWY2XX0J",
+            "parent_id": "01K1K2D0DT752Y8TG0MTADSCA6",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "a15e69cce437c094b14d01044469557c",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T15:01:56.380208+00:00",
+            "finish": "2025-08-01T15:01:56.464175+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753890797701",
+          "trigger": "state of binary_sensor.unk_manufacturer_unk_model"
+        }
+      }
+    ],
+    "automation.1753889948954": [
+      {
+        "extended_dict": {
+          "last_step": "action/0",
+          "run_id": "2cff41a0330df4e991b858db0e4c16a8",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-07-31T22:58:44.753540+00:00",
+            "finish": "2025-07-31T22:58:45.138744+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753889948954",
+          "trigger": "event 'zha_event'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-07-31T22:58:44.753591+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.bedtime_button",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753889948954",
+                      "last_triggered": "2025-07-31T17:37:01.424518+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Bedtime button"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.467674+00:00",
+                    "last_reported": "2025-07-31T18:35:40.467674+00:00",
+                    "last_updated": "2025-07-31T18:35:40.467674+00:00",
+                    "context": {
+                      "id": "01K1GW9FHK4QDZFSSGR25YSQSP",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "device",
+                    "event": {
+                      "event_type": "zha_event",
+                      "data": {
+                        "device_ieee": "a4:c1:38:f1:ed:da:0b:d2",
+                        "device_id": "eb49e8d861260e48b9f9f0c65c44e304",
+                        "unique_id": "a4:c1:38:f1:ed:da:0b:d2:1:0x0006",
+                        "endpoint_id": 1,
+                        "cluster_id": 6,
+                        "command": "remote_button_short_press",
+                        "args": [],
+                        "params": {}
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2025-07-31T22:58:44.752205+00:00",
+                      "context": {
+                        "id": "01K1HBB5WG7NDAAGGSN85X83XN",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "description": "event 'zha_event'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-07-31T22:58:44.753629+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "condition/0/conditions/0": [
+              {
+                "path": "condition/0/conditions/0",
+                "timestamp": "2025-07-31T22:58:44.753655+00:00",
+                "result": {
+                  "result": true
+                }
+              },
+              {
+                "path": "condition/0/conditions/0",
+                "timestamp": "2025-07-31T22:58:44.753666+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "condition/0/conditions/0/entity_id/0": [
+              {
+                "path": "condition/0/conditions/0/entity_id/0",
+                "timestamp": "2025-07-31T22:58:44.753684+00:00",
+                "result": {
+                  "result": true,
+                  "state": "off",
+                  "wanted_state": "off"
+                }
+              }
+            ],
+            "condition/0/conditions/1": [
+              {
+                "path": "condition/0/conditions/1",
+                "timestamp": "2025-07-31T22:58:44.753746+00:00",
+                "result": {
+                  "result": true
+                }
+              },
+              {
+                "path": "condition/0/conditions/1",
+                "timestamp": "2025-07-31T22:58:44.753756+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "condition/0/conditions/1/entity_id/0": [
+              {
+                "path": "condition/0/conditions/1/entity_id/0",
+                "timestamp": "2025-07-31T22:58:44.753770+00:00",
+                "result": {
+                  "result": true,
+                  "state": "off",
+                  "wanted_state": "off"
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-07-31T22:58:44.754029+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01K1HBB5WH24A78D9H16MZ2G3S",
+                    "parent_id": "01K1HBB5WG7NDAAGGSN85X83XN",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "scene",
+                    "service": "turn_on",
+                    "service_data": {},
+                    "target": {
+                      "entity_id": [
+                        "scene.new_scene"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753889948954",
+            "alias": "Bedtime button",
+            "description": "",
+            "triggers": [
+              {
+                "device_id": "eb49e8d861260e48b9f9f0c65c44e304",
+                "domain": "zha",
+                "type": "remote_button_short_press",
+                "subtype": "button_1",
+                "trigger": "device"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "and",
+                "conditions": [
+                  {
+                    "condition": "device",
+                    "type": "is_off",
+                    "device_id": "99101c0bcd66d8e4d3532b7c03afbc44",
+                    "entity_id": "67db6b7fabd03a2a7e31a3ee06403967",
+                    "domain": "light"
+                  },
+                  {
+                    "condition": "device",
+                    "type": "is_off",
+                    "device_id": "8cc3f355ed7e71b1039c01b8091ecbb3",
+                    "entity_id": "0c4fe33636478cc1962a0741f4bf4f36",
+                    "domain": "switch"
+                  }
+                ]
+              }
+            ],
+            "actions": [
+              {
+                "action": "scene.turn_on",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "scene.new_scene"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1HBB5WH24A78D9H16MZ2G3S",
+            "parent_id": "01K1HBB5WG7NDAAGGSN85X83XN",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/0",
+          "run_id": "2cff41a0330df4e991b858db0e4c16a8",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-07-31T22:58:44.753540+00:00",
+            "finish": "2025-07-31T22:58:45.138744+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753889948954",
+          "trigger": "event 'zha_event'"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "condition/0/conditions/0/entity_id/0",
+          "run_id": "30534549a984ed9ca9682f0ce3b00b7d",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-08-01T15:12:31.270011+00:00",
+            "finish": "2025-08-01T15:12:31.270319+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753889948954",
+          "trigger": "event 'zha_event'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-08-01T15:12:31.270092+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.bedtime_button",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753889948954",
+                      "last_triggered": "2025-07-31T22:58:44.753882+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Bedtime button"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.467674+00:00",
+                    "last_reported": "2025-07-31T22:58:45.138601+00:00",
+                    "last_updated": "2025-07-31T22:58:45.138601+00:00",
+                    "context": {
+                      "id": "01K1HBB5WH24A78D9H16MZ2G3S",
+                      "parent_id": "01K1HBB5WG7NDAAGGSN85X83XN",
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "device",
+                    "event": {
+                      "event_type": "zha_event",
+                      "data": {
+                        "device_ieee": "a4:c1:38:f1:ed:da:0b:d2",
+                        "device_id": "eb49e8d861260e48b9f9f0c65c44e304",
+                        "unique_id": "a4:c1:38:f1:ed:da:0b:d2:1:0x0006",
+                        "endpoint_id": 1,
+                        "cluster_id": 6,
+                        "command": "remote_button_short_press",
+                        "args": [],
+                        "params": {}
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2025-08-01T15:12:31.267042+00:00",
+                      "context": {
+                        "id": "01K1K32713NAKE132HJFPJ0R1J",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "description": "event 'zha_event'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-08-01T15:12:31.270138+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "condition/0/conditions/0": [
+              {
+                "path": "condition/0/conditions/0",
+                "timestamp": "2025-08-01T15:12:31.270175+00:00",
+                "result": {
+                  "result": false
+                }
+              },
+              {
+                "path": "condition/0/conditions/0",
+                "timestamp": "2025-08-01T15:12:31.270199+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "condition/0/conditions/0/entity_id/0": [
+              {
+                "path": "condition/0/conditions/0/entity_id/0",
+                "timestamp": "2025-08-01T15:12:31.270228+00:00",
+                "result": {
+                  "result": false,
+                  "state": "on",
+                  "wanted_state": "off"
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753889948954",
+            "alias": "Bedtime button",
+            "description": "",
+            "triggers": [
+              {
+                "device_id": "eb49e8d861260e48b9f9f0c65c44e304",
+                "domain": "zha",
+                "type": "remote_button_short_press",
+                "subtype": "button_1",
+                "trigger": "device"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "and",
+                "conditions": [
+                  {
+                    "condition": "device",
+                    "type": "is_off",
+                    "device_id": "99101c0bcd66d8e4d3532b7c03afbc44",
+                    "entity_id": "67db6b7fabd03a2a7e31a3ee06403967",
+                    "domain": "light"
+                  },
+                  {
+                    "condition": "device",
+                    "type": "is_off",
+                    "device_id": "8cc3f355ed7e71b1039c01b8091ecbb3",
+                    "entity_id": "0c4fe33636478cc1962a0741f4bf4f36",
+                    "domain": "switch"
+                  }
+                ]
+              }
+            ],
+            "actions": [
+              {
+                "action": "scene.turn_on",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "entity_id": "scene.new_scene"
+                }
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1K32715KESCBFN8EE1D31YN",
+            "parent_id": "01K1K32713NAKE132HJFPJ0R1J",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0/conditions/0/entity_id/0",
+          "run_id": "30534549a984ed9ca9682f0ce3b00b7d",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-08-01T15:12:31.270011+00:00",
+            "finish": "2025-08-01T15:12:31.270319+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753889948954",
+          "trigger": "event 'zha_event'"
+        }
+      }
+    ],
+    "automation.1753906301577": [
+      {
+        "extended_dict": {
+          "last_step": "condition/0/conditions/1/entity_id/0",
+          "run_id": "12614978f1762aeb4a22e8c1a8c6a51a",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-07-31T22:58:44.754775+00:00",
+            "finish": "2025-07-31T22:58:44.758660+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753906301577",
+          "trigger": "event 'zha_event'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-07-31T22:58:44.757444+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.button_lights_off",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753906301577",
+                      "last_triggered": "2025-07-30T22:09:16.066718+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Button Lights off"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.468203+00:00",
+                    "last_reported": "2025-07-31T18:35:40.468203+00:00",
+                    "last_updated": "2025-07-31T18:35:40.468203+00:00",
+                    "context": {
+                      "id": "01K1GW9FHMHSTRGE0ACDVSVF0X",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "device",
+                    "event": {
+                      "event_type": "zha_event",
+                      "data": {
+                        "device_ieee": "a4:c1:38:f1:ed:da:0b:d2",
+                        "device_id": "eb49e8d861260e48b9f9f0c65c44e304",
+                        "unique_id": "a4:c1:38:f1:ed:da:0b:d2:1:0x0006",
+                        "endpoint_id": 1,
+                        "cluster_id": 6,
+                        "command": "remote_button_short_press",
+                        "args": [],
+                        "params": {}
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2025-07-31T22:58:44.752205+00:00",
+                      "context": {
+                        "id": "01K1HBB5WG7NDAAGGSN85X83XN",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "description": "event 'zha_event'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-07-31T22:58:44.757495+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "condition/0/conditions/0": [
+              {
+                "path": "condition/0/conditions/0",
+                "timestamp": "2025-07-31T22:58:44.757519+00:00",
+                "result": {
+                  "result": false
+                }
+              },
+              {
+                "path": "condition/0/conditions/0",
+                "timestamp": "2025-07-31T22:58:44.757530+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "condition/0/conditions/0/entity_id/0": [
+              {
+                "path": "condition/0/conditions/0/entity_id/0",
+                "timestamp": "2025-07-31T22:58:44.757547+00:00",
+                "result": {
+                  "result": false,
+                  "state": "off",
+                  "wanted_state": "on"
+                }
+              }
+            ],
+            "condition/0/conditions/1": [
+              {
+                "path": "condition/0/conditions/1",
+                "timestamp": "2025-07-31T22:58:44.758553+00:00",
+                "result": {
+                  "result": false
+                }
+              },
+              {
+                "path": "condition/0/conditions/1",
+                "timestamp": "2025-07-31T22:58:44.758581+00:00",
+                "result": {
+                  "result": false
+                }
+              }
+            ],
+            "condition/0/conditions/1/entity_id/0": [
+              {
+                "path": "condition/0/conditions/1/entity_id/0",
+                "timestamp": "2025-07-31T22:58:44.758597+00:00",
+                "result": {
+                  "result": false,
+                  "state": "off",
+                  "wanted_state": "on"
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753906301577",
+            "alias": "Button Lights off",
+            "description": "",
+            "triggers": [
+              {
+                "device_id": "eb49e8d861260e48b9f9f0c65c44e304",
+                "domain": "zha",
+                "type": "remote_button_short_press",
+                "subtype": "button_1",
+                "trigger": "device"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "or",
+                "conditions": [
+                  {
+                    "condition": "device",
+                    "type": "is_on",
+                    "device_id": "99101c0bcd66d8e4d3532b7c03afbc44",
+                    "entity_id": "67db6b7fabd03a2a7e31a3ee06403967",
+                    "domain": "light"
+                  },
+                  {
+                    "condition": "device",
+                    "type": "is_on",
+                    "device_id": "8cc3f355ed7e71b1039c01b8091ecbb3",
+                    "entity_id": "0c4fe33636478cc1962a0741f4bf4f36",
+                    "domain": "switch"
+                  }
+                ]
+              }
+            ],
+            "actions": [
+              {
+                "action": "light.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "area_id": "bedroom"
+                }
+              },
+              {
+                "type": "turn_off",
+                "device_id": "8cc3f355ed7e71b1039c01b8091ecbb3",
+                "entity_id": "0c4fe33636478cc1962a0741f4bf4f36",
+                "domain": "switch"
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1HBB5WJFG83JHNABKX1D8BM",
+            "parent_id": "01K1HBB5WG7NDAAGGSN85X83XN",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "condition/0/conditions/1/entity_id/0",
+          "run_id": "12614978f1762aeb4a22e8c1a8c6a51a",
+          "state": "stopped",
+          "script_execution": "failed_conditions",
+          "timestamp": {
+            "start": "2025-07-31T22:58:44.754775+00:00",
+            "finish": "2025-07-31T22:58:44.758660+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753906301577",
+          "trigger": "event 'zha_event'"
+        }
+      },
+      {
+        "extended_dict": {
+          "last_step": "action/1",
+          "run_id": "ae10a50eb16b044b72edeb678e64ef82",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T15:12:31.270384+00:00",
+            "finish": "2025-08-01T15:12:31.865547+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753906301577",
+          "trigger": "event 'zha_event'",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-08-01T15:12:31.270416+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.button_lights_off",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753906301577",
+                      "last_triggered": "2025-07-30T22:09:16.066718+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Button Lights off"
+                    },
+                    "last_changed": "2025-07-31T18:35:40.468203+00:00",
+                    "last_reported": "2025-07-31T18:35:40.468203+00:00",
+                    "last_updated": "2025-07-31T18:35:40.468203+00:00",
+                    "context": {
+                      "id": "01K1GW9FHMHSTRGE0ACDVSVF0X",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "device",
+                    "event": {
+                      "event_type": "zha_event",
+                      "data": {
+                        "device_ieee": "a4:c1:38:f1:ed:da:0b:d2",
+                        "device_id": "eb49e8d861260e48b9f9f0c65c44e304",
+                        "unique_id": "a4:c1:38:f1:ed:da:0b:d2:1:0x0006",
+                        "endpoint_id": 1,
+                        "cluster_id": 6,
+                        "command": "remote_button_short_press",
+                        "args": [],
+                        "params": {}
+                      },
+                      "origin": "LOCAL",
+                      "time_fired": "2025-08-01T15:12:31.267042+00:00",
+                      "context": {
+                        "id": "01K1K32713NAKE132HJFPJ0R1J",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "description": "event 'zha_event'"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-08-01T15:12:31.270447+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "condition/0/conditions/0": [
+              {
+                "path": "condition/0/conditions/0",
+                "timestamp": "2025-08-01T15:12:31.270480+00:00",
+                "result": {
+                  "result": true
+                }
+              },
+              {
+                "path": "condition/0/conditions/0",
+                "timestamp": "2025-08-01T15:12:31.270500+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "condition/0/conditions/0/entity_id/0": [
+              {
+                "path": "condition/0/conditions/0/entity_id/0",
+                "timestamp": "2025-08-01T15:12:31.270526+00:00",
+                "result": {
+                  "result": true,
+                  "state": "on",
+                  "wanted_state": "on"
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-08-01T15:12:31.270986+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01K1K32716ZJ2HC8E5KS39AKK3",
+                    "parent_id": "01K1K32713NAKE132HJFPJ0R1J",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_off",
+                    "service_data": {},
+                    "target": {
+                      "area_id": [
+                        "bedroom"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2025-08-01T15:12:31.371159+00:00"
+              }
+            ]
+          },
+          "config": {
+            "id": "1753906301577",
+            "alias": "Button Lights off",
+            "description": "",
+            "triggers": [
+              {
+                "device_id": "eb49e8d861260e48b9f9f0c65c44e304",
+                "domain": "zha",
+                "type": "remote_button_short_press",
+                "subtype": "button_1",
+                "trigger": "device"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "or",
+                "conditions": [
+                  {
+                    "condition": "device",
+                    "type": "is_on",
+                    "device_id": "99101c0bcd66d8e4d3532b7c03afbc44",
+                    "entity_id": "67db6b7fabd03a2a7e31a3ee06403967",
+                    "domain": "light"
+                  },
+                  {
+                    "condition": "device",
+                    "type": "is_on",
+                    "device_id": "8cc3f355ed7e71b1039c01b8091ecbb3",
+                    "entity_id": "0c4fe33636478cc1962a0741f4bf4f36",
+                    "domain": "switch"
+                  }
+                ]
+              }
+            ],
+            "actions": [
+              {
+                "action": "light.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "area_id": "bedroom"
+                }
+              },
+              {
+                "type": "turn_off",
+                "device_id": "8cc3f355ed7e71b1039c01b8091ecbb3",
+                "entity_id": "0c4fe33636478cc1962a0741f4bf4f36",
+                "domain": "switch"
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1K32716ZJ2HC8E5KS39AKK3",
+            "parent_id": "01K1K32713NAKE132HJFPJ0R1J",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/1",
+          "run_id": "ae10a50eb16b044b72edeb678e64ef82",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-08-01T15:12:31.270384+00:00",
+            "finish": "2025-08-01T15:12:31.865547+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753906301577",
+          "trigger": "event 'zha_event'"
+        }
+      }
+    ],
+    "automation.1753399106551": [
+      {
+        "extended_dict": {
+          "last_step": "action/2/then/0",
+          "run_id": "6a99a5af0a3fcb8c16030d7b38430b93",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-07-31T23:35:33.901360+00:00",
+            "finish": "2025-07-31T23:35:34.379939+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753399106551",
+          "trigger": "state of sensor.wvnq93vm7r_battery_state",
+          "trace": {
+            "trigger/0": [
+              {
+                "path": "trigger/0",
+                "timestamp": "2025-07-31T23:35:33.901514+00:00",
+                "changed_variables": {
+                  "this": {
+                    "entity_id": "automation.lights_out_at_night",
+                    "state": "on",
+                    "attributes": {
+                      "id": "1753399106551",
+                      "last_triggered": "2025-07-30T22:43:00.986416+00:00",
+                      "mode": "single",
+                      "current": 0,
+                      "friendly_name": "Lights out at night "
+                    },
+                    "last_changed": "2025-07-31T18:35:40.462205+00:00",
+                    "last_reported": "2025-07-31T18:35:40.462205+00:00",
+                    "last_updated": "2025-07-31T18:35:40.462205+00:00",
+                    "context": {
+                      "id": "01K1GW9FHE7Q4SRMQABQAQS5MB",
+                      "parent_id": null,
+                      "user_id": null
+                    }
+                  },
+                  "trigger": {
+                    "id": "0",
+                    "idx": "0",
+                    "alias": null,
+                    "platform": "state",
+                    "entity_id": "sensor.wvnq93vm7r_battery_state",
+                    "from_state": {
+                      "entity_id": "sensor.wvnq93vm7r_battery_state",
+                      "state": "Not Charging",
+                      "attributes": {
+                        "Low Power Mode": false,
+                        "icon": "mdi:battery-40",
+                        "friendly_name": "WVNQ93VM7R Battery State"
+                      },
+                      "last_changed": "2025-07-31T18:35:25.035602+00:00",
+                      "last_reported": "2025-07-31T22:26:29.174480+00:00",
+                      "last_updated": "2025-07-31T22:26:29.174480+00:00",
+                      "context": {
+                        "id": "01K1H9G3NPNHVXEJ20NB1DX49C",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "to_state": {
+                      "entity_id": "sensor.wvnq93vm7r_battery_state",
+                      "state": "Charging",
+                      "attributes": {
+                        "Low Power Mode": false,
+                        "icon": "mdi:battery-charging-40",
+                        "friendly_name": "WVNQ93VM7R Battery State"
+                      },
+                      "last_changed": "2025-07-31T23:35:33.898939+00:00",
+                      "last_reported": "2025-07-31T23:35:33.916588+00:00",
+                      "last_updated": "2025-07-31T23:35:33.898939+00:00",
+                      "context": {
+                        "id": "01K1HDEK8A1HC51TC3V59J73DP",
+                        "parent_id": null,
+                        "user_id": null
+                      }
+                    },
+                    "for": null,
+                    "attribute": null,
+                    "description": "state of sensor.wvnq93vm7r_battery_state"
+                  }
+                }
+              }
+            ],
+            "condition/0": [
+              {
+                "path": "condition/0",
+                "timestamp": "2025-07-31T23:35:33.901547+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "condition/1": [
+              {
+                "path": "condition/1",
+                "timestamp": "2025-07-31T23:35:33.901623+00:00",
+                "result": {
+                  "after": {
+                    "__type": "<class 'datetime.time'>",
+                    "isoformat": "23:00:00"
+                  },
+                  "now_time": {
+                    "__type": "<class 'datetime.time'>",
+                    "isoformat": "00:35:33.901638"
+                  },
+                  "before": {
+                    "__type": "<class 'datetime.time'>",
+                    "isoformat": "05:00:00"
+                  },
+                  "result": true
+                }
+              }
+            ],
+            "action/0": [
+              {
+                "path": "action/0",
+                "timestamp": "2025-07-31T23:35:33.901878+00:00",
+                "changed_variables": {
+                  "context": {
+                    "id": "01K1HDEK8DYJX0WAH64EB46JH4",
+                    "parent_id": "01K1HDEK8A1HC51TC3V59J73DP",
+                    "user_id": null
+                  }
+                },
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_off",
+                    "service_data": {},
+                    "target": {
+                      "device_id": [
+                        "d146f6075d24738d742ae8ec63d3ed4d",
+                        "36ba8d8d619f76af150f27bb1f18c4f7"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/1": [
+              {
+                "path": "action/1",
+                "timestamp": "2025-07-31T23:35:34.197519+00:00",
+                "result": {
+                  "params": {
+                    "domain": "switch",
+                    "service": "turn_off",
+                    "service_data": {},
+                    "target": {
+                      "device_id": [
+                        "8cc3f355ed7e71b1039c01b8091ecbb3"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ],
+            "action/2": [
+              {
+                "path": "action/2",
+                "timestamp": "2025-07-31T23:35:34.287711+00:00",
+                "result": {
+                  "choice": "then"
+                }
+              }
+            ],
+            "action/2/if": [
+              {
+                "path": "action/2/if",
+                "timestamp": "2025-07-31T23:35:34.288146+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "action/2/if/condition/0": [
+              {
+                "path": "action/2/if/condition/0",
+                "timestamp": "2025-07-31T23:35:34.288208+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "action/2/if/condition/0/conditions/0": [
+              {
+                "path": "action/2/if/condition/0/conditions/0",
+                "timestamp": "2025-07-31T23:35:34.288246+00:00",
+                "result": {
+                  "result": true
+                }
+              },
+              {
+                "path": "action/2/if/condition/0/conditions/0",
+                "timestamp": "2025-07-31T23:35:34.288279+00:00",
+                "result": {
+                  "result": true
+                }
+              }
+            ],
+            "action/2/if/condition/0/conditions/0/entity_id/0": [
+              {
+                "path": "action/2/if/condition/0/conditions/0/entity_id/0",
+                "timestamp": "2025-07-31T23:35:34.288315+00:00",
+                "result": {
+                  "result": true,
+                  "state": "on",
+                  "wanted_state": "on"
+                }
+              }
+            ],
+            "action/2/then/0": [
+              {
+                "path": "action/2/then/0",
+                "timestamp": "2025-07-31T23:35:34.288558+00:00",
+                "result": {
+                  "params": {
+                    "domain": "light",
+                    "service": "turn_on",
+                    "service_data": {
+                      "color_temp_kelvin": 2000,
+                      "brightness_pct": 10,
+                      "device_id": [
+                        "99101c0bcd66d8e4d3532b7c03afbc44"
+                      ]
+                    },
+                    "target": {
+                      "device_id": [
+                        "99101c0bcd66d8e4d3532b7c03afbc44"
+                      ]
+                    }
+                  },
+                  "running_script": false
+                }
+              }
+            ]
+          },
+          "config": {
+            "id": "1753399106551",
+            "alias": "Lights out at night ",
+            "description": "",
+            "triggers": [
+              {
+                "trigger": "state",
+                "entity_id": [
+                  "sensor.wvnq93vm7r_battery_state"
+                ],
+                "from": "Not Charging",
+                "to": "Charging"
+              }
+            ],
+            "conditions": [
+              {
+                "condition": "zone",
+                "entity_id": "person.francisco_power",
+                "zone": "zone.home"
+              },
+              {
+                "condition": "time",
+                "after": "23:00:00",
+                "before": "05:00:00"
+              }
+            ],
+            "actions": [
+              {
+                "action": "light.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "device_id": [
+                    "d146f6075d24738d742ae8ec63d3ed4d",
+                    "36ba8d8d619f76af150f27bb1f18c4f7"
+                  ]
+                }
+              },
+              {
+                "action": "switch.turn_off",
+                "metadata": {},
+                "data": {},
+                "target": {
+                  "device_id": "8cc3f355ed7e71b1039c01b8091ecbb3"
+                }
+              },
+              {
+                "if": [
+                  {
+                    "condition": "or",
+                    "conditions": [
+                      {
+                        "condition": "device",
+                        "type": "is_on",
+                        "device_id": "99101c0bcd66d8e4d3532b7c03afbc44",
+                        "entity_id": "67db6b7fabd03a2a7e31a3ee06403967",
+                        "domain": "light"
+                      },
+                      {
+                        "condition": "device",
+                        "type": "is_on",
+                        "device_id": "8cc3f355ed7e71b1039c01b8091ecbb3",
+                        "entity_id": "0c4fe33636478cc1962a0741f4bf4f36",
+                        "domain": "switch"
+                      }
+                    ]
+                  }
+                ],
+                "then": [
+                  {
+                    "action": "light.turn_on",
+                    "metadata": {},
+                    "data": {
+                      "color_temp_kelvin": 2000,
+                      "brightness_pct": 10
+                    },
+                    "target": {
+                      "device_id": "99101c0bcd66d8e4d3532b7c03afbc44"
+                    }
+                  }
+                ]
+              }
+            ],
+            "mode": "single"
+          },
+          "blueprint_inputs": null,
+          "context": {
+            "id": "01K1HDEK8DYJX0WAH64EB46JH4",
+            "parent_id": "01K1HDEK8A1HC51TC3V59J73DP",
+            "user_id": null
+          }
+        },
+        "short_dict": {
+          "last_step": "action/2/then/0",
+          "run_id": "6a99a5af0a3fcb8c16030d7b38430b93",
+          "state": "stopped",
+          "script_execution": "finished",
+          "timestamp": {
+            "start": "2025-07-31T23:35:33.901360+00:00",
+            "finish": "2025-07-31T23:35:34.379939+00:00"
+          },
+          "domain": "automation",
+          "item_id": "1753399106551",
+          "trigger": "state of sensor.wvnq93vm7r_battery_state"
+        }
+      }
+    ]
+  }
 }
