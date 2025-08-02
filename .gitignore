@@ -9,6 +9,7 @@ onboarding
 custom_components/
 backups/
 *.db*
+*credentials*
 
 ##### Adguard volumes
 adguard/volumes/
@@ -16,6 +17,9 @@ adguard/volumes/
 ##### Nginx proxy specific directories
 *.sqlite
 keys.json
+
+##### Portainer Volumes
+portainer/volumes/
 
 ##### Python defaults (for general apps and plugins)
 

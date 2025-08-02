@@ -1,0 +1,20 @@
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:lts
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./volumes:/data
+    # ports:
+    #   - 9443:9443 # UI
+      # - 8000:8000 # Optional: TCP tunnel server for edge compute features
+    networks:
+      - proxy
+    environment:
+      - TRUSTED_ORIGINS=docker.lan
+
+networks:
+  proxy:
+    name: nginx-proxy_proxy
+    external: true
