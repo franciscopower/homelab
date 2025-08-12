@@ -38,7 +38,11 @@
                         }
                       ]
                     }
-                  ]
+                  ],
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  }
                 },
                 {
                   "type": "custom:entity-progress-card",
@@ -68,22 +72,6 @@
               "type": "grid",
               "cards": [
                 {
-                  "type": "custom:big-slider-card",
-                  "entity": "light.bedroom_light",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": 1
-                  }
-                },
-                {
-                  "type": "custom:big-slider-card",
-                  "entity": "light.ellies_light",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": 1
-                  }
-                },
-                {
                   "type": "custom:mushroom-entity-card",
                   "entity": "switch.bedside_table",
                   "tap_action": {
@@ -91,6 +79,24 @@
                   },
                   "icon_color": "orange",
                   "name": "Bedside Table "
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.bedroom_light",
+                  "icon": "mdi:ceiling-light",
+                  "use_light_color": true,
+                  "show_brightness_control": true,
+                  "collapsible_controls": true,
+                  "show_color_temp_control": true
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.ellies_light",
+                  "icon": "mdi:ceiling-light",
+                  "use_light_color": true,
+                  "show_brightness_control": true,
+                  "show_color_temp_control": true,
+                  "collapsible_controls": true
                 }
               ],
               "visibility": [
@@ -491,20 +497,21 @@
                   "icon": "mdi:lightbulb"
                 },
                 {
-                  "type": "custom:big-slider-card",
-                  "entity": "light.bedroom_light",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": 1
-                  }
-                },
-                {
                   "type": "custom:mushroom-entity-card",
                   "entity": "switch.bedside_table",
                   "tap_action": {
                     "action": "toggle"
                   },
                   "icon_color": "orange"
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.bedroom_light",
+                  "icon": "mdi:ceiling-light",
+                  "use_light_color": true,
+                  "show_brightness_control": true,
+                  "show_color_temp_control": true,
+                  "collapsible_controls": true
                 }
               ]
             }
@@ -739,7 +746,16 @@
               "text_only": true,
               "content": "## 🐣 Ellie's Mansion"
             }
-          }
+          },
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.tze200_3towulqd_ts0601"
+            }
+          ]
         }
       ]
     }
