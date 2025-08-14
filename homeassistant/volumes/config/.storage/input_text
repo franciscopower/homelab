@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_text",
+  "data": {
+    "items": [
+      {
+        "id": "material_you_base_color_13475ff9b07c447c980258c9d4b5af72",
+        "name": "Material You Base Color Frankie",
+        "icon": "mdi:palette",
+        "min": 3,
+        "max": 9,
+        "mode": "text"
+      },
+      {
+        "id": "material_you_image_url_13475ff9b07c447c980258c9d4b5af72",
+        "name": "Material You Base Color Source Image Path/URL Frankie",
+        "icon": "mdi:image",
+        "min": 0,
+        "max": 255,
+        "mode": "text"
+      },
+      {
+        "id": "material_you_css_file_13475ff9b07c447c980258c9d4b5af72",
+        "name": "Material You CSS Path/URL Frankie",
+        "icon": "mdi:language-css3",
+        "min": 0,
+        "max": 255,
+        "mode": "text"
+      },
+      {
+        "id": "material_you_base_color_ef6b57fd674242e5bd2c71cc89896ebe",
+        "name": "Material You Base Color Angie",
+        "icon": "mdi:palette",
+        "min": 3,
+        "max": 9,
+        "mode": "text"
+      },
+      {
+        "id": "material_you_image_url_ef6b57fd674242e5bd2c71cc89896ebe",
+        "name": "Material You Base Color Source Image Path/URL Angie",
+        "icon": "mdi:image",
+        "min": 0,
+        "max": 255,
+        "mode": "text"
+      },
+      {
+        "id": "material_you_css_file_ef6b57fd674242e5bd2c71cc89896ebe",
+        "name": "Material You CSS Path/URL Angie",
+        "icon": "mdi:language-css3",
+        "min": 0,
+        "max": 255,
+        "mode": "text"
+      }
+    ]
+  }
+}

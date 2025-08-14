@@ -259,3 +259,23 @@
     target:
       area_id: ellie_s_room
   mode: single
+- id: '1755004808813'
+  alias: 'Bedroom light max brightness '
+  description: ''
+  triggers:
+  - device_id: eb49e8d861260e48b9f9f0c65c44e304
+    domain: zha
+    type: remote_button_double_press
+    subtype: button_1
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data:
+      transition: 2
+      brightness_pct: 100
+      color_temp_kelvin: 4813
+    target:
+      device_id: 99101c0bcd66d8e4d3532b7c03afbc44
+  mode: single

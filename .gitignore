@@ -10,9 +10,16 @@ custom_components/
 backups/
 *.db*
 *credentials*
+tts/
 
 ##### Adguard volumes
 adguard/volumes/
+
+##### Piper volumes
+piper/volumes/
+
+##### Whisper volumes
+whisper/volumes/
 
 ##### Nginx proxy specific directories
 *.sqlite

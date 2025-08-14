@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_number",
+  "data": {
+    "items": [
+      {
+        "id": "material_you_contrast_13475ff9b07c447c980258c9d4b5af72",
+        "name": "Material You Contrast Level Frankie",
+        "icon": "mdi:contrast-circle",
+        "min": -1.0,
+        "max": 1.0,
+        "step": 0.1,
+        "mode": "slider"
+      },
+      {
+        "id": "material_you_contrast_ef6b57fd674242e5bd2c71cc89896ebe",
+        "name": "Material You Contrast Level Angie",
+        "icon": "mdi:contrast-circle",
+        "min": -1.0,
+        "max": 1.0,
+        "step": 0.1,
+        "mode": "slider"
+      }
+    ]
+  }
+}

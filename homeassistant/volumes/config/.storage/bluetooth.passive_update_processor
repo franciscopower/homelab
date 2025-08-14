@@ -62,8 +62,8 @@
         },
         "entity_names": {},
         "entity_data": {
-          "signal_strength___": -63,
-          "temperature___": 28.1,
+          "signal_strength___": -70,
+          "temperature___": 28.3,
           "humidity___": 63,
           "battery___": 100,
           "voltage___": 3.1

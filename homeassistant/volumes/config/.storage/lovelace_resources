@@ -10,11 +10,6 @@
         "type": "module"
       },
       {
-        "id": "ad43b1cea680497ba741766053761ca8",
-        "url": "/bambu_lab/ha-bambulab-cards.js?v=0.5.11",
-        "type": "module"
-      },
-      {
         "id": "7b4757e000e04b76826b2e278d259559",
         "url": "/hacsfiles/lovelace-entity-progress-card/entity-progress-card.js?hacstag=9088685221412",
         "type": "module"
@@ -32,6 +27,21 @@
       {
         "id": "04773e12f7cc4f22b7b915804020e346",
         "url": "/hacsfiles/lovelace-card-mod/card-mod.js?hacstag=190927524345",
+        "type": "module"
+      },
+      {
+        "id": "5fe9a93e3f3d47fbbf18244b7c82f693",
+        "url": "/hacsfiles/material-you-utilities/material-you-utilities.min.js?hacstag=967737153203",
+        "type": "module"
+      },
+      {
+        "id": "e67ea366039943489881748a660f648f",
+        "url": "https://cdn.jsdelivr.net/gh/giovannilamarmora/lovelace-google-components@master/dist/google-components.js?v=20250626",
+        "type": "module"
+      },
+      {
+        "id": "27a1021abb08406bad090d707ad98f85",
+        "url": "/bambu_lab/ha-bambulab-cards.js?v=0.5.11",
         "type": "module"
       }
     ]

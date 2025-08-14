@@ -72,31 +72,61 @@
               "type": "grid",
               "cards": [
                 {
-                  "type": "custom:mushroom-entity-card",
+                  "type": "custom:google-button-card",
                   "entity": "switch.bedside_table",
-                  "tap_action": {
-                    "action": "toggle"
-                  },
-                  "icon_color": "orange",
-                  "name": "Bedside Table "
+                  "icon": "mdi:lamp",
+                  "height": 97,
+                  "use_default_icon": false,
+                  "use_default_toggle": true,
+                  "use_default_text": true,
+                  "control_type": "generic",
+                  "name": "Bedside Table",
+                  "dual_icon": true,
+                  "icon_on": "mdi:lamp",
+                  "icon_off": "mdi:lamp-outline",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
                 },
                 {
-                  "type": "custom:mushroom-light-card",
+                  "type": "custom:google-slider-card",
                   "entity": "light.bedroom_light",
+                  "attribute": "brightness",
                   "icon": "mdi:ceiling-light",
-                  "use_light_color": true,
-                  "show_brightness_control": true,
-                  "collapsible_controls": true,
-                  "show_color_temp_control": true
+                  "show_percentage": true,
+                  "bold_text": false,
+                  "name": "Bedroom Ceiling light ",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
                 },
                 {
-                  "type": "custom:mushroom-light-card",
+                  "type": "custom:google-slider-card",
                   "entity": "light.ellies_light",
+                  "attribute": "brightness",
                   "icon": "mdi:ceiling-light",
-                  "use_light_color": true,
-                  "show_brightness_control": true,
-                  "show_color_temp_control": true,
-                  "collapsible_controls": true
+                  "show_percentage": true,
+                  "bold_text": false,
+                  "name": "Ellie’s room light ",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "custom:google-slider-card",
+                  "entity": "light.kitchen_cabinet",
+                  "attribute": "brightness",
+                  "icon": "mdi:countertop",
+                  "show_percentage": true,
+                  "bold_text": false,
+                  "name": "Kitchen light ",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
                 }
               ],
               "visibility": [
@@ -184,7 +214,7 @@
                 {
                   "alert_classes": [
                     "motion",
-                    "moisture"
+                    "running"
                   ],
                   "sensor_classes": [
                     "temperature",
@@ -277,15 +307,6 @@
               "show_icon": true,
               "entity": "person.angelica",
               "show_entity_picture": true
-            },
-            {
-              "type": "entity",
-              "show_name": true,
-              "show_state": false,
-              "show_icon": true,
-              "entity": "conversation.google_ai_conversation_2",
-              "name": "AI",
-              "icon": "mdi:creation"
             }
           ],
           "header": {
@@ -317,12 +338,30 @@
                   "heading": "Lights "
                 },
                 {
-                  "type": "custom:mushroom-light-card",
+                  "type": "custom:google-slider-card",
                   "entity": "light.living_room_press",
+                  "attribute": "brightness",
                   "icon": "mdi:wardrobe",
-                  "use_light_color": true,
-                  "show_brightness_control": true,
-                  "show_color_control": true
+                  "show_percentage": true,
+                  "bold_text": false,
+                  "name": "Press light",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
+                },
+                {
+                  "type": "custom:google-slider-card",
+                  "entity": "light.wled_2",
+                  "attribute": "brightness",
+                  "show_percentage": true,
+                  "bold_text": false,
+                  "name": "Jesus Light",
+                  "icon": "mdi:image-frame",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
                 },
                 {
                   "type": "heading",
@@ -497,21 +536,35 @@
                   "icon": "mdi:lightbulb"
                 },
                 {
-                  "type": "custom:mushroom-entity-card",
+                  "type": "custom:google-button-card",
                   "entity": "switch.bedside_table",
-                  "tap_action": {
-                    "action": "toggle"
-                  },
-                  "icon_color": "orange"
+                  "icon": "mdi:lamp",
+                  "height": 97,
+                  "use_default_icon": false,
+                  "use_default_toggle": true,
+                  "use_default_text": true,
+                  "control_type": "generic",
+                  "name": "Bedside Table",
+                  "dual_icon": true,
+                  "icon_on": "mdi:lamp",
+                  "icon_off": "mdi:lamp-outline",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
                 },
                 {
-                  "type": "custom:mushroom-light-card",
+                  "type": "custom:google-slider-card",
                   "entity": "light.bedroom_light",
+                  "attribute": "brightness",
                   "icon": "mdi:ceiling-light",
-                  "use_light_color": true,
-                  "show_brightness_control": true,
-                  "show_color_temp_control": true,
-                  "collapsible_controls": true
+                  "show_percentage": true,
+                  "bold_text": false,
+                  "name": "Ceiling light ",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  }
                 }
               ]
             }
@@ -674,6 +727,23 @@
                   }
                 }
               ]
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "heading",
+                  "heading_style": "title",
+                  "heading": "Automations",
+                  "icon": "mdi:robot"
+                },
+                {
+                  "show_name": true,
+                  "show_icon": true,
+                  "type": "button",
+                  "entity": "automation.kitchen_lights_off"
+                }
+              ]
             }
           ],
           "header": {
@@ -724,16 +794,13 @@
                   "icon": "mdi:lightbulb"
                 },
                 {
-                  "type": "custom:mushroom-light-card",
+                  "type": "custom:google-slider-card",
                   "entity": "light.ellies_light",
+                  "attribute": "brightness",
                   "icon": "mdi:ceiling-light",
-                  "use_light_color": true,
-                  "show_color_temp_control": true,
-                  "show_brightness_control": true,
-                  "grid_options": {
-                    "columns": 12,
-                    "rows": 2
-                  }
+                  "show_percentage": true,
+                  "bold_text": false,
+                  "name": "Ceiling light "
                 }
               ]
             }

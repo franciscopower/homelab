@@ -1,0 +1,12 @@
+
+services:
+  piper:
+    image: rhasspy/wyoming-piper
+    container_name: piper
+    command: --voice en_US-lessac-medium
+    volumes:
+      - ./volumes:/data
+    ports:
+      - 10200:10200
+    restart: unless-stopped
+

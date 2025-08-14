@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "input_boolean",
+  "data": {
+    "items": [
+      {
+        "id": "material_you_styles_13475ff9b07c447c980258c9d4b5af72",
+        "name": "Material You Style Upgrades Frankie",
+        "icon": "mdi:material-design"
+      },
+      {
+        "id": "material_you_navbar_13475ff9b07c447c980258c9d4b5af72",
+        "name": "Material You Show Navigation Bar Frankie",
+        "icon": "mdi:navigation"
+      },
+      {
+        "id": "material_you_harmonize_13475ff9b07c447c980258c9d4b5af72",
+        "name": "Material You Harmonize Semantic Colors Frankie",
+        "icon": "mdi:palette-swatch"
+      },
+      {
+        "id": "material_you_styles_ef6b57fd674242e5bd2c71cc89896ebe",
+        "name": "Material You Style Upgrades Angie",
+        "icon": "mdi:material-design"
+      },
+      {
+        "id": "material_you_navbar_ef6b57fd674242e5bd2c71cc89896ebe",
+        "name": "Material You Show Navigation Bar Angie",
+        "icon": "mdi:navigation"
+      },
+      {
+        "id": "material_you_harmonize_ef6b57fd674242e5bd2c71cc89896ebe",
+        "name": "Material You Harmonize Semantic Colors Angie",
+        "icon": "mdi:palette-swatch"
+      }
+    ]
+  }
+}
