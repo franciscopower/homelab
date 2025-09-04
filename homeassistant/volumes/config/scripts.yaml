@@ -1,0 +1,43 @@
+robot_vacuum_room_0:
+  sequence:
+  - action: xiaomi_miot.call_action
+    metadata: {}
+    data:
+      entity_id: vacuum.xiaomi_d106gl_b255_robot_cleaner
+      siid: 7
+      aiid: 3
+      params:
+      - '10'
+      - 0
+      - 1
+  alias: Robot Vacuum Room 0
+  description: ''
+lights_out:
+  sequence:
+  - action: light.turn_off
+    metadata: {}
+    data:
+      transition: 30
+    target:
+      area_id:
+      - ellie_s_room
+      - kitchen
+      - living_room
+  alias: Lights out
+  description: ''
+notify_to_vacuum_the_house:
+  use_blueprint:
+    path: homeassistant/confirmable_notification.yaml
+    input:
+      notify_device: d63398366a8d1b9dd522022508ea86c0
+      title: Vacuum House?
+      message: Should I take advantage to vacuum the house while you’re out?
+      confirm_text: 'Yes'
+      dismiss_text: 'No'
+      confirm_action:
+      - device_id: 3674b4a7ac88c923c71a2099325b304f
+        domain: button
+        entity_id: 26b8dd43ff0b13878fdf10004a28b277
+        type: press
+  alias: 'Notify to vacuum the house '
+  description: ''

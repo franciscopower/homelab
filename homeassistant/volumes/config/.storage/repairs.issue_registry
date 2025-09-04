@@ -52,6 +52,13 @@
         "domain": "bambu_lab",
         "is_persistent": false,
         "issue_id": "authentication_failed_01P00A460501268_1753639778"
+      },
+      {
+        "created": "2025-08-23T00:06:37.481403+00:00",
+        "dismissed_version": "2025.8.1",
+        "domain": "bambu_lab",
+        "is_persistent": false,
+        "issue_id": "authentication_failed_01P00A460501268_1755907597"
       }
     ]
   }

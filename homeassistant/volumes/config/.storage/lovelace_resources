@@ -11,17 +11,12 @@
       },
       {
         "id": "7b4757e000e04b76826b2e278d259559",
-        "url": "/hacsfiles/lovelace-entity-progress-card/entity-progress-card.js?hacstag=9088685221412",
+        "url": "/hacsfiles/lovelace-entity-progress-card/entity-progress-card.js?hacstag=908868522151",
         "type": "module"
       },
       {
         "id": "324c32cd0038430ea395649d133c1469",
-        "url": "/hacsfiles/room-card-minimalist/room-card-minimalist.js?hacstag=1020949375102",
-        "type": "module"
-      },
-      {
-        "id": "bbffe03e1ecd4f8c97ada1bc8ad14a12",
-        "url": "/hacsfiles/lovelace-big-slider-card/big-slider-card.js?hacstag=332589148115",
+        "url": "/hacsfiles/room-card-minimalist/room-card-minimalist.js?hacstag=1020949375110",
         "type": "module"
       },
       {
@@ -31,17 +26,17 @@
       },
       {
         "id": "5fe9a93e3f3d47fbbf18244b7c82f693",
-        "url": "/hacsfiles/material-you-utilities/material-you-utilities.min.js?hacstag=967737153203",
+        "url": "/hacsfiles/material-you-utilities/material-you-utilities.min.js?hacstag=9677371532011",
         "type": "module"
       },
       {
-        "id": "e67ea366039943489881748a660f648f",
-        "url": "https://cdn.jsdelivr.net/gh/giovannilamarmora/lovelace-google-components@master/dist/google-components.js?v=20250626",
-        "type": "module"
-      },
-      {
-        "id": "27a1021abb08406bad090d707ad98f85",
+        "id": "713ab34cae324238807aa5347755bd61",
         "url": "/bambu_lab/ha-bambulab-cards.js?v=0.5.11",
+        "type": "module"
+      },
+      {
+        "id": "e505f99bcf2847d79f784fa79bc3776a",
+        "url": "/hacsfiles/Bubble-Card/bubble-card.js?hacstag=680112919303",
         "type": "module"
       }
     ]

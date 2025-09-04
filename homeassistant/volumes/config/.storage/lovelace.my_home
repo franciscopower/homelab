@@ -19,6 +19,35 @@
                 },
                 {
                   "type": "tile",
+                  "entity": "light.light_switch_light",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "icon": "",
+                  "hide_state": true,
+                  "name": "Rest Area",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "icon_tap_action": {
+                    "action": "more-info"
+                  }
+                },
+                {
+                  "type": "tile",
+                  "entity": "light.light_switch_light_2",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Work Area",
+                  "hide_state": true,
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "icon_tap_action": {
+                    "action": "more-info"
+                  }
+                },
+                {
+                  "type": "tile",
                   "entity": "vacuum.xiaomi_d106gl_b255_robot_cleaner",
                   "features_position": "bottom",
                   "vertical": false,
@@ -47,7 +76,7 @@
                 {
                   "type": "custom:entity-progress-card",
                   "entity": "sensor.403100542121000104_bsh_common_option_programprogress",
-                  "name": "Program progress ",
+                  "name": "Dishwasher progress ",
                   "icon": "mdi:dishwasher",
                   "visibility": [
                     {
@@ -65,75 +94,6 @@
                     "columns": 12,
                     "rows": 1
                   }
-                }
-              ]
-            },
-            {
-              "type": "grid",
-              "cards": [
-                {
-                  "type": "custom:google-button-card",
-                  "entity": "switch.bedside_table",
-                  "icon": "mdi:lamp",
-                  "height": 97,
-                  "use_default_icon": false,
-                  "use_default_toggle": true,
-                  "use_default_text": true,
-                  "control_type": "generic",
-                  "name": "Bedside Table",
-                  "dual_icon": true,
-                  "icon_on": "mdi:lamp",
-                  "icon_off": "mdi:lamp-outline",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                },
-                {
-                  "type": "custom:google-slider-card",
-                  "entity": "light.bedroom_light",
-                  "attribute": "brightness",
-                  "icon": "mdi:ceiling-light",
-                  "show_percentage": true,
-                  "bold_text": false,
-                  "name": "Bedroom Ceiling light ",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                },
-                {
-                  "type": "custom:google-slider-card",
-                  "entity": "light.ellies_light",
-                  "attribute": "brightness",
-                  "icon": "mdi:ceiling-light",
-                  "show_percentage": true,
-                  "bold_text": false,
-                  "name": "Ellie’s room light ",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                },
-                {
-                  "type": "custom:google-slider-card",
-                  "entity": "light.kitchen_cabinet",
-                  "attribute": "brightness",
-                  "icon": "mdi:countertop",
-                  "show_percentage": true,
-                  "bold_text": false,
-                  "name": "Kitchen light ",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
-                  }
-                }
-              ],
-              "visibility": [
-                {
-                  "condition": "state",
-                  "entity": "sun.sun",
-                  "state": "below_horizon"
                 }
               ]
             },
@@ -168,9 +128,7 @@
                   "camera_view": "auto",
                   "fit_mode": "cover",
                   "type": "picture-entity",
-                  "entity": "camera.p1s_01p00a460501268_camera",
-                  "image": "https://demo.home-assistant.io/stub_config/bedroom.png",
-                  "camera_image": "camera.p1s_01p00a460501268_camera"
+                  "entity": "image.3d_printer_camera"
                 }
               ],
               "visibility": [
@@ -307,6 +265,20 @@
               "show_icon": true,
               "entity": "person.angelica",
               "show_entity_picture": true
+            },
+            {
+              "type": "entity",
+              "show_name": true,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "conversation.home_assistant",
+              "tap_action": {
+                "action": "assist",
+                "pipeline_id": "preferred",
+                "start_listening": true
+              },
+              "name": "AI",
+              "icon": "mdi:creation"
             }
           ],
           "header": {
@@ -338,53 +310,102 @@
                   "heading": "Lights "
                 },
                 {
-                  "type": "custom:google-slider-card",
-                  "entity": "light.living_room_press",
-                  "attribute": "brightness",
-                  "icon": "mdi:wardrobe",
-                  "show_percentage": true,
-                  "bold_text": false,
-                  "name": "Press light",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": "auto"
+                  "type": "tile",
+                  "entity": "light.light_switch_light",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "icon": "",
+                  "hide_state": true,
+                  "name": "Rest Area",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "icon_tap_action": {
+                    "action": "more-info"
                   }
                 },
                 {
-                  "type": "custom:google-slider-card",
+                  "type": "tile",
+                  "entity": "light.light_switch_light_2",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Work Area",
+                  "hide_state": true,
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "icon_tap_action": {
+                    "action": "more-info"
+                  }
+                },
+                {
+                  "type": "custom:bubble-card",
+                  "card_type": "button",
+                  "button_type": "slider",
                   "entity": "light.wled_2",
-                  "attribute": "brightness",
-                  "show_percentage": true,
-                  "bold_text": false,
-                  "name": "Jesus Light",
+                  "allow_light_slider_to_0": true,
                   "icon": "mdi:image-frame",
                   "grid_options": {
                     "columns": 6,
                     "rows": "auto"
-                  }
+                  },
+                  "scrolling_effect": false,
+                  "name": "Jesus Image"
+                },
+                {
+                  "type": "custom:bubble-card",
+                  "card_type": "button",
+                  "button_type": "slider",
+                  "entity": "light.wled",
+                  "allow_light_slider_to_0": true,
+                  "icon": "mdi:television",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  },
+                  "scrolling_effect": false,
+                  "name": "TV Cabinet"
+                },
+                {
+                  "type": "custom:bubble-card",
+                  "card_type": "button",
+                  "button_type": "slider",
+                  "entity": "light.living_room_press",
+                  "allow_light_slider_to_0": true,
+                  "icon": "mdi:wardrobe",
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": "auto"
+                  },
+                  "scrolling_effect": false,
+                  "name": ""
                 },
                 {
                   "type": "heading",
-                  "heading": "Climate",
+                  "icon": "mdi:television",
                   "heading_style": "title",
-                  "icon": "mdi:air-filter"
+                  "heading": "Devices"
                 },
                 {
-                  "graph": "line",
-                  "type": "sensor",
-                  "entity": "sensor.3d_printer_humidity_sensor_temperature",
-                  "detail": 1,
-                  "name": "Temperature ",
-                  "hours_to_show": 24,
-                  "limits": {}
+                  "type": "custom:bubble-card",
+                  "card_type": "media-player",
+                  "entity": "media_player.tv_qe50q68bauxxc",
+                  "button_action": {},
+                  "sub_button": [],
+                  "card_layout": "large",
+                  "cover_background": false
                 },
                 {
-                  "graph": "line",
-                  "type": "sensor",
-                  "entity": "sensor.3d_printer_humidity_sensor_humidity",
-                  "detail": 1,
-                  "name": "Humidity ",
-                  "hours_to_show": 24
+                  "type": "tile",
+                  "entity": "button.wake_on_lan_c8_7f_54_a8_35_0e",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "name": "Wake up PC",
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  },
+                  "icon": "mdi:laptop"
                 }
               ]
             },
@@ -467,21 +488,7 @@
                   "camera_view": "auto",
                   "fit_mode": "cover",
                   "type": "picture-entity",
-                  "entity": "camera.p1s_01p00a460501268_camera",
-                  "image": "https://demo.home-assistant.io/stub_config/bedroom.png",
-                  "camera_image": "camera.p1s_01p00a460501268_camera",
-                  "visibility": [
-                    {
-                      "condition": "state",
-                      "entity": "sensor.p1s_01p00a460501268_current_stage",
-                      "state_not": "idle"
-                    },
-                    {
-                      "condition": "state",
-                      "entity": "sensor.p1s_01p00a460501268_current_stage",
-                      "state_not": "offline"
-                    }
-                  ]
+                  "entity": "image.3d_printer_camera"
                 }
               ],
               "visibility": [
@@ -515,6 +522,13 @@
               "show_state": true,
               "show_icon": true,
               "entity": "sensor.3d_printer_humidity_sensor_humidity"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": false,
+              "show_icon": true,
+              "entity": "binary_sensor.unk_manufacturer_unk_model"
             }
           ]
         },
@@ -536,35 +550,37 @@
                   "icon": "mdi:lightbulb"
                 },
                 {
-                  "type": "custom:google-button-card",
+                  "type": "custom:bubble-card",
+                  "card_type": "button",
+                  "button_type": "switch",
                   "entity": "switch.bedside_table",
-                  "icon": "mdi:lamp",
-                  "height": 97,
-                  "use_default_icon": false,
-                  "use_default_toggle": true,
-                  "use_default_text": true,
-                  "control_type": "generic",
-                  "name": "Bedside Table",
-                  "dual_icon": true,
-                  "icon_on": "mdi:lamp",
-                  "icon_off": "mdi:lamp-outline",
                   "grid_options": {
                     "columns": 6,
                     "rows": "auto"
-                  }
+                  },
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "button_action": {
+                    "tap_action": {
+                      "action": "more-info"
+                    }
+                  },
+                  "name": "Bedside table "
                 },
                 {
-                  "type": "custom:google-slider-card",
+                  "type": "custom:bubble-card",
+                  "card_type": "button",
+                  "button_type": "slider",
                   "entity": "light.bedroom_light",
-                  "attribute": "brightness",
-                  "icon": "mdi:ceiling-light",
-                  "show_percentage": true,
-                  "bold_text": false,
-                  "name": "Ceiling light ",
+                  "button_action": {},
                   "grid_options": {
                     "columns": 6,
                     "rows": "auto"
-                  }
+                  },
+                  "allow_light_slider_to_0": true,
+                  "name": "Ceiling Light",
+                  "icon": "mdi:ceiling-light"
                 }
               ]
             }
@@ -604,6 +620,11 @@
                     {
                       "type": "entity",
                       "entity": "binary_sensor.403100542121000104_bsh_common_status_doorstate"
+                    },
+                    {
+                      "type": "entity",
+                      "entity": "binary_sensor.403100542121000104_bsh_common_setting_childlock",
+                      "icon": "mdi:lock"
                     }
                   ],
                   "alignment": "center"
@@ -631,117 +652,130 @@
                   }
                 },
                 {
-                  "type": "custom:mushroom-select-card",
-                  "entity": "select.403100542121000104_programs",
-                  "name": "Select Program"
-                },
-                {
                   "type": "custom:mushroom-entity-card",
-                  "entity": "switch.403100542121000104_bsh_common_setting_childlock",
-                  "icon": "mdi:lock",
+                  "entity": "sensor.403100542121000104_bsh_common_status_operationstate",
+                  "icon": "mdi:dishwasher",
                   "tap_action": {
-                    "action": "toggle"
+                    "action": "navigate",
+                    "navigation_path": "#dishwasher"
                   },
-                  "name": "Childproof Lock"
-                },
-                {
-                  "type": "custom:mushroom-entity-card",
-                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_ecodry",
-                  "name": "Eco Dry",
-                  "icon": "mdi:leaf",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_hygieneplus",
-                  "features_position": "bottom",
-                  "vertical": false,
-                  "tap_action": {
-                    "action": "toggle"
-                  },
-                  "icon_tap_action": {
-                    "action": "more-info"
-                  },
-                  "icon": "mdi:air-filter",
-                  "name": "Hygene +"
-                },
-                {
-                  "type": "tile",
-                  "entity": "switch.403100542121000104_dishcare_dishwasher_option_halfload",
-                  "features_position": "bottom",
-                  "vertical": false,
-                  "name": "Half Load",
-                  "icon": "mdi:fraction-one-half",
-                  "tap_action": {
-                    "action": "toggle"
-                  }
-                },
-                {
-                  "type": "tile",
-                  "entity": "binary_sensor.403100542121000104_dishcare_dishwasher_option_variospeedplus",
-                  "features_position": "bottom",
-                  "vertical": false,
-                  "name": "Speed Perfect +",
-                  "icon": "mdi:speedometer",
-                  "tap_action": {
-                    "action": "toggle"
-                  },
-                  "icon_tap_action": {
-                    "action": "more-info"
-                  }
-                },
-                {
-                  "show_name": false,
-                  "show_icon": true,
-                  "type": "button",
-                  "entity": "button.403100542121000104_start_pause",
                   "grid_options": {
-                    "columns": 6,
+                    "columns": 12,
                     "rows": 1
                   },
-                  "tap_action": {
-                    "action": "toggle"
-                  }
+                  "name": "Dishwasher"
                 },
                 {
-                  "type": "custom:mushroom-select-card",
-                  "entity": "select.403100542121000104_bsh_common_option_startinrelative",
-                  "name": "Start Time"
-                },
-                {
-                  "show_name": false,
-                  "show_icon": true,
-                  "type": "button",
-                  "entity": "button.403100542121000104_stop",
-                  "grid_options": {
-                    "columns": 6,
-                    "rows": 1
-                  },
-                  "tap_action": {
-                    "action": "more-info"
-                  },
-                  "hold_action": {
-                    "action": "toggle"
-                  }
-                }
-              ]
-            },
-            {
-              "type": "grid",
-              "cards": [
-                {
-                  "type": "heading",
-                  "heading_style": "title",
-                  "heading": "Automations",
-                  "icon": "mdi:robot"
-                },
-                {
-                  "show_name": true,
-                  "show_icon": true,
-                  "type": "button",
-                  "entity": "automation.kitchen_lights_off"
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:bubble-card",
+                      "card_type": "pop-up",
+                      "hash": "#dishwasher",
+                      "button_type": "name",
+                      "name": "Dishwasher ",
+                      "icon": "mdi:dishwasher"
+                    },
+                    {
+                      "type": "custom:mushroom-select-card",
+                      "entity": "select.403100542121000104_programs",
+                      "name": "Select Program "
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "custom:mushroom-entity-card",
+                          "entity": "switch.403100542121000104_bsh_common_setting_childlock",
+                          "name": "Child lock",
+                          "icon": "mdi:lock",
+                          "tap_action": {
+                            "action": "toggle"
+                          }
+                        },
+                        {
+                          "type": "custom:mushroom-entity-card",
+                          "entity": "switch.403100542121000104_dishcare_dishwasher_option_ecodry",
+                          "icon": "mdi:leaf",
+                          "name": "Eco Dry",
+                          "tap_action": {
+                            "action": "toggle"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "custom:mushroom-entity-card",
+                          "entity": "switch.403100542121000104_dishcare_dishwasher_option_hygieneplus",
+                          "tap_action": {
+                            "action": "toggle"
+                          },
+                          "name": "Hygiene +",
+                          "icon": "mdi:air-filter",
+                          "primary_info": "none",
+                          "secondary_info": "none"
+                        },
+                        {
+                          "type": "custom:mushroom-entity-card",
+                          "entity": "switch.403100542121000104_dishcare_dishwasher_option_halfload",
+                          "name": "Half Load",
+                          "icon": "mdi:fraction-one-half",
+                          "tap_action": {
+                            "action": "toggle"
+                          },
+                          "secondary_info": "none",
+                          "primary_info": "none"
+                        },
+                        {
+                          "type": "custom:mushroom-entity-card",
+                          "entity": "switch.403100542121000104_dishcare_dishwasher_option_variospeedplus",
+                          "icon": "mdi:speedometer",
+                          "name": "Speed Perfect",
+                          "tap_action": {
+                            "action": "toggle"
+                          },
+                          "fill_container": false,
+                          "primary_info": "none",
+                          "secondary_info": "none"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "custom:mushroom-select-card",
+                          "entity": "select.403100542121000104_bsh_common_option_startinrelative"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "show_name": false,
+                          "show_icon": true,
+                          "type": "button",
+                          "entity": "button.403100542121000104_start_pause",
+                          "tap_action": {
+                            "action": "toggle"
+                          }
+                        },
+                        {
+                          "show_name": false,
+                          "show_icon": true,
+                          "type": "button",
+                          "entity": "button.403100542121000104_stop",
+                          "hold_action": {
+                            "action": "toggle"
+                          }
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -759,7 +793,7 @@
               "show_name": false,
               "show_state": false,
               "show_icon": true,
-              "entity": "binary_sensor.kitchen_motion_sensor_occupancy",
+              "entity": "binary_sensor.kitchen_presence_sensor",
               "icon": "mdi:motion-sensor"
             },
             {
@@ -794,13 +828,12 @@
                   "icon": "mdi:lightbulb"
                 },
                 {
-                  "type": "custom:google-slider-card",
+                  "type": "custom:bubble-card",
+                  "card_type": "button",
+                  "button_type": "slider",
                   "entity": "light.ellies_light",
-                  "attribute": "brightness",
                   "icon": "mdi:ceiling-light",
-                  "show_percentage": true,
-                  "bold_text": false,
-                  "name": "Ceiling light "
+                  "allow_light_slider_to_0": true
                 }
               ]
             }
@@ -814,15 +847,7 @@
               "content": "## 🐣 Ellie's Mansion"
             }
           },
-          "badges": [
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": false,
-              "show_icon": true,
-              "entity": "binary_sensor.tze200_3towulqd_ts0601"
-            }
-          ]
+          "badges": []
         }
       ]
     }

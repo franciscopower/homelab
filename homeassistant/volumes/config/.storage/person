@@ -9,7 +9,8 @@
         "name": "Frankie",
         "user_id": "13475ff9b07c447c980258c9d4b5af72",
         "device_trackers": [
-          "device_tracker.wvnq93vm7r"
+          "device_tracker.wvnq93vm7r",
+          "device_tracker.kb2003"
         ],
         "picture": "/api/image/serve/c2a651ecb094f38f4e68a1e806f579b1/512x512"
       },
@@ -21,6 +22,15 @@
         ],
         "user_id": "ef6b57fd674242e5bd2c71cc89896ebe",
         "picture": "/api/image/serve/ad069fc142f4dbeaad4e7aba02df05bd/512x512"
+      },
+      {
+        "id": "dionisio",
+        "name": "Dionisio",
+        "device_trackers": [
+          "device_tracker.pixel_8_pro"
+        ],
+        "user_id": "cc070eba21b8463c9b4484123886a2b9",
+        "picture": null
       }
     ]
   }

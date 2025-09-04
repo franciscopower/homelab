@@ -51,6 +51,54 @@
         "min": 0,
         "max": 255,
         "mode": "text"
+      },
+      {
+        "id": "material_you_base_color",
+        "name": "Material You Base Color",
+        "icon": "mdi:palette",
+        "min": 3,
+        "max": 9,
+        "mode": "text"
+      },
+      {
+        "id": "material_you_image_url",
+        "name": "Material You Base Color Source Image Path/URL",
+        "icon": "mdi:image",
+        "min": 0,
+        "max": 255,
+        "mode": "text"
+      },
+      {
+        "id": "material_you_css_file",
+        "name": "Material You CSS Path/URL",
+        "icon": "mdi:language-css3",
+        "min": 0,
+        "max": 255,
+        "mode": "text"
+      },
+      {
+        "id": "material_you_base_color_cc070eba21b8463c9b4484123886a2b9",
+        "name": "Material You Base Color Dionisio",
+        "icon": "mdi:palette",
+        "min": 3,
+        "max": 9,
+        "mode": "text"
+      },
+      {
+        "id": "material_you_image_url_cc070eba21b8463c9b4484123886a2b9",
+        "name": "Material You Base Color Source Image Path/URL Dionisio",
+        "icon": "mdi:image",
+        "min": 0,
+        "max": 255,
+        "mode": "text"
+      },
+      {
+        "id": "material_you_css_file_cc070eba21b8463c9b4484123886a2b9",
+        "name": "Material You CSS Path/URL Dionisio",
+        "icon": "mdi:language-css3",
+        "min": 0,
+        "max": 255,
+        "mode": "text"
       }
     ]
   }
