@@ -12,19 +12,6 @@ robot_vacuum_room_0:
       - 1
   alias: Robot Vacuum Room 0
   description: ''
-lights_out:
-  sequence:
-  - action: light.turn_off
-    metadata: {}
-    data:
-      transition: 30
-    target:
-      area_id:
-      - ellie_s_room
-      - kitchen
-      - living_room
-  alias: Lights out
-  description: ''
 notify_to_vacuum_the_house:
   use_blueprint:
     path: homeassistant/confirmable_notification.yaml
@@ -40,4 +27,16 @@ notify_to_vacuum_the_house:
         entity_id: 26b8dd43ff0b13878fdf10004a28b277
         type: press
   alias: 'Notify to vacuum the house '
+  description: ''
+baby_feeding:
+  sequence:
+  - action: babybuddy.add_feeding
+    data:
+      type: Formula
+      method: Bottle
+      amount: '{{ states(''input_number.bottle_qty'') }}'
+      timer: true
+    target:
+      entity_id: switch.ellie_grace_nunez_power_timer
+  alias: Baby Feeding
   description: ''

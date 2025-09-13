@@ -5,19 +5,19 @@
   "data": {
     "backups": [
       {
-        "backup_id": "6fe30efc",
+        "backup_id": "e47a9929",
         "failed_addons": [],
         "failed_agent_ids": [],
         "failed_folders": []
       },
       {
-        "backup_id": "3087d945",
+        "backup_id": "289d2710",
         "failed_addons": [],
         "failed_agent_ids": [],
         "failed_folders": []
       },
       {
-        "backup_id": "c59b59bf",
+        "backup_id": "ce8c446b",
         "failed_addons": [],
         "failed_agent_ids": [],
         "failed_folders": []
@@ -25,7 +25,7 @@
     ],
     "config": {
       "agents": {},
-      "automatic_backups_configured": false,
+      "automatic_backups_configured": true,
       "create_backup": {
         "agent_ids": [
           "backup.local"
@@ -37,8 +37,8 @@
         "name": null,
         "password": "215K-OOSA-QA2N-2QE9-JCRY-05WD-EHHD"
       },
-      "last_attempted_automatic_backup": "2025-09-04T05:05:14.001182+01:00",
-      "last_completed_automatic_backup": "2025-09-04T05:06:04.222109+01:00",
+      "last_attempted_automatic_backup": "2025-09-13T05:28:29.001347+01:00",
+      "last_completed_automatic_backup": "2025-09-13T05:29:32.123589+01:00",
       "retention": {
         "copies": 3,
         "days": null
@@ -46,7 +46,6 @@
       "schedule": {
         "days": [],
         "recurrence": "daily",
-        "state": "never",
         "time": null
       }
     }

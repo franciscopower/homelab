@@ -1,0 +1,23 @@
+services:
+  babybuddy:
+    image: lscr.io/linuxserver/babybuddy
+    container_name: babybuddy
+    restart: unless-stopped
+    volumes:
+      - ./volumes/:/config
+    # ports:
+    #   - 8000:8000
+    networks:
+      - tunnel
+      - proxy
+    environment:
+      - ENABLE_HOME_ASSISTANT_SUPPORT=true
+
+networks:
+  tunnel:
+    name: cloudflared_tunnel
+    external: true
+  proxy:
+    name: nginx-proxy_proxy
+    external: true
+

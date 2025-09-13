@@ -32,13 +32,22 @@
         "url_path": "esp-home"
       },
       {
-        "id": "battery_status",
+        "id": "dashboard_tests",
         "show_in_sidebar": true,
-        "icon": "mdi:battery-charging",
-        "title": "Battery Status",
+        "icon": "mdi:test-tube",
+        "title": "Tests",
         "require_admin": true,
         "mode": "storage",
-        "url_path": "battery-status"
+        "url_path": "dashboard-tests"
+      },
+      {
+        "id": "dashboard_baby",
+        "show_in_sidebar": true,
+        "icon": "mdi:baby-bottle",
+        "title": "Baby",
+        "require_admin": false,
+        "mode": "storage",
+        "url_path": "dashboard-baby"
       }
     ]
   }

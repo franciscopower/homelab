@@ -39,6 +39,16 @@
         "max": 1.0,
         "step": 0.1,
         "mode": "slider"
+      },
+      {
+        "id": "bottle_qty",
+        "min": 0.0,
+        "max": 300.0,
+        "name": "Bottle Qty",
+        "icon": "mdi:baby-bottle",
+        "step": 10.0,
+        "unit_of_measurement": "ml",
+        "mode": "slider"
       }
     ]
   }

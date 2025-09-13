@@ -18,15 +18,19 @@
       "panelOrder": [
         "my-home",
         "todo",
+        "battery-status",
         "map",
         "hacs",
-        "logbook",
-        "history",
+        "esp-home",
+        "material-you-configuration",
         "developer-tools"
       ],
       "hiddenPanels": [
+        "lovelace",
         "media-browser",
-        "energy"
+        "history",
+        "energy",
+        "logbook"
       ]
     }
   }

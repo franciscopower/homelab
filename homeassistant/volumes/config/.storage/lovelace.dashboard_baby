@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.dashboard_baby",
+  "data": {
+    "config": {
+      "strategy": {
+        "type": "iframe",
+        "url": "https://baby.npower.dev"
+      }
+    }
+  }
+}

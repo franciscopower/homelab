@@ -32,7 +32,7 @@
         "tts_voice": "en_US-hfc_male-medium",
         "wake_word_entity": null,
         "wake_word_id": null,
-        "prefer_local_intents": false
+        "prefer_local_intents": true
       }
     ],
     "preferred_item": "01k0emskddm7901zt6gvebh6xn"

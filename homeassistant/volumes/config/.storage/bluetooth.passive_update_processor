@@ -49,6 +49,11 @@
             "key": "battery_%",
             "device_class": "battery",
             "entity_category": "diagnostic",
+            "entity_registry_enabled_default": null,
+            "entity_registry_visible_default": null,
+            "force_update": null,
+            "has_entity_name": null,
+            "name": null,
             "native_unit_of_measurement": "%",
             "state_class": "measurement"
           },
@@ -56,17 +61,63 @@
             "key": "voltage_V",
             "device_class": "voltage",
             "entity_category": "diagnostic",
+            "entity_registry_enabled_default": null,
+            "entity_registry_visible_default": null,
+            "force_update": null,
+            "has_entity_name": null,
+            "name": null,
             "native_unit_of_measurement": "V",
             "state_class": "measurement"
           }
         },
         "entity_names": {},
         "entity_data": {
-          "signal_strength___": -70,
-          "temperature___": 24.3,
-          "humidity___": 56,
+          "signal_strength___": -56,
+          "temperature___": 24.5,
+          "humidity___": 59,
           "battery___": 100,
           "voltage___": 3.1
+        }
+      }
+    },
+    "01K4X2HP34MFSZMTM6NX7YADHS": {
+      "binary_sensor": {
+        "devices": {
+          "": {
+            "name": "Body Composition Scale AC50",
+            "manufacturer": "Xiaomi",
+            "model": "MJTZC01YM"
+          }
+        },
+        "entity_descriptions": {},
+        "entity_names": {},
+        "entity_data": {}
+      },
+      "sensor": {
+        "devices": {
+          "": {
+            "name": "Body Composition Scale AC50",
+            "manufacturer": "Xiaomi",
+            "model": "MJTZC01YM"
+          }
+        },
+        "entity_descriptions": {
+          "signal_strength___": {
+            "key": "signal_strength_dBm",
+            "device_class": "signal_strength",
+            "entity_category": "diagnostic",
+            "entity_registry_enabled_default": false,
+            "entity_registry_visible_default": null,
+            "force_update": null,
+            "has_entity_name": null,
+            "name": null,
+            "native_unit_of_measurement": "dBm",
+            "state_class": "measurement"
+          }
+        },
+        "entity_names": {},
+        "entity_data": {
+          "signal_strength___": -95
         }
       }
     }

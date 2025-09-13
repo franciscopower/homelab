@@ -1,0 +1,274 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace.dashboard_tests",
+  "data": {
+    "config": {
+      "views": [
+        {
+          "title": "Home",
+          "header": {
+            "card": {
+              "type": "markdown",
+              "text_only": true,
+              "content": "# Tests"
+            }
+          },
+          "sections": [
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "switch.ellie_grace_nunez_power_timer",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "tap_action": {
+                    "action": "perform-action",
+                    "perform_action": "babybuddy.start_timer",
+                    "target": {
+                      "entity_id": "switch.ellie_grace_nunez_power_timer"
+                    }
+                  },
+                  "name": "Start Timer",
+                  "hide_state": true,
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  },
+                  "icon_tap_action": {
+                    "action": "none"
+                  }
+                },
+                {
+                  "type": "custom:bubble-card",
+                  "card_type": "button",
+                  "button_type": "switch",
+                  "entity": "input_number.bottle_qty",
+                  "sub_button": [
+                    {
+                      "entity": "input_number.bottle_qty",
+                      "icon": "mdi:minus-thick",
+                      "state_background": true,
+                      "show_icon": true,
+                      "show_name": false,
+                      "tap_action": {
+                        "action": "call-service",
+                        "target": {
+                          "entity_id": "entity"
+                        },
+                        "service": "input_number.decrement"
+                      }
+                    },
+                    {
+                      "entity": "input_number.bottle_qty",
+                      "tap_action": {
+                        "action": "call-service",
+                        "target": {
+                          "entity_id": "entity"
+                        },
+                        "service": "input_number.increment"
+                      },
+                      "show_state": false,
+                      "icon": "mdi:plus-thick"
+                    },
+                    {
+                      "entity": "input_number.bottle_qty",
+                      "name": "30 ml",
+                      "show_icon": false,
+                      "show_name": true,
+                      "tap_action": {
+                        "action": "perform-action",
+                        "target": {
+                          "entity_id": [
+                            "input_number.bottle_qty"
+                          ]
+                        },
+                        "perform_action": "input_number.set_value",
+                        "data": {
+                          "value": 30
+                        }
+                      }
+                    },
+                    {
+                      "entity": "input_number.bottle_qty",
+                      "name": "60 ml",
+                      "show_name": true,
+                      "show_icon": false,
+                      "tap_action": {
+                        "action": "perform-action",
+                        "target": {
+                          "entity_id": [
+                            "input_number.bottle_qty"
+                          ]
+                        },
+                        "perform_action": "input_number.set_value",
+                        "data": {
+                          "value": 60
+                        }
+                      }
+                    },
+                    {
+                      "entity": "input_number.bottle_qty",
+                      "name": "120 ml",
+                      "show_name": true,
+                      "show_icon": false,
+                      "state_background": true,
+                      "show_state": false,
+                      "show_attribute": false,
+                      "tap_action": {
+                        "action": "perform-action",
+                        "target": {
+                          "entity_id": [
+                            "input_number.bottle_qty"
+                          ]
+                        },
+                        "perform_action": "input_number.set_value",
+                        "data": {
+                          "value": 120
+                        }
+                      }
+                    }
+                  ],
+                  "show_state": true,
+                  "show_name": false,
+                  "show_icon": true,
+                  "rows": "1",
+                  "scrolling_effect": false
+                },
+                {
+                  "type": "tile",
+                  "entity": "sensor.baby_ellie_grace_nunez_power",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "tap_action": {
+                    "action": "perform-action",
+                    "perform_action": "script.baby_feeding",
+                    "target": {}
+                  },
+                  "name": "Record Bottle",
+                  "icon": "mdi:baby-bottle",
+                  "hide_state": true,
+                  "grid_options": {
+                    "columns": 12,
+                    "rows": 1
+                  }
+                }
+              ]
+            },
+            {
+              "type": "grid",
+              "cards": []
+            },
+            {
+              "type": "grid",
+              "cards": [
+                {
+                  "type": "custom:navbar-card",
+                  "routes": [
+                    {
+                      "label": "More",
+                      "icon": "mdi:dots-horizontal",
+                      "tap_action": {
+                        "action": "open-popup"
+                      },
+                      "popup": [
+                        {
+                          "label": "Automations",
+                          "icon": "mdi:robot",
+                          "url": "/config/logs"
+                        },
+                        {
+                          "label": "Batteries",
+                          "icon": "mdi:battery-80",
+                          "url": "/my-home/batteries"
+                        },
+                        {
+                          "label": "Monitor",
+                          "icon": "mdi:gauge",
+                          "url": "/my-home/monitor"
+                        },
+                        {
+                          "label": "Logs",
+                          "icon": "mdi:note-text",
+                          "url": "/config/logs"
+                        },
+                        {
+                          "label": "Devices",
+                          "icon": "mdi:devices",
+                          "url": "/config/devices/dashboard"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Rooms",
+                      "icon": "mdi:view-dashboard",
+                      "tap_action": {
+                        "action": "open-popup"
+                      },
+                      "popup": [
+                        {
+                          "label": "Living Room",
+                          "icon": "mdi:sofa",
+                          "url": "/my-home/living-room"
+                        },
+                        {
+                          "label": "Kitchen",
+                          "icon": "mdi:countertop",
+                          "url": "/my-home/kitchen"
+                        },
+                        {
+                          "label": "Bedroom",
+                          "icon": "mdi:bed-king",
+                          "url": "/my-home/master-bedroom"
+                        },
+                        {
+                          "label": "Ellie's Room",
+                          "icon": "mdi:cradle",
+                          "url": "/my-home/ellies-room"
+                        }
+                      ]
+                    },
+                    {
+                      "label": "Home",
+                      "url": "/my-home/0",
+                      "icon": "mdi:home"
+                    },
+                    {
+                      "label": "Climate",
+                      "url": "/my-home/climate",
+                      "icon": "mdi:leaf"
+                    },
+                    {
+                      "label": "Lights",
+                      "url": "/my-home/lights",
+                      "icon": "mdi:lightbulb",
+                      "badge": {
+                        "color": "orange",
+                        "show": "[[[ \n  const lightsOn = Object.entries(states)\n    .filter(([entityId, value]) => {\n      return entityId.startsWith('light.') && value.state == 'on';\n    })\n    .length;\n  return lightsOn - 1 > 0\n]]]\n"
+                      }
+                    }
+                  ],
+                  "mobile": {
+                    "show_labels": true,
+                    "position": "bottom",
+                    "mode": "floating"
+                  },
+                  "desktop": {
+                    "show_labels": true,
+                    "position": "left"
+                  }
+                }
+              ],
+              "column_span": 1
+            },
+            {
+              "type": "grid",
+              "cards": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -21,6 +21,11 @@ piper/volumes/
 ##### Whisper volumes
 whisper/volumes/
 
+##### Baby Buddy specific directories
+.secretkey
+baby-buddy/volumes/log
+baby-buddy/volumes/keys
+
 ##### Nginx proxy specific directories
 *.sqlite
 keys.json

@@ -22,15 +22,6 @@
         ],
         "user_id": "ef6b57fd674242e5bd2c71cc89896ebe",
         "picture": "/api/image/serve/ad069fc142f4dbeaad4e7aba02df05bd/512x512"
-      },
-      {
-        "id": "dionisio",
-        "name": "Dionisio",
-        "device_trackers": [
-          "device_tracker.pixel_8_pro"
-        ],
-        "user_id": "cc070eba21b8463c9b4484123886a2b9",
-        "picture": null
       }
     ]
   }

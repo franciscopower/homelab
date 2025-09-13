@@ -90,8 +90,8 @@
     - condition: device
       type: is_off
       device_id: 8cc3f355ed7e71b1039c01b8091ecbb3
-      entity_id: 0c4fe33636478cc1962a0741f4bf4f36
-      domain: switch
+      entity_id: cfa52647b79a5edb20e4159383d66b6b
+      domain: light
   actions:
   - if:
     - condition: sun
@@ -130,8 +130,8 @@
     - condition: device
       type: is_on
       device_id: 8cc3f355ed7e71b1039c01b8091ecbb3
-      entity_id: 0c4fe33636478cc1962a0741f4bf4f36
-      domain: switch
+      entity_id: cfa52647b79a5edb20e4159383d66b6b
+      domain: light
   actions:
   - action: light.turn_off
     metadata: {}
@@ -205,21 +205,13 @@
       entity_id: person.francisco_power
       zone: zone.home
   actions:
-  - action: light.turn_off
+  - action: script.notify_to_vacuum_the_house
+    data: {}
+  - action: scene.turn_on
     metadata: {}
     data: {}
     target:
-      area_id:
-      - bedroom
-      - ellie_s_room
-      - kitchen
-      - living_room
-  - type: turn_off
-    device_id: 8cc3f355ed7e71b1039c01b8091ecbb3
-    entity_id: 0c4fe33636478cc1962a0741f4bf4f36
-    domain: switch
-  - action: script.notify_to_vacuum_the_house
-    data: {}
+      entity_id: scene.away
   mode: single
 - id: '1756158673667'
   alias: Kitchen Night Motion Lights
@@ -270,4 +262,159 @@
         data: {}
         target:
           device_id: d146f6075d24738d742ae8ec63d3ed4d
+  mode: single
+- id: '1757194232417'
+  alias: 'Living room motion lights '
+  description: ''
+  triggers:
+  - type: occupied
+    device_id: 530032e09dab84b6ec0ee6b2a6567a2d
+    entity_id: 29a7eefe3dc25e6e50797c5c9fbcdf72
+    domain: binary_sensor
+    trigger: device
+  conditions:
+  - condition: device
+    type: is_off
+    device_id: 1964a6f927793f478ad1717ab92edd5b
+    entity_id: a0655cb8486fbcb33805bf923fb285f2
+    domain: remote
+  - condition: sun
+    before: sunrise
+    after: sunset
+  actions:
+  - action: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.living_room_work_area_ceiling
+  mode: single
+- id: '1757196749516'
+  alias: 'Deco lights off at night '
+  description: ''
+  triggers:
+  - trigger: time
+    at: 00:00:00
+  conditions: []
+  actions:
+  - action: scene.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: scene.bedtime
+  mode: single
+- id: '1757260987815'
+  alias: Dishwasher full
+  description: ''
+  triggers:
+  - device_id: 04895f39d388e8c67d39ed23a280c406
+    domain: home_connect_alt
+    type: program_finished
+    trigger: device
+  conditions: []
+  actions:
+  - action: input_boolean.turn_on
+    metadata: {}
+    data: {}
+    target:
+      entity_id: input_boolean.dishwasher_full
+  mode: single
+- id: '1757319702694'
+  alias: Set TV Scene
+  description: ''
+  triggers:
+  - device_id: 1964a6f927793f478ad1717ab92edd5b
+    domain: media_player
+    entity_id: bac5309196134d4481331f729fe5655c
+    type: turned_on
+    trigger: device
+  conditions: []
+  actions:
+  - parallel:
+    - action: light.turn_off
+      metadata: {}
+      data: {}
+      target:
+        entity_id: light.decorative_lights
+    - if:
+      - condition: sun
+        before: sunrise
+        after: sunset
+      then:
+      - action: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.living_room_work_area_ceiling
+      - action: light.turn_off
+        metadata: {}
+        target:
+          entity_id: light.living_room_rest_area_ceiling
+      else:
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.living_room_work_area_ceiling
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.living_room_rest_area_ceiling
+  mode: single
+- id: '1757701595790'
+  alias: Bathroom Motion Lights
+  description: ''
+  triggers:
+  - type: occupied
+    device_id: f6941e5dfc8016c2726c659ac3995e80
+    entity_id: 1fd33567d5d2eec4b597fb7e1f08ee62
+    domain: binary_sensor
+    trigger: device
+    id: occupied
+  - type: not_occupied
+    device_id: f6941e5dfc8016c2726c659ac3995e80
+    entity_id: 1fd33567d5d2eec4b597fb7e1f08ee62
+    domain: binary_sensor
+    trigger: device
+    id: unoccupied
+    for:
+      hours: 0
+      minutes: 0
+      seconds: 30
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id:
+        - occupied
+      - condition: time
+        after: '23:00:00'
+        before: 07:00:00
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          entity_id: light.bathroom_vanity_light
+    - conditions:
+      - condition: trigger
+        id:
+        - occupied
+      sequence:
+      - action: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          area_id: bathroom
+    - conditions:
+      - condition: trigger
+        id:
+        - unoccupied
+      sequence:
+      - action: light.turn_off
+        metadata: {}
+        data: {}
+        target:
+          area_id: bathroom
   mode: single
