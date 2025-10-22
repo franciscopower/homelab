@@ -17,12 +17,13 @@
     "sidebar": {
       "panelOrder": [
         "my-home",
+        "dashboard-baby",
         "todo",
-        "battery-status",
         "map",
         "hacs",
         "esp-home",
         "material-you-configuration",
+        "dashboard-tests",
         "developer-tools"
       ],
       "hiddenPanels": [

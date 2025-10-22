@@ -82,27 +82,37 @@
   conditions:
   - condition: and
     conditions:
-    - condition: device
-      type: is_off
-      device_id: 99101c0bcd66d8e4d3532b7c03afbc44
-      entity_id: 67db6b7fabd03a2a7e31a3ee06403967
-      domain: light
-    - condition: device
-      type: is_off
-      device_id: 8cc3f355ed7e71b1039c01b8091ecbb3
-      entity_id: cfa52647b79a5edb20e4159383d66b6b
-      domain: light
+    - condition: not
+      conditions:
+      - condition: device
+        type: is_on
+        device_id: 99101c0bcd66d8e4d3532b7c03afbc44
+        entity_id: 67db6b7fabd03a2a7e31a3ee06403967
+        domain: light
+      - condition: device
+        type: is_on
+        device_id: d6d7d02f85d39745f2cfa6021cb24583
+        entity_id: 6ba20ee9af83823e1955b95aa17e9eb7
+        domain: light
   actions:
   - if:
     - condition: sun
       before: sunrise
       after: sunset
     then:
-    - action: scene.turn_on
-      metadata: {}
-      data: {}
-      target:
-        entity_id: scene.new_scene
+    - parallel:
+      - action: light.turn_on
+        metadata: {}
+        data:
+          brightness_pct: 50
+          color_temp_kelvin: 2000
+        target:
+          device_id: 99101c0bcd66d8e4d3532b7c03afbc44
+      - action: light.turn_on
+        metadata: {}
+        data: {}
+        target:
+          device_id: d6d7d02f85d39745f2cfa6021cb24583
     else:
     - action: light.turn_on
       metadata: {}
@@ -129,8 +139,8 @@
       domain: light
     - condition: device
       type: is_on
-      device_id: 8cc3f355ed7e71b1039c01b8091ecbb3
-      entity_id: cfa52647b79a5edb20e4159383d66b6b
+      device_id: d6d7d02f85d39745f2cfa6021cb24583
+      entity_id: 6ba20ee9af83823e1955b95aa17e9eb7
       domain: light
   actions:
   - action: light.turn_off
@@ -139,8 +149,8 @@
     target:
       area_id: bedroom
   - type: turn_off
-    device_id: 8cc3f355ed7e71b1039c01b8091ecbb3
-    entity_id: 0c4fe33636478cc1962a0741f4bf4f36
+    device_id: d6d7d02f85d39745f2cfa6021cb24583
+    entity_id: 1e0f67a2dd6b7684970a12430a4c6023
     domain: switch
   mode: single
 - id: '1755947185380'
@@ -365,29 +375,25 @@
   alias: Bathroom Motion Lights
   description: ''
   triggers:
-  - type: occupied
-    device_id: f6941e5dfc8016c2726c659ac3995e80
-    entity_id: 1fd33567d5d2eec4b597fb7e1f08ee62
+  - type: turned_on
+    device_id: bd7acc677dafa15f4a1fd104755a82b1
+    entity_id: f531874bf9e6f566320e7cfcc6ce8659
     domain: binary_sensor
     trigger: device
-    id: occupied
-  - type: not_occupied
-    device_id: f6941e5dfc8016c2726c659ac3995e80
-    entity_id: 1fd33567d5d2eec4b597fb7e1f08ee62
+    id: 'occupied '
+  - type: turned_off
+    device_id: bd7acc677dafa15f4a1fd104755a82b1
+    entity_id: f531874bf9e6f566320e7cfcc6ce8659
     domain: binary_sensor
     trigger: device
-    id: unoccupied
-    for:
-      hours: 0
-      minutes: 0
-      seconds: 30
+    id: 'unoccupied '
   conditions: []
   actions:
   - choose:
     - conditions:
       - condition: trigger
         id:
-        - occupied
+        - 'occupied '
       - condition: time
         after: '23:00:00'
         before: 07:00:00
@@ -400,7 +406,7 @@
     - conditions:
       - condition: trigger
         id:
-        - occupied
+        - 'occupied '
       sequence:
       - action: light.turn_on
         metadata: {}
@@ -410,11 +416,124 @@
     - conditions:
       - condition: trigger
         id:
-        - unoccupied
+        - 'unoccupied '
       sequence:
       - action: light.turn_off
         metadata: {}
         data: {}
         target:
           area_id: bathroom
+  mode: single
+- id: '1757880987307'
+  alias: Remote Control Feeding
+  description: ''
+  triggers:
+  - device_id: 60e5d4d2cbbc867b586e617eb058049d
+    domain: zha
+    type: remote_button_short_press
+    subtype: button_1
+    trigger: device
+    id: first button
+  - device_id: 60e5d4d2cbbc867b586e617eb058049d
+    domain: zha
+    type: remote_button_short_press
+    subtype: button_2
+    trigger: device
+    id: second button
+  - device_id: 60e5d4d2cbbc867b586e617eb058049d
+    domain: zha
+    type: remote_button_short_press
+    subtype: button_3
+    trigger: device
+    id: third button
+  - device_id: 60e5d4d2cbbc867b586e617eb058049d
+    domain: zha
+    type: remote_button_short_press
+    subtype: button_4
+    trigger: device
+    id: fourth button
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: state
+        entity_id: switch.ellie_grace_nunez_power_timer
+        state: 'off'
+      sequence:
+      - action: babybuddy.start_timer
+        metadata: {}
+        data: {}
+        target:
+          entity_id: switch.ellie_grace_nunez_power_timer
+    - conditions:
+      - condition: state
+        entity_id: switch.ellie_grace_nunez_power_timer
+        state: 'on'
+      sequence:
+      - choose:
+        - conditions:
+          - condition: trigger
+            id:
+            - first button
+          sequence:
+          - action: select.select_option
+            metadata: {}
+            data:
+              option: Both breasts
+            target:
+              entity_id: select.baby_buddy_feeding_method
+        - conditions:
+          - condition: trigger
+            id:
+            - second button
+          sequence:
+          - action: select.select_option
+            metadata: {}
+            data:
+              option: Bottle
+            target:
+              entity_id: select.baby_buddy_feeding_method
+          - action: input_number.set_value
+            metadata: {}
+            data:
+              value: 30
+            target:
+              entity_id: input_number.bottle_qty
+        - conditions:
+          - condition: trigger
+            id:
+            - third button
+          sequence:
+          - action: select.select_option
+            metadata: {}
+            data:
+              option: Bottle
+            target:
+              entity_id: select.baby_buddy_feeding_method
+          - action: input_number.set_value
+            metadata: {}
+            data:
+              value: 60
+            target:
+              entity_id: input_number.bottle_qty
+        - conditions:
+          - condition: trigger
+            id:
+            - fourth button
+          sequence:
+          - action: select.select_option
+            metadata: {}
+            data:
+              option: Bottle
+            target:
+              entity_id: select.baby_buddy_feeding_method
+          - action: input_number.set_value
+            metadata: {}
+            data:
+              value: 90
+            target:
+              entity_id: input_number.bottle_qty
+      - action: script.baby_feeding
+        metadata: {}
+        data: {}
   mode: single

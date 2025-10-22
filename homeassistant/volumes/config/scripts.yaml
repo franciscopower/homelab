@@ -31,12 +31,15 @@ notify_to_vacuum_the_house:
 baby_feeding:
   sequence:
   - action: babybuddy.add_feeding
+    metadata: {}
     data:
-      type: Formula
-      method: Bottle
-      amount: '{{ states(''input_number.bottle_qty'') }}'
       timer: true
+      method: '{{ states(''select.baby_buddy_feeding_method'') }}'
+      amount: '{{ states(''input_number.bottle_qty'') }}'
+      type: "{% if is_state('select.baby_buddy_feeding_method', ['Both breasts', 'Left
+        breast', 'Right breast']) %}\n  Breast milk\n{% else %}\n  Formula\n{% endif
+        %}\n"
     target:
-      entity_id: switch.ellie_grace_nunez_power_timer
+      device_id: b6e9818c43984054d7504dd229308c7e
   alias: Baby Feeding
   description: ''

@@ -99,6 +99,14 @@
         "min": 0,
         "max": 255,
         "mode": "text"
+      },
+      {
+        "id": "baby_buddy_note",
+        "name": "Baby Buddy Note",
+        "icon": "mdi:note-edit",
+        "max": 255,
+        "min": 0,
+        "mode": "text"
       }
     ]
   }

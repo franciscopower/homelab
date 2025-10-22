@@ -5,19 +5,13 @@
   "data": {
     "backups": [
       {
-        "backup_id": "e47a9929",
+        "backup_id": "0e9d8312",
         "failed_addons": [],
         "failed_agent_ids": [],
         "failed_folders": []
       },
       {
-        "backup_id": "289d2710",
-        "failed_addons": [],
-        "failed_agent_ids": [],
-        "failed_folders": []
-      },
-      {
-        "backup_id": "ce8c446b",
+        "backup_id": "f2c00d55",
         "failed_addons": [],
         "failed_agent_ids": [],
         "failed_folders": []
@@ -28,17 +22,18 @@
       "automatic_backups_configured": true,
       "create_backup": {
         "agent_ids": [
-          "backup.local"
+          "backup.local",
+          "onedrive.917C2D4A03EE813D"
         ],
-        "include_addons": null,
+        "include_addons": [],
         "include_all_addons": false,
         "include_database": true,
-        "include_folders": null,
+        "include_folders": [],
         "name": null,
         "password": "215K-OOSA-QA2N-2QE9-JCRY-05WD-EHHD"
       },
-      "last_attempted_automatic_backup": "2025-09-13T05:28:29.001347+01:00",
-      "last_completed_automatic_backup": "2025-09-13T05:29:32.123589+01:00",
+      "last_attempted_automatic_backup": "2025-10-20T04:47:43.001349+01:00",
+      "last_completed_automatic_backup": "2025-10-20T04:49:24.072019+01:00",
       "retention": {
         "copies": 3,
         "days": null

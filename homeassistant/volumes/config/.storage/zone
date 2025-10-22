@@ -12,6 +12,15 @@
         "icon": "mdi:briefcase",
         "passive": false,
         "radius": 295.60468610420963
+      },
+      {
+        "id": "pharmacy",
+        "latitude": 40.683851771539715,
+        "longitude": -8.597488403320314,
+        "name": "Pharmacy",
+        "icon": "mdi:hospital-box",
+        "passive": false,
+        "radius": 45.0
       }
     ]
   }

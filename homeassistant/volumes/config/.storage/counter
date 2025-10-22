@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "minor_version": 1,
+  "key": "counter",
+  "data": {
+    "items": [
+      {
+        "id": "pumping_counter",
+        "name": "Pumping Counter",
+        "icon": "mdi:pump",
+        "initial": 0,
+        "minimum": null,
+        "maximum": null,
+        "restore": true,
+        "step": 1
+      }
+    ]
+  }
+}

@@ -183,6 +183,24 @@
           "outlined",
           "transparent"
         ]
+      },
+      {
+        "id": "feeding_type",
+        "name": "Feeding Type",
+        "icon": "mdi:baby-bottle",
+        "options": [
+          "Breast milk",
+          "Formula"
+        ]
+      },
+      {
+        "id": "feeding_method",
+        "name": "Feeding method",
+        "icon": "mdi:baby-bottle",
+        "options": [
+          "Bottle",
+          "Both breasts"
+        ]
       }
     ]
   }

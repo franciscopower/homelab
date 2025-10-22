@@ -72,9 +72,9 @@
         },
         "entity_names": {},
         "entity_data": {
-          "signal_strength___": -56,
-          "temperature___": 24.5,
-          "humidity___": 59,
+          "signal_strength___": -63,
+          "temperature___": 23.4,
+          "humidity___": 75,
           "battery___": 100,
           "voltage___": 3.1
         }
@@ -117,7 +117,7 @@
         },
         "entity_names": {},
         "entity_data": {
-          "signal_strength___": -95
+          "signal_strength___": -93
         }
       }
     }

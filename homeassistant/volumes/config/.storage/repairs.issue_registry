@@ -59,6 +59,27 @@
         "domain": "bambu_lab",
         "is_persistent": false,
         "issue_id": "authentication_failed_01P00A460501268_1755907597"
+      },
+      {
+        "created": "2025-09-25T07:31:18.168144+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_588734673_tags/v2.2.2"
+      },
+      {
+        "created": "2025-10-01T23:17:13.838132+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_318182014_tags/v1.0.23"
+      },
+      {
+        "created": "2025-10-03T09:06:41.909376+00:00",
+        "dismissed_version": null,
+        "domain": "hacs",
+        "is_persistent": false,
+        "issue_id": "restart_required_318182014_tags/v1.1.0"
       }
     ]
   }

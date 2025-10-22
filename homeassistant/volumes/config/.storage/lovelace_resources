@@ -6,7 +6,7 @@
     "items": [
       {
         "id": "b0e5d34fbb3e43e2a4c4949ccfb7e715",
-        "url": "/hacsfiles/lovelace-mushroom/mushroom.js?hacstag=444350375505",
+        "url": "/hacsfiles/lovelace-mushroom/mushroom.js?hacstag=444350375508",
         "type": "module"
       },
       {
@@ -21,27 +21,22 @@
       },
       {
         "id": "5fe9a93e3f3d47fbbf18244b7c82f693",
-        "url": "/hacsfiles/material-you-utilities/material-you-utilities.min.js?hacstag=9677371532012",
+        "url": "/hacsfiles/material-you-utilities/material-you-utilities.min.js?hacstag=9677371532021",
         "type": "module"
       },
       {
         "id": "713ab34cae324238807aa5347755bd61",
-        "url": "/bambu_lab/ha-bambulab-cards.js?v=0.6.6",
+        "url": "/bambu_lab/ha-bambulab-cards.js?v=0.6.15",
         "type": "module"
       },
       {
         "id": "e505f99bcf2847d79f784fa79bc3776a",
-        "url": "/hacsfiles/Bubble-Card/bubble-card.js?hacstag=680112919303",
-        "type": "module"
-      },
-      {
-        "id": "428934853f904cf0be4bf3335620c519",
-        "url": "/hacsfiles/room-summary-card/room-summary-card.js?hacstag=9192095670340",
+        "url": "/hacsfiles/Bubble-Card/bubble-card.js?hacstag=680112919304",
         "type": "module"
       },
       {
         "id": "7a7c5c0a50534119a0fc25441b4faee1",
-        "url": "/hacsfiles/lovelace-navbar-card/navbar-card.js?hacstag=8711064990181",
+        "url": "/hacsfiles/lovelace-navbar-card/navbar-card.js?hacstag=871106499111",
         "type": "module"
       },
       {
@@ -55,11 +50,6 @@
         "type": "module"
       },
       {
-        "id": "4b5f7750f19349b2a8502951c6dfb0b4",
-        "url": "/hacsfiles/lovelace-hourly-weather/hourly-weather.js?hacstag=499270202671",
-        "type": "module"
-      },
-      {
         "id": "a702c80aed204d269c448baf2f7e9e47",
         "url": "/hacsfiles/mini-graph-card/mini-graph-card-bundle.js?hacstag=1512800620130",
         "type": "module"
@@ -67,11 +57,6 @@
       {
         "id": "79982450e3004c5fab3685827b9b705a",
         "url": "/hacsfiles/weather-chart-card/weather-chart-card.js?hacstag=6655018292411",
-        "type": "module"
-      },
-      {
-        "id": "a26daa1fa0e0483aa5b2355cc81cdf48",
-        "url": "/hacsfiles/button-card/button-card.js?hacstag=146194325430",
         "type": "module"
       }
     ]

@@ -308,15 +308,6 @@
       friendly_name: Rest Area
       supported_features: 8
       state: 'off'
-    light.kitchen_countertop:
-      supported_color_modes:
-      - brightness
-      color_mode:
-      brightness:
-      icon: mdi:led-strip-variant
-      friendly_name: Countertop Light
-      supported_features: 0
-      state: 'off'
     light.bedroom_ceiling:
       min_color_temp_kelvin: 2500
       max_color_temp_kelvin: 6500
@@ -373,26 +364,6 @@
       friendly_name: TV
       supported_features: 24509
       state: 'off'
-    light.bathroom_ceiling_light:
-      supported_color_modes:
-      - onoff
-      color_mode:
-      off_with_transition: false
-      off_brightness:
-      icon: mdi:wall-sconce-flat
-      friendly_name: Bathroom Ceiling Light
-      supported_features: 8
-      state: 'off'
-    light.bathroom_vanity_light:
-      supported_color_modes:
-      - onoff
-      color_mode:
-      off_with_transition: false
-      off_brightness:
-      icon: mdi:vanity-light
-      friendly_name: Bathroom Vanity Lights
-      supported_features: 8
-      state: 'off'
   icon: mdi:lightbulb-night
   metadata:
     light.decorative_lights:
@@ -401,17 +372,11 @@
       entity_only: true
     light.living_room_rest_area_ceiling:
       entity_only: true
-    light.kitchen_countertop:
-      entity_only: true
     light.bedroom_ceiling:
       entity_only: true
     light.ellie_room_ceiling:
       entity_only: true
     media_player.tv_qe50q68bauxxc:
-      entity_only: true
-    light.bathroom_ceiling_light:
-      entity_only: true
-    light.bathroom_vanity_light:
       entity_only: true
 - id: '1757318757353'
   name: Prayer
@@ -830,16 +795,6 @@
       friendly_name: Jesus Image Light
       supported_features: 36
       state: 'on'
-    light.living_room_work_area_ceiling:
-      supported_color_modes:
-      - onoff
-      color_mode: onoff
-      off_with_transition: false
-      off_brightness:
-      icon: mdi:vanity-light
-      friendly_name: Work Area
-      supported_features: 8
-      state: 'on'
     media_player.tv_qe50q68bauxxc:
       source_list:
       - TV
@@ -863,8 +818,6 @@
     light.living_room_tv_cabinet_wled:
       entity_only: true
     light.living_room_jesus_wled:
-      entity_only: true
-    light.living_room_work_area_ceiling:
       entity_only: true
     media_player.tv_qe50q68bauxxc:
       entity_only: true

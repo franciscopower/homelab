@@ -42,45 +42,6 @@
               ]
             },
             {
-              "label": "Rooms",
-              "icon": "mdi:view-dashboard",
-              "tap_action": {
-                "action": "open-popup"
-              },
-              "popup": [
-                {
-                  "label": "Living Room",
-                  "icon": "mdi:sofa",
-                  "url": "/my-home/living-room"
-                },
-                {
-                  "label": "Kitchen",
-                  "icon": "mdi:countertop",
-                  "url": "/my-home/kitchen"
-                },
-                {
-                  "label": "Bedroom",
-                  "icon": "mdi:bed-king",
-                  "url": "/my-home/master-bedroom"
-                },
-                {
-                  "label": "Ellie's Room",
-                  "icon": "mdi:cradle",
-                  "url": "/my-home/ellies-room"
-                },
-                {
-                  "label": "Bathroom",
-                  "icon": "mdi:bathtub",
-                  "url": "/my-home/bathroom"
-                }
-              ]
-            },
-            {
-              "label": "Home",
-              "url": "/my-home/0",
-              "icon": "mdi:home"
-            },
-            {
               "label": "Climate",
               "url": "/my-home/climate",
               "icon": "mdi:leaf"
@@ -93,6 +54,11 @@
                 "color": "orange",
                 "show": "[[[ \n  const lightsOn = Object.entries(states)\n    .filter(([entityId, value]) => {\n      return entityId.startsWith('light.') && value.state == 'on';\n    })\n    .length;\n  return lightsOn - 1 > 0\n]]]\n"
               }
+            },
+            {
+              "label": "Home",
+              "url": "/my-home/0",
+              "icon": "mdi:home"
             }
           ],
           "mobile": {
@@ -206,6 +172,88 @@
                   ]
                 },
                 {
+                  "type": "custom:mushroom-vacuum-card",
+                  "entity": "vacuum.xiaomi_d106gl_b255_robot_cleaner",
+                  "commands": [
+                    "start_pause",
+                    "stop",
+                    "return_home"
+                  ],
+                  "icon_animation": true,
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 2
+                  },
+                  "card_mod": {
+                    "style": "ha-card {\n  --ha-card-background: rgb(18, 169, 240, 0.2) !important;\n}\n"
+                  }
+                },
+                {
+                  "type": "horizontal-stack",
+                  "cards": [
+                    {
+                      "type": "conditional",
+                      "conditions": [
+                        {
+                          "condition": "state",
+                          "entity": "switch.ellie_grace_nunez_power_timer",
+                          "state": "off"
+                        }
+                      ],
+                      "card": {
+                        "type": "tile",
+                        "features_position": "bottom",
+                        "vertical": true,
+                        "entity": "switch.ellie_grace_nunez_power_timer",
+                        "color": "pink",
+                        "name": "Start Feeding",
+                        "hide_state": false,
+                        "tap_action": {
+                          "action": "toggle"
+                        },
+                        "state_content": "last_changed",
+                        "icon": "mdi:baby-bottle",
+                        "card_mod": {
+                          "style": "ha-card {\n  --ha-card-background: rgb(232, 35, 99, 0.2) !important;\n}\n"
+                        }
+                      }
+                    },
+                    {
+                      "type": "conditional",
+                      "conditions": [
+                        {
+                          "condition": "state",
+                          "entity": "switch.ellie_grace_nunez_power_timer",
+                          "state": "on"
+                        }
+                      ],
+                      "card": {
+                        "type": "tile",
+                        "features_position": "bottom",
+                        "vertical": true,
+                        "entity": "switch.ellie_grace_nunez_power_timer",
+                        "tap_action": {
+                          "action": "navigate",
+                          "navigation_path": "#baby-feeding"
+                        },
+                        "icon_tap_action": {
+                          "action": "navigate",
+                          "navigation_path": "#baby-feeding"
+                        },
+                        "name": "End Feeding",
+                        "state_content": "last_changed",
+                        "card_mod": {
+                          "style": "ha-card {\n  --ha-card-background: rgb(232, 35, 99, 0.2) !important;\n}\n"
+                        }
+                      }
+                    }
+                  ],
+                  "grid_options": {
+                    "columns": 6,
+                    "rows": 2
+                  }
+                },
+                {
                   "features": [
                     {
                       "style": "icons",
@@ -306,20 +354,6 @@
                       "state": "on"
                     }
                   ]
-                },
-                {
-                  "type": "custom:mushroom-vacuum-card",
-                  "entity": "vacuum.xiaomi_d106gl_b255_robot_cleaner",
-                  "commands": [
-                    "start_pause",
-                    "stop",
-                    "return_home"
-                  ],
-                  "icon_animation": true,
-                  "grid_options": {
-                    "columns": 12,
-                    "rows": 2
-                  }
                 }
               ]
             },
@@ -480,15 +514,16 @@
                           "tap_action": {
                             "action": "toggle"
                           },
-                          "entity": "light.bedroom_bedside_table",
-                          "on_state": "on"
+                          "on_state": "on",
+                          "entity": "light.bedside_table_light"
                         },
                         {
                           "type": "entity",
-                          "entity": "camera.baby_1t_profile_000",
+                          "entity": "camera.baby_1t_profile_000_2",
                           "icon": "mdi:video"
                         }
-                      ]
+                      ],
+                      "secondary": "{{states(\"sensor.bedroom_temperature_humidity_sensor_temperature\", with_unit=true)}} / \n{{states(\"sensor.bedroom_temperature_humidity_sensor_humidity\", with_unit=true)}}"
                     },
                     {
                       "background_type": "color",
@@ -549,8 +584,7 @@
                           "icon": "mdi:vanity-light",
                           "icon_off": "mdi:vanity-light"
                         }
-                      ],
-                      "secondary": "{{states(\"sensor.bathroom_temperature\", with_unit=true)}} / \n{{states(\"sensor.bathroom_humidity\", with_unit=true)}}"
+                      ]
                     }
                   ],
                   "columns": 2
@@ -825,6 +859,248 @@
                       }
                     }
                   ]
+                },
+                {
+                  "type": "vertical-stack",
+                  "cards": [
+                    {
+                      "type": "custom:bubble-card",
+                      "card_type": "pop-up",
+                      "hash": "#baby-feeding",
+                      "button_type": "name",
+                      "show_header": true,
+                      "name": "Record Feeding",
+                      "icon": "mdi:baby-bottle"
+                    },
+                    {
+                      "type": "heading",
+                      "icon": "mdi:pencil",
+                      "heading": "Feeding quantity",
+                      "heading_style": "subtitle",
+                      "badges": [
+                        {
+                          "type": "entity",
+                          "entity": "input_number.bottle_qty"
+                        }
+                      ]
+                    },
+                    {
+                      "features": [
+                        {
+                          "type": "select-options"
+                        }
+                      ],
+                      "type": "tile",
+                      "entity": "select.baby_buddy_feeding_method",
+                      "features_position": "inline",
+                      "vertical": false,
+                      "hide_state": true,
+                      "name": "Feeding Method"
+                    },
+                    {
+                      "type": "custom:bubble-card",
+                      "card_type": "button",
+                      "button_type": "switch",
+                      "entity": "input_number.bottle_qty",
+                      "sub_button": [
+                        {
+                          "entity": "input_number.bottle_qty",
+                          "icon": "mdi:minus-thick",
+                          "state_background": true,
+                          "show_icon": true,
+                          "show_name": false,
+                          "tap_action": {
+                            "action": "call-service",
+                            "target": {
+                              "entity_id": "entity"
+                            },
+                            "service": "input_number.decrement"
+                          }
+                        },
+                        {
+                          "entity": "input_number.bottle_qty",
+                          "tap_action": {
+                            "action": "call-service",
+                            "target": {
+                              "entity_id": "entity"
+                            },
+                            "service": "input_number.increment"
+                          },
+                          "show_state": false,
+                          "icon": "mdi:plus-thick"
+                        },
+                        {
+                          "entity": "input_number.bottle_qty",
+                          "name": "30 ml",
+                          "show_icon": false,
+                          "show_name": true,
+                          "tap_action": {
+                            "action": "perform-action",
+                            "target": {
+                              "entity_id": [
+                                "input_number.bottle_qty"
+                              ]
+                            },
+                            "perform_action": "input_number.set_value",
+                            "data": {
+                              "value": 30
+                            }
+                          }
+                        },
+                        {
+                          "entity": "input_number.bottle_qty",
+                          "name": "60 ml",
+                          "show_name": true,
+                          "show_icon": false,
+                          "tap_action": {
+                            "action": "perform-action",
+                            "target": {
+                              "entity_id": [
+                                "input_number.bottle_qty"
+                              ]
+                            },
+                            "perform_action": "input_number.set_value",
+                            "data": {
+                              "value": 60
+                            }
+                          }
+                        },
+                        {
+                          "entity": "input_number.bottle_qty",
+                          "name": "120 ml",
+                          "show_name": true,
+                          "show_icon": false,
+                          "state_background": true,
+                          "show_state": false,
+                          "show_attribute": false,
+                          "tap_action": {
+                            "action": "perform-action",
+                            "target": {
+                              "entity_id": [
+                                "input_number.bottle_qty"
+                              ]
+                            },
+                            "perform_action": "input_number.set_value",
+                            "data": {
+                              "value": 120
+                            }
+                          }
+                        }
+                      ],
+                      "show_state": false,
+                      "show_name": false,
+                      "show_icon": true,
+                      "rows": "1",
+                      "scrolling_effect": false
+                    },
+                    {
+                      "type": "heading",
+                      "icon": "",
+                      "heading_style": "subtitle",
+                      "heading": "Click to finish"
+                    },
+                    {
+                      "type": "horizontal-stack",
+                      "cards": [
+                        {
+                          "type": "conditional",
+                          "conditions": [
+                            {
+                              "condition": "state",
+                              "entity": "switch.ellie_grace_nunez_power_timer",
+                              "state": "on"
+                            }
+                          ],
+                          "card": {
+                            "type": "tile",
+                            "entity": "sensor.baby_ellie_grace_nunez_power",
+                            "features_position": "bottom",
+                            "vertical": true,
+                            "tap_action": {
+                              "action": "perform-action",
+                              "perform_action": "script.baby_feeding",
+                              "target": {}
+                            },
+                            "name": "Record Feeding",
+                            "icon": "mdi:check-bold",
+                            "hide_state": true,
+                            "grid_options": {
+                              "columns": 12,
+                              "rows": 1
+                            },
+                            "color": "primary"
+                          }
+                        },
+                        {
+                          "type": "conditional",
+                          "conditions": [
+                            {
+                              "condition": "state",
+                              "entity": "switch.ellie_grace_nunez_power_timer",
+                              "state": "off"
+                            }
+                          ],
+                          "card": {
+                            "type": "tile",
+                            "features_position": "bottom",
+                            "vertical": true,
+                            "tap_action": {
+                              "action": "none"
+                            },
+                            "name": "Recorded",
+                            "icon": "mdi:check-bold",
+                            "hide_state": false,
+                            "grid_options": {
+                              "columns": 12,
+                              "rows": 1
+                            },
+                            "color": "primary",
+                            "entity": "sensor.ellie_grace_nunez_power_last_feeding",
+                            "icon_tap_action": {
+                              "action": "none"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "heading",
+                      "icon": "",
+                      "heading_style": "subtitle",
+                      "badges": [
+                        {
+                          "type": "entity",
+                          "show_state": true,
+                          "show_icon": false,
+                          "entity": "script.baby_feeding",
+                          "state_content": "last_triggered"
+                        }
+                      ],
+                      "heading": "Last recording"
+                    },
+                    {
+                      "type": "conditional",
+                      "conditions": [
+                        {
+                          "condition": "state",
+                          "entity": "switch.ellie_grace_nunez_power_timer",
+                          "state": "on"
+                        }
+                      ],
+                      "card": {
+                        "type": "tile",
+                        "features_position": "bottom",
+                        "vertical": false,
+                        "entity": "switch.ellie_grace_nunez_power_timer",
+                        "tap_action": {
+                          "action": "toggle"
+                        },
+                        "name": "Cancel feeding ",
+                        "icon": "mdi:cancel",
+                        "hide_state": true
+                      }
+                    }
+                  ]
                 }
               ]
             }
@@ -1092,7 +1368,6 @@
                   "type": "custom:bubble-card",
                   "card_type": "button",
                   "button_type": "switch",
-                  "entity": "switch.bedside_table",
                   "grid_options": {
                     "columns": 6,
                     "rows": 2
@@ -1103,7 +1378,8 @@
                   "icon": "mdi:lamp",
                   "tap_action": {
                     "action": "none"
-                  }
+                  },
+                  "entity": "light.bedside_table_light"
                 },
                 {
                   "type": "heading",
@@ -1693,13 +1969,6 @@
               "show_name": false,
               "show_state": false,
               "show_icon": true,
-              "entity": "binary_sensor.living_room_motion"
-            },
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": false,
-              "show_icon": true,
               "entity": "binary_sensor.door_sensor",
               "icon": "mdi:door"
             },
@@ -1755,14 +2024,14 @@
                   "type": "custom:bubble-card",
                   "card_type": "button",
                   "button_type": "switch",
-                  "entity": "switch.bedside_table",
                   "grid_options": {
                     "columns": 6,
                     "rows": 2
                   },
                   "button_action": {},
                   "name": "Bedside table ",
-                  "icon": "mdi:lamp"
+                  "icon": "mdi:lamp",
+                  "entity": "light.bedside_table_light"
                 },
                 {
                   "type": "custom:bubble-card",
@@ -1791,7 +2060,7 @@
                   "fit_mode": "cover",
                   "type": "picture-entity",
                   "image": "https://demo.home-assistant.io/stub_config/bedroom.png",
-                  "entity": "camera.baby_1t_profile_000"
+                  "entity": "camera.baby_1t_profile_000_2"
                 }
               ]
             },
@@ -1806,7 +2075,23 @@
             }
           ],
           "header": {},
-          "cards": []
+          "cards": [],
+          "badges": [
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.bedroom_temperature_humidity_sensor_temperature"
+            },
+            {
+              "type": "entity",
+              "show_name": false,
+              "show_state": true,
+              "show_icon": true,
+              "entity": "sensor.bedroom_temperature_humidity_sensor_humidity"
+            }
+          ]
         },
         {
           "type": "sections",
@@ -2188,6 +2473,15 @@
                   "icon": "mdi:bathtub",
                   "heading_style": "subtitle",
                   "heading": "Bathroom "
+                },
+                {
+                  "type": "entities",
+                  "entities": [
+                    {
+                      "entity": "automation.bathroom_motion_lights",
+                      "secondary_info": "last-triggered"
+                    }
+                  ]
                 }
               ]
             },
@@ -2204,15 +2498,15 @@
                   "type": "entities",
                   "entities": [
                     {
-                      "entity": "automation.deco_lights_off_at_night",
-                      "secondary_info": "last-triggered"
-                    },
-                    {
                       "entity": "automation.leaving_home",
                       "secondary_info": "last-triggered"
                     },
                     {
                       "entity": "automation.leaving_work",
+                      "secondary_info": "last-triggered"
+                    },
+                    {
+                      "entity": "automation.midnight_bedtime_scene",
                       "secondary_info": "last-triggered"
                     }
                   ]
@@ -2615,34 +2909,6 @@
                     "columns": 6,
                     "rows": 2
                   }
-                },
-                {
-                  "type": "heading",
-                  "icon": "mdi:leaf",
-                  "heading_style": "title",
-                  "heading": "Climate "
-                },
-                {
-                  "graph": "line",
-                  "type": "sensor",
-                  "detail": 1,
-                  "entity": "sensor.bathroom_temperature",
-                  "name": "Temperature",
-                  "grid_options": {
-                    "columns": 12,
-                    "rows": 2
-                  }
-                },
-                {
-                  "graph": "line",
-                  "type": "sensor",
-                  "entity": "sensor.bathroom_humidity",
-                  "detail": 1,
-                  "name": "Humidity",
-                  "grid_options": {
-                    "columns": 12,
-                    "rows": 2
-                  }
                 }
               ]
             }
@@ -2653,21 +2919,8 @@
               "show_name": false,
               "show_state": false,
               "show_icon": true,
-              "entity": "binary_sensor.bathroom_motion"
-            },
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "sensor.bathroom_temperature"
-            },
-            {
-              "type": "entity",
-              "show_name": false,
-              "show_state": true,
-              "show_icon": true,
-              "entity": "sensor.bathroom_humidity"
+              "entity": "binary_sensor.bathroom_occupancy_sensor",
+              "icon": "mdi:motion-sensor"
             }
           ]
         }

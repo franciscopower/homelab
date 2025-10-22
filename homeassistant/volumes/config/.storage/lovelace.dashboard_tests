@@ -19,151 +19,6 @@
               "type": "grid",
               "cards": [
                 {
-                  "type": "tile",
-                  "entity": "switch.ellie_grace_nunez_power_timer",
-                  "features_position": "bottom",
-                  "vertical": false,
-                  "tap_action": {
-                    "action": "perform-action",
-                    "perform_action": "babybuddy.start_timer",
-                    "target": {
-                      "entity_id": "switch.ellie_grace_nunez_power_timer"
-                    }
-                  },
-                  "name": "Start Timer",
-                  "hide_state": true,
-                  "grid_options": {
-                    "columns": 12,
-                    "rows": 1
-                  },
-                  "icon_tap_action": {
-                    "action": "none"
-                  }
-                },
-                {
-                  "type": "custom:bubble-card",
-                  "card_type": "button",
-                  "button_type": "switch",
-                  "entity": "input_number.bottle_qty",
-                  "sub_button": [
-                    {
-                      "entity": "input_number.bottle_qty",
-                      "icon": "mdi:minus-thick",
-                      "state_background": true,
-                      "show_icon": true,
-                      "show_name": false,
-                      "tap_action": {
-                        "action": "call-service",
-                        "target": {
-                          "entity_id": "entity"
-                        },
-                        "service": "input_number.decrement"
-                      }
-                    },
-                    {
-                      "entity": "input_number.bottle_qty",
-                      "tap_action": {
-                        "action": "call-service",
-                        "target": {
-                          "entity_id": "entity"
-                        },
-                        "service": "input_number.increment"
-                      },
-                      "show_state": false,
-                      "icon": "mdi:plus-thick"
-                    },
-                    {
-                      "entity": "input_number.bottle_qty",
-                      "name": "30 ml",
-                      "show_icon": false,
-                      "show_name": true,
-                      "tap_action": {
-                        "action": "perform-action",
-                        "target": {
-                          "entity_id": [
-                            "input_number.bottle_qty"
-                          ]
-                        },
-                        "perform_action": "input_number.set_value",
-                        "data": {
-                          "value": 30
-                        }
-                      }
-                    },
-                    {
-                      "entity": "input_number.bottle_qty",
-                      "name": "60 ml",
-                      "show_name": true,
-                      "show_icon": false,
-                      "tap_action": {
-                        "action": "perform-action",
-                        "target": {
-                          "entity_id": [
-                            "input_number.bottle_qty"
-                          ]
-                        },
-                        "perform_action": "input_number.set_value",
-                        "data": {
-                          "value": 60
-                        }
-                      }
-                    },
-                    {
-                      "entity": "input_number.bottle_qty",
-                      "name": "120 ml",
-                      "show_name": true,
-                      "show_icon": false,
-                      "state_background": true,
-                      "show_state": false,
-                      "show_attribute": false,
-                      "tap_action": {
-                        "action": "perform-action",
-                        "target": {
-                          "entity_id": [
-                            "input_number.bottle_qty"
-                          ]
-                        },
-                        "perform_action": "input_number.set_value",
-                        "data": {
-                          "value": 120
-                        }
-                      }
-                    }
-                  ],
-                  "show_state": true,
-                  "show_name": false,
-                  "show_icon": true,
-                  "rows": "1",
-                  "scrolling_effect": false
-                },
-                {
-                  "type": "tile",
-                  "entity": "sensor.baby_ellie_grace_nunez_power",
-                  "features_position": "bottom",
-                  "vertical": false,
-                  "tap_action": {
-                    "action": "perform-action",
-                    "perform_action": "script.baby_feeding",
-                    "target": {}
-                  },
-                  "name": "Record Bottle",
-                  "icon": "mdi:baby-bottle",
-                  "hide_state": true,
-                  "grid_options": {
-                    "columns": 12,
-                    "rows": 1
-                  }
-                }
-              ]
-            },
-            {
-              "type": "grid",
-              "cards": []
-            },
-            {
-              "type": "grid",
-              "cards": [
-                {
                   "type": "custom:navbar-card",
                   "routes": [
                     {
@@ -257,14 +112,36 @@
                   "desktop": {
                     "show_labels": true,
                     "position": "left"
-                  }
+                  },
+                  "styles": ".navbar-card {\nbackground-color: #00201a7\n}"
                 }
               ],
               "column_span": 1
             },
             {
               "type": "grid",
-              "cards": []
+              "cards": [
+                {
+                  "type": "tile",
+                  "entity": "light.ellie_room_ceiling",
+                  "features_position": "bottom",
+                  "vertical": false,
+                  "features": [
+                    {
+                      "type": "light-brightness"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:mushroom-light-card",
+                  "entity": "light.ellie_room_ceiling",
+                  "show_brightness_control": true,
+                  "use_light_color": true,
+                  "show_color_temp_control": true,
+                  "show_color_control": true,
+                  "collapsible_controls": true
+                }
+              ]
             }
           ]
         }
