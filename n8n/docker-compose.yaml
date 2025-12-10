@@ -1,0 +1,26 @@
+services:
+  n8n:
+    container_name: n8n
+    image: docker.n8n.io/n8nio/n8n
+    restart: unless-stopped
+    environment:
+      - GENERIC_TIMEZONE=Europe/Lisbon
+      - TZ=Europe/Lisbon
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+      - N8N_RUNNERS_ENABLED=true
+    # ports:
+    #   - 5678:5678
+    volumes:
+      - ./volumes/n8n_storage:/home/node/.n8n
+    networks:
+      - tunnel
+      - proxy
+
+networks:
+  tunnel:
+    name: cloudflared_tunnel
+    external: true
+  proxy:
+    name: nginx-proxy_proxy
+    external: true
+
