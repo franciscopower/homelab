@@ -1,0 +1,16 @@
+services:
+  test-server:
+    container_name: test-server
+    image: nginx
+    networks:
+      - tunnel
+      - proxy
+
+networks:
+  tunnel:
+    name: cloudflared_tunnel
+    external: true
+  proxy:
+    name: nginx-proxy_proxy
+    external: true
+
