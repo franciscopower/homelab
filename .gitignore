@@ -1,37 +1,38 @@
 secret*
 .env
 
-##### Home assistant specific directories
-*.log*
-auth*
-core.*
-onboarding
-custom_components/
-backups/
-*.db*
-*credentials*
-tts/
-
 ##### Adguard volumes
 adguard/volumes/
+
+##### Baby Buddy volumes
+baby-buddy/volumes/
+
+##### ESPHome volumes
+ESPHome/volumes/
+
+##### Home assistant volumes
+homeassistant/volumes/
+
+##### n8n volumes
+n8n/volumes/
+
+##### Nginx proxy specific directories
+nginx-proxy/volumes/letsencrypt/
+nginx-proxy/volumes/data/access/
+nginx-proxy/volumes/data/custom_ssl/
+nginx-proxy/volumes/data/letsencrypt_acme_challenge/
+nginx-proxy/volumes/data/logs/
+*.sqlite
+keys.json
 
 ##### Piper volumes
 piper/volumes/
 
-##### Whisper volumes
-whisper/volumes/
-
-##### Baby Buddy specific directories
-.secretkey
-baby-buddy/volumes/log
-baby-buddy/volumes/keys
-
-##### Nginx proxy specific directories
-*.sqlite
-keys.json
-
 ##### Portainer Volumes
 portainer/volumes/
+
+##### Whisper volumes
+whisper/volumes/
 
 ##### Python defaults (for general apps and plugins)
 
